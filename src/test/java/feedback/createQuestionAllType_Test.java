@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class createQuestionAllType {
+public class createQuestionAllType_Test {
 
     @Test
     public void createQuestionAllType() {

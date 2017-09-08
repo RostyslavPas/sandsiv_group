@@ -4,7 +4,7 @@ import org.junit.Test;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class createCaseAlerts {
+public class createCaseAlerts_Test {
 
     @Test
     public void createCaseAlerts(){

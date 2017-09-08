@@ -5,7 +5,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class copySurveys {
+public class copySurveys_Test {
     @Test
     public void copySurveysTest(){
         OpenCI page = new OpenCI();

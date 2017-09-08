@@ -4,7 +4,7 @@ import org.junit.Test;
 import static com.codeborne.selenide.Condition.text;
 
 
-public class createImport10 {
+public class createImport10_Test {
 
     @Test
     public void createImport10(){

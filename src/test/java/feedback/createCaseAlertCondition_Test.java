@@ -3,7 +3,7 @@ package feedback;
 import org.junit.Test;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class createCaseAlertCondition {
+public class createCaseAlertCondition_Test {
     @Test
     public void createCaseAlertCondition() {
         OpenCI page = new OpenCI();

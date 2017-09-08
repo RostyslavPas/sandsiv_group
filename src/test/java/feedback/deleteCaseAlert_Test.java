@@ -11,7 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.sleep;
 
-public class deleteCaseAlert {
+public class deleteCaseAlert_Test {
     public void delAlert(){
         $$(".btn.btn-link.btn-xs").get(0).click();
         $(".btn.ng-binding.btn-primary").click();

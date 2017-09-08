@@ -5,7 +5,7 @@ import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class createQuestionFlow {
+public class createQuestionFlow_Test {
     @Test
     public void createQuestionFlow(){
 
