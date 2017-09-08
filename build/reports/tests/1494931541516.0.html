@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+<meta charset="utf-8" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="max-age=0" http-equiv="cache-control" />
+<meta content="no-cache" http-equiv="cache-control" />
+<meta content="0" http-equiv="expires" />
+<meta content="Tue, 01 Jan 1980 1:00:00 GMT" http-equiv="expires" />
+<meta content="no-cache" http-equiv="pragma" />
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/dist/feedback.js" src="/dist/feedback.js"></script><base href="/feedback/" />
+<title ng-bind="'Feedback :: ' + pageTitle" class="ng-binding">Feedback :: Survey Questions</title>
+<script src="/js/vendor/requirejs/require.js"></script>
+<script src="/bundles/xirclxirclfeedback/js/main-bootstrap.js"></script>
+<link href="/dist/feedback/vendor.css" rel="stylesheet" />
+<link href="/bundles/xirclxirclfeedback/css/app.css?" rel="stylesheet" />
+<style>.SandSIV_Feedback_Button {
+  position: fixed;
+  z-index: 4000;
+  height: 43px;
+  padding: 10px 20px;
+  background: #3F51B5;
+  color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  outline: none;
+  transition: all 0.5s;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border: 0;
+  right: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Button_PositionTopLeft {
+  left: 20px;
+  top: 20px;
+}
+
+.SandSIV_Feedback_Button_PositionTopRight {
+  right: 20px;
+  top: 20px;
+}
+
+.SandSIV_Feedback_Button_PositionBottomLeft {
+  left: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Button_PositionBottomRight {
+  right: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Button_Loading {
+  background: #78909C;
+  color: #CFD8DC;
+  pointer-events: none;
+}
+
+.SandSIV_Feedback_Button:hover {
+  box-shadow: inset 0 4px 2px 0 rgba(0, 0, 0, 0.26);
+}
+
+.SandSIV_Feedback_Button:active {
+  background: #313d8a;
+  box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.SandSIV_Feedback_Modal {
+  right: 20px;
+  bottom: 20px;
+  width: 600px;
+  height: 650px;
+  font-family: Roboto, Arial, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  display: none;
+  z-index: 5000;
+  position: fixed;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+
+.SandSIV_Feedback_Modal_PositionTopLeft {
+  left: 20px;
+  top: 20px;
+}
+
+.SandSIV_Feedback_Modal_PositionTopRight {
+  right: 20px;
+  top: 20px;
+}
+
+.SandSIV_Feedback_Modal_PositionBottomLeft {
+  left: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Modal_PositionBottomRight {
+  right: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Modal_Header {
+  background: #3F51B5;
+  color: #fff;
+  padding: 20px;
+  text-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 6px, rgba(0, 0, 0, 0.117647) 0 1px 4px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.SandSIV_Feedback_Modal_Body {
+  position: relative;
+  overflow-y: scroll;
+  height: 592px;
+}
+
+.SandSIV_Feedback_Modal_Body::-webkit-scrollbar {
+  width: 12px;
+  height: 16px;
+}
+
+.SandSIV_Feedback_Modal_Body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+.SandSIV_Feedback_Modal_Body::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.SandSIV_Feedback_Modal_Body::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.SandSIV_Feedback_Modal_Body .loader-wrapper {
+  display: none;
+  width: 600px;
+  height: 592px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.SandSIV_Feedback_Modal_Body .loader-wrapper .loader-spinner {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  text-align: center;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.SandSIV_Feedback_Modal_Body .message {
+  text-align: center;
+  padding: 15px;
+  margin: 20px 15px 30px 15px;
+  border-radius: 8px;
+  transition: all 0.7s;
+  box-shadow: inset 3px 3px 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.SandSIV_Feedback_Modal_Body .message-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+}
+
+.SandSIV_Feedback_Modal_Body .message-error {
+  color: #762728;
+  background-color: rgba(240, 129, 93, 0.2);
+  border: 1px solid rgba(233, 136, 110, 0.44);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm {
+  margin: 20px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .required {
+  color: #d22d2d;
+  margin-left: 3px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionItem {
+  background: #e7f2f6;
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 8px 20px;
+  margin-bottom: 10px;
+  line-height: 25px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionItem.questionItemError {
+  background: #fff8d5;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionValidationMessage {
+  display: none;
+  text-align: left;
+  padding: 12px 20px;
+  border-radius: 4px;
+  line-height: 23px;
+  border: 1px dashed rgba(233, 136, 110, 0.44);
+  box-shadow: inset 3px 3px 1px 0 rgba(255, 255, 255, 0.25);
+  background: rgba(255, 218, 218, 0.47);
+  color: #762728;
+  margin: 5px 0;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer {
+  margin-bottom: 20px;
+  padding: 2px 12px 0 4px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer label {
+  margin-right: 20px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer label span {
+  color: #666;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer input {
+  margin-right: 10px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer textarea {
+  width: 100%;
+  min-height: 50px;
+  max-height: 100px;
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid #999;
+  resize: vertical;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer, .SandSIV_Feedback_Modal_Body .questionForm .questionAnswer label, .SandSIV_Feedback_Modal_Body .questionForm .questionAnswer input, .SandSIV_Feedback_Modal_Body .questionForm .questionAnswer textarea {
+  font-size: 14px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating {
+  display: inline-block;
+  padding: 0 0 0 20px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating input.star {
+  border: 0;
+  display: none;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star {
+  float: right;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  margin: 0 20px 0 0;
+  font-size: 28px;
+  color: #546E7A;
+  transition: all .2s;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating input.star:checked ~ label.star:before {
+  content: '\2605';
+  color: #FFC107;
+  transition: all .25s;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating input.star-5:checked ~ label.star:before {
+  color: #FFC107;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating input.star-1:checked ~ label.star:before {
+  color: #F62;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star:hover {
+  transform: rotate(-15deg) scale(1.3);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star:hover, .SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star:hover ~ label.star:before {
+  color: #FFC107;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star:before {
+  content: '\2605';
+  border: 0;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .button {
+  font-size: 15px;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  float: right;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .button:hover {
+  background-color: #2bbbad;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .button:active {
+  box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: #27a195;
+}
+
+.SandSIV_Feedback_Modal_Body a {
+  color: #3F51B5;
+}
+
+.SandSIV_Feedback_Modal_Body a:hover {
+  color: #C51162;
+}
+
+.SandSIV_Feedback_Modal_Body pre {
+  font-size: 14px;
+  white-space: nowrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.SandSIV_Feedback_Modal_Close {
+  right: 10px;
+  top: 10px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  border-radius: 50%;
+  color: #fff;
+  overflow: hidden;
+  outline: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  user-select: none;
+  border: 0;
+}
+
+.SandSIV_Feedback_Modal_Close:hover, .SandSIV_Feedback_Modal_Close:active {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.SandSIV_Feedback_Modal_Close svg {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 6px;
+  left: 6px;
+  fill: white;
+}</style><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_editor.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled &gt; .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style type="text/css"></style><style media="print" type="text/css">.tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}</style><style media="print" type="text/css">.tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}</style><style media="print" type="text/css">.tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}</style><style media="print" type="text/css">.tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}</style></head>
+<body class="modal-open ngProgressLite-on">
+                    <style type="text/css">
+    header.navbar.navbar-default.bs-docs-nav ul.dropdown-menu {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        border: 0;
+        height: 51px;
+        background: none;
+        border-radius: 0;
+        width: 1170px;
+        margin-left:-585px;
+        box-shadow: none;
+    }
+    header.navbar.navbar-default.bs-docs-nav ul.dropdown-menu &gt; li {
+        display: inline-block;
+        float: left;
+        margin-top: 8px;
+    }
+    @media (min-width: 992px) {
+        header.navbar.navbar-default.bs-docs-nav ul.dropdown-menu {
+            width: 992px;
+            margin-left:-496px;
+        }
+    }
+    @media (min-width: 768px) {
+        header.navbar.navbar-default.bs-docs-nav ul.dropdown-menu {
+            width: 768px;
+            margin-left:-384px;
+        }
+    }
+    .ngProgressLiteBar {
+        position: fixed !important;
+        z-index: 2000 !important;
+        top: 0 !important;
+        left: 0;
+    }
+</style>
+<header role="banner" class="navbar navbar-default bs-docs-nav">
+    <div class="navbar-header">
+        <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/feedback/#/survey_list">Voc Feedback</a>
+    </div>
+    <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+        <ul class="dropdown-menu">
+    <li><a href="/feedback/#/survey_list">Surveys</a></li>
+    <li class="divider" role="presentation"></li>
+    <li><a href="/feedback/#/export/results">Export</a></li>
+    <li><a href="/feedback/#/import">Import</a></li>
+    <li class="divider" role="presentation"></li>
+    <li><a href="/feedback/#/settings/advanced">Global settings</a></li>
+    <li class="divider" role="presentation"></li>
+    <li><a href="/feedback/#/customers">Customers</a></li>
+</ul>
+    </nav>
+</header>
+    
+    <main id="xircl-feedback-bundle" role="main">
+        <div class="container">
+            <!--Main View-->
+            <div class="xircl-alerts"></div>
+            <authorization></authorization>
+            <!-- ngView:  --><div ng-hide="viewLoading" ng-view="" class="ng-scope"><div class="questions-wrapper ng-scope">
+    <div class="row">
+        <div class="col-lg-12">
+            <survey-sidepanel><div class="row ng-scope" ng-controller="SidebarController">
+    <nav class="col-lg-10 margin-b-20" role="sidebar">
+        <ul class="nav nav-tabs nav-tabs-survey noselect">
+            <li ng-class="{ 'is-disabled-link': loading || !(survey.id &gt; 0), 'active': navClass(ROUTES.SURVEY_QUESTION_LIST) == 'active' }" class="pointer active is-disabled-link">
+                <a href="#/survey/4031/questions">
+                <i aria-hidden="true" class="fa fa-comments-o"></i> Questions</a>
+            </li>
+            <li ng-class="{ 'is-disabled-link': loading || !(survey.id &gt; 0), 'active': navClass(ROUTES.SURVEY_SETTINGS_ADVANCED) == 'active' }" class="pointer is-disabled-link">
+                <a href="#/survey/4031/settings/advanced">
+                <i class="glyphicon glyphicons cogwheels"></i> Survey Settings</a>
+            </li>
+            <li ng-class="{ 'is-disabled-link': loading || !(survey.id &gt; 0), 'active': navClass(ROUTES.SURVEY_SETTINGS_LANGUAGE) == 'active' }" class="pointer is-disabled-link">
+                <a href="#/survey/4031/settings/language">
+                    <span class="glyphicon glyphicon-globe"></span> Survey Languages</a>
+            </li>
+            <li ng-class="{ 'is-disabled-link': loading || !(survey.id &gt; 0), 'active': navClass(ROUTES.SURVEY_STATISTICS) == 'active' }" class="pointer is-disabled-link">
+                <a data-toggle="dropdown" class="dropdown-toggle" ng-href="">
+                    <span class="glyphicon glyphicon-stats"></span> Statistics <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="#/survey/4031/statistics">Statistics Results</a>
+                    </li>
+                    <li>
+                        <a href="#/survey/4031/questions_statistics">Questions Statistics</a>
+                    </li>
+                </ul>
+            </li>
+            <li ng-class="{ 'is-disabled-link': loading || !(survey.id &gt; 0), 'active': navClass(ROUTES.SURVEY_QUARANTINES) == 'active' }" class="pointer is-disabled-link">
+                <a href="#/survey/4031/quarantines">
+                    <span class="glyphicon glyphicon-transfer"></span> Quarantines
+                </a>
+            </li>
+            <li ng-class="{ 'is-disabled-link': loading || !(survey.id &gt; 0), 'active': navClass(ROUTES.SURVEY_CUSTOMERS) == 'active' }" class="pointer is-disabled-link">
+                <a href="#/survey/4031/customers">
+                <i class="glyphicon glyphicons group"></i> Customers</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="col-lg-2 margin-b-20">
+        <button ng-click="sendInvitation()" class="btn btn-success btn-invitation pull-right" type="button">
+            <span class="glyphicon glyphicon-send margin-r-10"></span>Send invitation
+        </button>
+    </div>
+</div>
+
+</survey-sidepanel>
+
+            <div class="row margin-b-20">
+                <div class="col-lg-6">
+                    <rename-survey-directive survey="survey" class="ng-isolate-scope"><h4 class="pull-left margin-t-0 margin-b-0">
+    <span tooltip-placement="right" tooltip="qaTest56577" ng-bind="survey.name" class="surveyTitle ng-binding">qaTest56577</span>
+    <span class="btn btn-link btn-sm padding-t-0" ng-click="renameSurvey(survey)" tooltip="Change name">
+        <span class="glyphicon glyphicon-pencil"></span>
+    </span>
+</h4>
+</rename-survey-directive>
+                    <change-status-directive survey="survey" class="ng-isolate-scope"><!-- ngRepeat: c in survey.surveys -->
+</change-status-directive>
+                </div>
+                <div class="col-lg-6">
+                    <channels-directive><!-- ngIf: channels --><div ng-if="channels" class="btn-group pull-right margin-l-10 channels-switcher ng-scope">
+    <!-- ngRepeat: channelItem in channels --><button class="btn btn-default btn-channel ng-scope active" ng-class="{ 'active': (currentChannel == channelItem.channel &amp;&amp; channelItem.id&gt;0), 'is-disabled': (channelItem.channel == 'WEC' &amp;&amp; $parent.disableWecChannel) }" ng-click="setChannel(channelItem.channel)" ng-repeat="channelItem in channels">
+        <strong ng-show="channelItem.channel == currentChannel &amp;&amp; channelsPreloader" class="ng-hide">
+            <i aria-hidden="true" class="fa fa-spinner fa-spin fa-fw preloader"></i>
+            <span>Loading...</span>
+        </strong>
+        <span ng-hide="channelItem.channel == currentChannel &amp;&amp; channelsPreloader">
+            <span ng-show="(channelItem.id&gt;0)" class="glyphicon glyphicon-ok"></span>
+            <span class="ng-binding">WEB</span>
+            <span ng-show="(channelItem.id&gt;0)" class="ng-binding">(ID: 2659)</span>
+        </span>
+    </button><!-- end ngRepeat: channelItem in channels --><button class="btn btn-default btn-channel ng-scope" ng-class="{ 'active': (currentChannel == channelItem.channel &amp;&amp; channelItem.id&gt;0), 'is-disabled': (channelItem.channel == 'WEC' &amp;&amp; $parent.disableWecChannel) }" ng-click="setChannel(channelItem.channel)" ng-repeat="channelItem in channels">
+        <strong ng-show="channelItem.channel == currentChannel &amp;&amp; channelsPreloader" class="ng-hide">
+            <i aria-hidden="true" class="fa fa-spinner fa-spin fa-fw preloader"></i>
+            <span>Loading...</span>
+        </strong>
+        <span ng-hide="channelItem.channel == currentChannel &amp;&amp; channelsPreloader">
+            <span ng-show="(channelItem.id&gt;0)" class="glyphicon glyphicon-ok"></span>
+            <span class="ng-binding">SMS</span>
+            <span ng-show="(channelItem.id&gt;0)" class="ng-binding">(ID: 2660)</span>
+        </span>
+    </button><!-- end ngRepeat: channelItem in channels --><button class="btn btn-default btn-channel ng-scope" ng-class="{ 'active': (currentChannel == channelItem.channel &amp;&amp; channelItem.id&gt;0), 'is-disabled': (channelItem.channel == 'WEC' &amp;&amp; $parent.disableWecChannel) }" ng-click="setChannel(channelItem.channel)" ng-repeat="channelItem in channels">
+        <strong ng-show="channelItem.channel == currentChannel &amp;&amp; channelsPreloader" class="ng-hide">
+            <i aria-hidden="true" class="fa fa-spinner fa-spin fa-fw preloader"></i>
+            <span>Loading...</span>
+        </strong>
+        <span ng-hide="channelItem.channel == currentChannel &amp;&amp; channelsPreloader">
+            <span ng-show="(channelItem.id&gt;0)" class="glyphicon glyphicon-ok"></span>
+            <span class="ng-binding">IVR</span>
+            <span ng-show="(channelItem.id&gt;0)" class="ng-binding">(ID: 2661)</span>
+        </span>
+    </button><!-- end ngRepeat: channelItem in channels -->
+</div><!-- end ngIf: channels -->
+</channels-directive>
+                </div>
+            </div>
+
+            <!-- ngIf: (languages) --><div class="row margin-b-20 ng-scope" ng-if="(languages)">
+                <div class="col-lg-12">
+                    <div class="btn-group">
+                        <!-- ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">DE</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">FR</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">IT</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">EN</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">ES</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">FL</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">HU</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">AR</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">CM</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">CZ</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages --><!-- ngIf: languageItem.isVisible --><div class="btn-group ng-scope" ng-if="languageItem.isVisible" ng-repeat="languageItem in languages">
+                            <button class="btn btn-default text-capitalize padding-l-20 padding-r-20" ng-click="switchLang(languageItem)" ng-class="{'active': languageItem.iso_6391_code === languageSelected}" tooltip-placement="bottom" tooltip="">
+                                <!-- ngIf: languageItem.hasLanguageText -->
+                                <span class="ng-binding">SK</span>
+                            </button>
+                        </div><!-- end ngIf: languageItem.isVisible --><!-- end ngRepeat: languageItem in languages -->
+                    </div>
+                </div>
+            </div><!-- end ngIf: (languages) -->
+
+            <div ng-show="errorMsg" class="ng-hide">
+                <p ng-bind="errorMsg" class="alert alert-danger alert-danger-light text-center ng-binding"></p>
+            </div>
+
+            <div ng-show="!channel.active &amp;&amp; !errorMsg &amp;&amp; !loading" class="ng-hide">
+                <p class="alert alert-danger alert-danger-light text-center">Select a channel to start</p>
+            </div>
+
+            <div class="clearfix row margin-b-20 margin-t-20" ng-show="channel.active &amp;&amp; languages.length">
+                <div class="col-lg-6">
+                    <div class="btn-group">
+                        <button ng-class="{'active': reorder==true}" tooltip="Enable questions reorder" ng-disabled="questions.length === 0" ng-click="changeOrder(); info.isCollapsed = !info.isCollapsed;" class="btn btn-default" type="button" disabled="disabled">
+                            <i ng-class="{'unlock': reorder==true}" class="glyphicon glyphicons lock"></i>
+                            Reorder
+                        </button>
+
+                        <a class="btn btn-default" tooltip="Download flow structure graph" href="http://demo-api.ci-fb.sandsiv.com/api/rest/survey/2659/structuregraph/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NTYsImN1bHR1cmUiOiJlbl9FTiIsInVzZXJuYW1lIjoicm9zdGlzbGF2LnBhcyIsImVudGVycHJpc2UiOnsic2x1ZyI6ImRlbW8iLCJpZCI6NiwibmFtZSI6ImRlbW8ifSwibGFzdF9uYW1lIjoiUGFzIiwic2Vzc2lkIjoiMWM4YTE2MTYtNDkzNC00YzI2LWJkNTctM2U5NWY3MDRkZmMyIiwiZW1haWwiOiJyb3N0aXNsYXYucGFzQHNhbmRzaXYuY29tIiwiZmlyc3RfbmFtZSI6IlJvc3R5c2xhdiJ9.RVn44Nye0zypSqTT8LES-ptBBWLZWcDqQ8ORxdzNtPw" target="_blank">
+                            <span class="glyphicon glyphicon-stats"></span> Graph
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <a class="btn btn-success pull-right" tooltip-placement="bottom" tooltip="" ng-disabled="channel.state == DELETED_SURVEY_STATE" ng-click="chooseQuestionType()">
+                        <span class="glyphicon glyphicon-plus"></span> Add question
+                    </a>
+                </div>
+            </div>
+
+            <div ng-show="!errorMsg &amp;&amp; channel.active" ng-class="{'hide': errorMsg}" class="panel panel-default">
+                <div class="panel-heading overflow-off clearfix no-paddings padding-l-15">
+                    <h5 class="pull-left">Questions</h5>
+                </div>
+
+                <div class="panel-body">
+
+                    <!-- Preloader -->
+                    <div ng-show="loading" class="loader">Loading...</div>
+
+                    <!-- No questions -->
+                    <!-- ngIf: (!loading && questions !== null && questions.length==0) -->
+
+                    <!-- Main content -->
+                    <div ng-show="questions &amp;&amp; questions.length&gt;0 &amp;&amp; !loading" class="row ng-hide">
+                        <div class="col-lg-12">
+                            <div collapse="info.isCollapsed" ng-init="info.isCollapsed = true" class="collapse" style="height: 0px;">
+                                <div class="alert alert-info">
+                                    <strong>
+                                        <span class="glyphicon glyphicon-info-sign"></span>
+                                         
+                                        Info
+                                    </strong>
+                                    <hr class="margin-t-10 margin-b-10" />
+                                    <ul>
+                                        <li>
+                                            <p>You can drag and drop questions to rearrange their order</p>
+                                        </li>
+                                        <li>
+                                            <p>Pull right to make a question sub-level</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div ng-show="questions" class="row">
+                                <div class="col-lg-12">
+                                    <div ng-class="{'enable-reorder': reorder}" ui-tree="options" id="nestedList" data-nodrag="true" class="ng-scope angular-ui-tree">
+                                        <ul ng-model="questions" ui-tree-nodes="" ng-class="{'visible': questions, 'invisible': !questions}" class="ng-pristine ng-untouched ng-valid ng-scope angular-ui-tree-nodes visible">
+                                            <!-- ngRepeat: item in questions -->
+                                        </ul>
+                                    <div class="angular-ui-tree-empty"></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+            <notifications-template><div data-ng-controller="NotificationCntr" class="messagesList ng-scope">
+    <p ng-hide="!notifications" ng-show="showNotices()" class="ng-hide">
+    </p><!-- ngRepeat: notification in notifications -->
+    <p></p>
+</div>
+</notifications-template>
+            <scrollup-template><a class="scrollup" ng-href=""><button class="btn btn-primary"><span class="glyphicon glyphicon-chevron-up"></span></button></a></scrollup-template>
+        </div>
+    </main>
+
+<script>
+    window.feedbackApiUrl = "http://feedback-backend.ci.custvox.org/";
+    window.feedbackV2ApiUrl = "http://demo-api.ci-fb.sandsiv.com/";
+    window.ssoApiUrl = "http://sso.ci-fb.sandsiv.com/api/";
+    window.enterpriseSlug = "demo";
+
+    window.googleAnalyticsEnabled = false;
+    window.uxMetricsEnabled = false;
+    require.config({
+        urlArgs: ''
+    });
+
+    require([
+        "/dist/feedback.js"
+    ], function () {
+        require(["boot"]);
+    });
+</script>
+<heatmap></heatmap>
+<script src="http://stand-ci.sandsiv.com/dist/sandsiv_feedback.js?noCache=31"></script>
+
+
+<div ng-style="{'z-index': 1040 + (index &amp;&amp; 1 || 0) + index*10}" ng-class="{in: animate}" class="modal-backdrop fade  in" modal-backdrop="" style="z-index: 1040;"></div><div ng-click="close($event)" ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-class="{in: animate}" class="modal fade ng-isolate-scope modal-question-type in" role="dialog" tabindex="-1" modal-window="" window-class="modal modal-question-type" index="0" animate="animate" style="z-index: 1050; display: block;">
+    <div ng-class="{'modal-sm': size == 'sm', 'modal-lg': size == 'lg'}" class="modal-dialog"><div modal-transclude="" class="modal-content"><div class="modal-content ng-scope">
+    <div class="modal-header">
+        <div class="bootstrap-dialog-header">
+            <button ng-click="cancelAdding()" class="close" type="button">×</button>
+            <h4 class="modal-title">Question type</h4>
+        </div>
+    </div>
+    <form ng-submit="createQuestion(selectedQuestionType)" role="form" class="form-horizontal ng-pristine ng-valid ng-submitted">
+        <div class="modal-body">
+                <fieldset ng-disabled="survey.loading==true">
+                <div class="form-group">
+                    <label class="col-sm-4 control-label" for="questionType">Choose question type</label>
+                    <div class="col-sm-8">
+                        <select class="form-control ng-pristine ng-untouched ng-valid" id="questionType" ng-model="selectedQuestionType"><option value="? string:QuestionScalableIVR ?"></option>
+                            <!-- ngRepeat: questionTypeItem in questionTypes track by $index --><option ng-selected="($index == 0)" ng-value="( questionTypeItem.display_class )" ng-repeat="questionTypeItem in questionTypes track by $index" class="ng-binding ng-scope" value="QuestionScalableIVR" selected="selected">
+                                Scalable
+                            </option><!-- end ngRepeat: questionTypeItem in questionTypes track by $index --><option ng-selected="($index == 0)" ng-value="( questionTypeItem.display_class )" ng-repeat="questionTypeItem in questionTypes track by $index" class="ng-binding ng-scope" value="QuestionConfigurableIVR">
+                                Configurable
+                            </option><!-- end ngRepeat: questionTypeItem in questionTypes track by $index --><option ng-selected="($index == 0)" ng-value="( questionTypeItem.display_class )" ng-repeat="questionTypeItem in questionTypes track by $index" class="ng-binding ng-scope" value="QuestionDirectSpeechIVR">
+                                Open
+                            </option><!-- end ngRepeat: questionTypeItem in questionTypes track by $index --><option ng-selected="($index == 0)" ng-value="( questionTypeItem.display_class )" ng-repeat="questionTypeItem in questionTypes track by $index" class="ng-binding ng-scope" value="QuestionNumberInputIVR">
+                                Number input
+                            </option><!-- end ngRepeat: questionTypeItem in questionTypes track by $index --><option ng-selected="($index == 0)" ng-value="( questionTypeItem.display_class )" ng-repeat="questionTypeItem in questionTypes track by $index" class="ng-binding ng-scope" value="QuestionEndSurveyIVR">
+                                Finish Survey
+                            </option><!-- end ngRepeat: questionTypeItem in questionTypes track by $index --><option ng-selected="($index == 0)" ng-value="( questionTypeItem.display_class )" ng-repeat="questionTypeItem in questionTypes track by $index" class="ng-binding ng-scope" value="QuestionTerminatorIVR">
+                                Terminator
+                            </option><!-- end ngRepeat: questionTypeItem in questionTypes track by $index -->
+                        </select>
+                    </div>
+                </div>
+                </fieldset>
+        </div>
+        <div class="modal-footer">
+            <div class="bootstrap-dialog-footer">
+                <div class="bootstrap-dialog-footer-buttons">
+                    <button ng-click="cancelAdding()" type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-remove"></span> Cancel
+                    </button>
+                    <button ladda="survey.loading==true" data-style="zoom-in" ng-disabled="statusCreation" type="submit" class="ladda-button btn btn-primary" disabled="disabled"><span class="ladda-label">
+                        <span class="glyphicon glyphicon-ok"></span> Continue
+                    </span><span class="ladda-spinner"></span></button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</div></div>
+</div><div class="ngProgressLite"><div class="ngProgressLiteBar" style="width: 20%; transition: all 1000ms ease 0s;"><div class="ngProgressLiteBarShadow"></div></div></div></body></html>
