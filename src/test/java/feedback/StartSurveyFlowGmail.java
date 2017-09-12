@@ -28,6 +28,7 @@ public class StartSurveyFlowGmail {
         SelenideElement startSurvey = $(By.linkText("Start survey (EN)"));
 
         startSurvey.click();
+        sleep(5000);
             switchTo().window("..:: Sandsiv ::..");
             sleep(3000);
         SelenideElement scalableQuestionCheckbox = $("#form_q_7479_validated_4");
