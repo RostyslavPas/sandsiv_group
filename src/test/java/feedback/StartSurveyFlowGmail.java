@@ -19,6 +19,7 @@ public class StartSurveyFlowGmail {
         SelenideElement password = $(".whsOnd.zHQkBf");
         String userPassword = "Ros_0632059555_sandsiv";
             password.setValue(userPassword).pressEnter();
+            sleep(10000);
         ElementsCollection letters = $$(".yX.xY");
             letters.get(0).click();
         SelenideElement showTrimmedContent = $(".ajT");
