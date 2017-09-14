@@ -44,6 +44,20 @@ public class Import {
         importCI.importHistory.shouldHave(text(importCI.textImportHistory));
 
     }
+    public void addImportWithSurvey(){
+        btnAddImport.click();
+        popapWindows.shouldHave(text(textPopapWindows));
+        alertInfo.shouldHave(text(alertInfoText));
+        sleep(2000);
+        $(By.xpath(".//*[@id='survey']/option[2]")).click();
+        sleep(2000);
+        uploadFile.sendKeys(filePath);
+        delimiter.setValue(",");
+        btnSaveImport.click();
+        alertSave.shouldHave(text(textImportSave));
+        Import importCI = new Import();
+        importCI.importHistory.shouldHave(text(importCI.textImportHistory));
+    }
 
 
 }

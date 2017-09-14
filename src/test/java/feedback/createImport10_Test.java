@@ -15,7 +15,7 @@ public class createImport10_Test {
             importCI.importHistory.shouldHave(text(importCI.textImportHistory));
 
         for (int i = 0; i < 12; i++) {
-            importCI.addImport();
+            importCI.addImportWithSurvey();
         }
 
 
