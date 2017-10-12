@@ -49,7 +49,7 @@ public class Import {
         popapWindows.shouldHave(text(textPopapWindows));
         alertInfo.shouldHave(text(alertInfoText));
         sleep(2000);
-        $(By.xpath(".//*[@id='survey']/option[2]")).click();
+        $(By.xpath("//option[@label='TestBlackListCustomer_QA']")).click();
         sleep(2000);
         uploadFile.sendKeys(filePath);
         delimiter.setValue(",");

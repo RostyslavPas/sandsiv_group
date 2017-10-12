@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3edffc41-6b29-4035-8201-278cacb8f44f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/StartSurveyFlowGmail.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/StartSurveyFlowGmail.class" />
+    <list default="true" id="3edffc41-6b29-4035-8201-278cacb8f44f" name="Default" comment="test commit">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1505462471994.0.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1505462471994.0.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/Import.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/Import.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/createImport10_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/createImport10_Test.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Sandsiv.iml" afterPath="$PROJECT_DIR$/Sandsiv.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/StartSurveyFlowGmail.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/StartSurveyFlowGmail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/Import.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/Import.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +28,8 @@
       <file leaf-file-name="sendInviteAndCheckSurveyFlow_Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/sendInviteAndCheckSurveyFlow_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+            <state relative-caret-position="-252">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,11 +37,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="LoginSSO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/LoginSSO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="394">
+              <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="createImport10_Test.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+            <state relative-caret-position="318">
+              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -48,8 +60,8 @@
       <file leaf-file-name="Import.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Import.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="23" column="61" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="61" />
+            <state relative-caret-position="1672">
+              <caret line="51" column="63" lean-forward="false" selection-start-line="51" selection-start-column="63" selection-end-line="51" selection-end-column="63" />
               <folding />
             </state>
           </provider>
@@ -58,11 +70,9 @@
       <file leaf-file-name="SendInvite.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SendInvite.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="190">
+              <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="73" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,9 +80,11 @@
       <file leaf-file-name="StartSurveyFlowGmail.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/StartSurveyFlowGmail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="1520">
+              <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,8 +145,8 @@
         <option value="$PROJECT_DIR$/src/test/java/feedback/sendInviteAndCheckSurveyFlow_Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/StartSurveyFlowGmail.java" />
         <option value="$PROJECT_DIR$/src/test/java/st/test1111.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/Import.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java" />
       </list>
     </option>
   </component>
@@ -173,8 +185,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -256,6 +266,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -837,7 +849,11 @@
       <workItem from="1504861476460" duration="7992000" />
       <workItem from="1504873620458" duration="12908000" />
       <workItem from="1505291780809" duration="1266000" />
-      <workItem from="1505402503421" duration="2624000" />
+      <workItem from="1505402503421" duration="7944000" />
+      <workItem from="1505484691627" duration="1201000" />
+      <workItem from="1505910611618" duration="613000" />
+      <workItem from="1507625545451" duration="900000" />
+      <workItem from="1507802915088" duration="1446000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1504873911857</created>
@@ -850,15 +866,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="createImport10_Test - 2017.09.14 at 18h 49m 43s.xml">
-      <configuration name="createImport10_Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="createImport10_Test_createImport10 - 2017.09.14 at 19h 00m 00s.xml">
-      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="createImport10_Test_createImport10 - 2017.09.14 at 19h 01m 13s.xml">
-      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="createImport10_Test_createImport10 - 2017.09.14 at 19h 02m 57s.xml">
       <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
     </history-entry>
@@ -868,25 +875,33 @@
     <history-entry file="createImport10_Test_createImport10 - 2017.09.14 at 19h 13m 52s.xml">
       <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="sendInviteAndCheckSurveyFlow_Test_sendInviteAndCheckSurveyFlow_Test - 2017.09.12 at 16h 32m 24s.xml">
-      <configuration name="sendInviteAndCheckSurveyFlow_Test.sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
+    <history-entry file="createImport10_Test_createImport10 - 2017.09.15 at 10h 49m 28s.xml">
+      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="sendInviteAndCheckSurveyFlow_Test_sendInviteAndCheckSurveyFlow_Test - 2017.09.12 at 16h 34m 34s.xml">
-      <configuration name="sendInviteAndCheckSurveyFlow_Test.sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
+    <history-entry file="createImport10_Test_createImport10 - 2017.09.15 at 10h 54m 54s.xml">
+      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="sendInviteAndCheckSurveyFlow_Test_sendInviteAndCheckSurveyFlow_Test - 2017.09.13 at 11h 38m 41s.xml">
-      <configuration name="sendInviteAndCheckSurveyFlow_Test.sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
+    <history-entry file="createImport10_Test_createImport10 - 2017.09.15 at 11h 01m 14s.xml">
+      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="sendInviteAndCheckSurveyFlow_Test_sendInviteAndCheckSurveyFlow_Test - 2017.09.13 at 11h 40m 59s.xml">
-      <configuration name="sendInviteAndCheckSurveyFlow_Test.sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
+    <history-entry file="createImport10_Test_createImport10 - 2017.09.15 at 11h 04m 44s.xml">
+      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createImport10_Test_createImport10 - 2017.09.15 at 11h 10m 17s.xml">
+      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createImport10_Test_createImport10 - 2017.09.15 at 11h 13m 13s.xml">
+      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createImport10_Test_createImport10 - 2017.10.12 at 13h 43m 02s.xml">
+      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63093000" />
+    <option name="totallyTimeSpent" value="72573000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1924" height="1042" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -898,12 +913,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32699168" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10463734" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2532699" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3959572" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.43043995" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30131003" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23034935" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1176,13 +1191,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/LoginSSO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/OpenCI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -1269,47 +1277,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/sendInviteAndCheckSurveyFlow_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/st/test1111.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Import.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="25" column="31" lean-forward="false" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="1672">
+          <caret line="51" column="63" lean-forward="false" selection-start-line="51" selection-start-column="63" selection-end-line="51" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SendInvite.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="190">
+          <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/StartSurveyFlowGmail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1520">
+          <caret line="45" column="5" lean-forward="false" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/st/test1111.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/StartSurveyFlowGmail.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/sendInviteAndCheckSurveyFlow_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="-252">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Import.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/LoginSSO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="23" column="61" lean-forward="true" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="61" />
+        <state relative-caret-position="394">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="13" column="22" lean-forward="true" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+        <state relative-caret-position="318">
+          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding />
         </state>
       </provider>
