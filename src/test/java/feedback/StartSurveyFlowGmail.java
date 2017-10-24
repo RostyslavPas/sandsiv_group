@@ -14,6 +14,7 @@ public class StartSurveyFlowGmail {
         SelenideElement mail = $("#identifierId");
         String userMail = "rostislav.pas@sandsiv.com";
             mail.setValue(userMail).pressEnter();
+            sleep(2000);
         SelenideElement password = $(".whsOnd.zHQkBf");
         String userPassword = "Ros_0632059555_sandsiv";
             password.setValue(userPassword).pressEnter();

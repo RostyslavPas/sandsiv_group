@@ -45,7 +45,7 @@ public class createQuestionFlow_Test {
  */
         QuestionFlow questionFlow = new QuestionFlow();
 
-        for (int flow = 1; flow < 12; flow++) {
+        for (int flow = 1; flow < 10; flow++) {
             questionFlow.addFlow.get(0).click();
             questionFlow.conditionQuestionAnswer.click();
             questionFlow.btnAddFlow.click();
