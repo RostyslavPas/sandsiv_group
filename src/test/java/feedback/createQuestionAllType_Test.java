@@ -1,7 +1,5 @@
 package feedback;
 
-import com.codeborne.selenide.ElementsCollection;
-import com.codeborne.selenide.SelenideElement;
 import org.junit.Test;
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
@@ -28,18 +26,9 @@ public class createQuestionAllType_Test {
             surveyNew.alertSurveySaved.shouldHave(text("Survey was successfully saved"));
             surveyNew.editSurvey.get(0).click();
             surveyNew.assertSurveyTitle.shouldHave(text(userMail));
-//            surveyNew.surveyList.get(0).shouldHave(text(userMail));
-
-//            surveyNew.surveyList.get(0).click();
 
         SurveyUpdate survey = new SurveyUpdate();
             survey.surveyUpdatePage.shouldHave(text("Select a channel to start"));
-
-//        for (int channel = 0; channel < 3; channel++) {
-//            survey.channelList.get(channel).click();
-//            survey.alertCreateChannel.shouldHave(text("Channel was created"));
-//            sleep(3000);
-//        }
             survey.channelList.get(0).click();
             sleep(4000);
 

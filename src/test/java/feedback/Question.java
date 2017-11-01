@@ -28,6 +28,13 @@ public class Question {
     String questionIdText = "Test Id";
     SelenideElement questionText = $("#text");
     String questionTextText = "Question Text";
+    String questionTextScalableForCaseAlert [] = {"Conditions_\"<\" must be < 10 ", "Conditions_\"<=\" must be <= 9 ",
+            "Conditions_\">\" must be > 5 ", "Conditions_\"=\" must be = 10 ", "Conditions_\">=\" must be >= 5 ",
+            "Conditions_\"!=\" must be != 1 "};
+    String questionTextOpenForCaseAlert [] = {"Conditions_\"like%\" must be like% - test",
+            "Conditions_\"%like%\" must be %like% - test_test", "Conditions_\"likeNot%\" must be likeNot% - sandsiv ",
+            "Conditions_\"%likeNot%\" must be %likeNot% - sandsiv_sandsiv"};
+
     SelenideElement questionErrorText = $("#error_text");
     String questionErrorTextText = "Error Question Text";
     SelenideElement lowestValue = $(By.xpath(".//*[@id='configurable-values-panel']/div[2]/div[4]/div/question-options/div[3]/input[2]"));
