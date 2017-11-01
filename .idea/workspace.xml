@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3edffc41-6b29-4035-8201-278cacb8f44f" name="Default" comment="test commit">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/SurveyCreate.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/SurveyCreate.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionAllType_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionAllType_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/sendInvitation100Users.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/sendInvitation100Users.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/SurveyCreate.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/SurveyCreate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java" />
-    </list>
+    <list default="true" id="3edffc41-6b29-4035-8201-278cacb8f44f" name="Default" comment="test commit" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,12 +37,54 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createQuestionToCheckAllCaseAlert_Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createCaseAlerts_Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlerts_Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createQuestionToCheckAllCaseAlert_Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+            <state relative-caret-position="684">
+              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createCaseAlertCondition_Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="copySurveys_Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="266">
+              <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CaseAlert.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1378">
+              <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -69,8 +104,8 @@
       <file leaf-file-name="QuestionType.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/QuestionType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="151" column="87" lean-forward="false" selection-start-line="151" selection-start-column="87" selection-end-line="151" selection-end-column="87" />
+            <state relative-caret-position="731">
+              <caret line="181" column="9" lean-forward="false" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -79,18 +114,8 @@
       <file leaf-file-name="Question.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Question.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="532">
-              <caret line="35" column="76" lean-forward="false" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createQuestionFlow_Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow_Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="12" selection-end-column="22" />
+            <state relative-caret-position="456">
+              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -104,6 +129,11 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>html/body/div[2]/div/div/div/div[2]/form/fieldset/div[2]/div/select/options[2]</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -161,8 +191,11 @@
         <option value="$PROJECT_DIR$/src/test/java/feedback/SurveyCreate.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/SurveyUpdate.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/Question.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/QuestionType.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/createCaseAlerts_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java" />
       </list>
     </option>
   </component>
@@ -303,33 +336,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.createQuestionToCheckAllCaseAlert_Test.testCaseAlert">
-    <configuration default="false" name="sendInviteAndCheckSurveyFlow_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="feedback.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Sandsiv" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="feedback" />
-      <option name="MAIN_CLASS_NAME" value="feedback.sendInviteAndCheckSurveyFlow_Test" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="JUnit.createCaseAlertCondition_Test.createCaseAlertCondition">
     <configuration default="false" name="sendInvitation100Users" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -421,6 +428,32 @@
       <option name="PACKAGE_NAME" value="feedback" />
       <option name="MAIN_CLASS_NAME" value="feedback.createQuestionToCheckAllCaseAlert_Test" />
       <option name="METHOD_NAME" value="testCaseAlert" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="createCaseAlertCondition_Test.createCaseAlertCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="feedback.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Sandsiv" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="feedback" />
+      <option name="MAIN_CLASS_NAME" value="feedback.createCaseAlertCondition_Test" />
+      <option name="METHOD_NAME" value="createCaseAlertCondition" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -822,19 +855,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.sendInviteAndCheckSurveyFlow_Test" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users.sendInviteAndCheckSurveyFlow_Test" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.createQuestionToCheckAllCaseAlert_Test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.createQuestionToCheckAllCaseAlert_Test.testCaseAlert" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users.sendInviteAndCheckSurveyFlow_Test" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.createQuestionToCheckAllCaseAlert_Test" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.createQuestionToCheckAllCaseAlert_Test.testCaseAlert" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.createCaseAlertCondition_Test.createCaseAlertCondition" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.createQuestionToCheckAllCaseAlert_Test.testCaseAlert" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.createQuestionToCheckAllCaseAlert_Test" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users.sendInviteAndCheckSurveyFlow_Test" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.sendInviteAndCheckSurveyFlow_Test" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.createCaseAlertCondition_Test.createCaseAlertCondition" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.createQuestionToCheckAllCaseAlert_Test.testCaseAlert" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.createQuestionToCheckAllCaseAlert_Test" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users.sendInviteAndCheckSurveyFlow_Test" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users" />
       </list>
     </recent_temporary>
   </component>
@@ -869,7 +902,7 @@
       <workItem from="1508240163287" duration="5071000" />
       <workItem from="1508844289910" duration="5611000" />
       <workItem from="1509463480441" duration="659000" />
-      <workItem from="1509529594741" duration="2524000" />
+      <workItem from="1509529594741" duration="10602000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1504873911857</created>
@@ -882,39 +915,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="createQuestionToCheckAllCaseAlert_Test - 2017.11.01 at 12h 01m 50s.xml">
-      <configuration name="createQuestionToCheckAllCaseAlert_Test" configurationId="JUnit" />
+    <history-entry file="createCaseAlertCondition_Test_createCaseAlertCondition - 2017.11.01 at 14h 46m 53s.xml">
+      <configuration name="createCaseAlertCondition_Test.createCaseAlertCondition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createCaseAlertCondition_Test_createCaseAlertCondition - 2017.11.01 at 15h 24m 29s.xml">
+      <configuration name="createCaseAlertCondition_Test.createCaseAlertCondition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createCaseAlertCondition_Test_createCaseAlertCondition - 2017.11.01 at 15h 26m 44s.xml">
+      <configuration name="createCaseAlertCondition_Test.createCaseAlertCondition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createCaseAlertCondition_Test_createCaseAlertCondition - 2017.11.01 at 15h 32m 29s.xml">
+      <configuration name="createCaseAlertCondition_Test.createCaseAlertCondition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createCaseAlertCondition_Test_createCaseAlertCondition - 2017.11.01 at 15h 38m 48s.xml">
+      <configuration name="createCaseAlertCondition_Test.createCaseAlertCondition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createCaseAlertCondition_Test_createCaseAlertCondition - 2017.11.01 at 15h 42m 28s.xml">
+      <configuration name="createCaseAlertCondition_Test.createCaseAlertCondition" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createCaseAlertCondition_Test_createCaseAlertCondition - 2017.11.01 at 15h 48m 21s.xml">
+      <configuration name="createCaseAlertCondition_Test.createCaseAlertCondition" configurationId="JUnit" />
     </history-entry>
     <history-entry file="createQuestionToCheckAllCaseAlert_Test_testCaseAlert - 2017.11.01 at 12h 26m 20s.xml">
       <configuration name="createQuestionToCheckAllCaseAlert_Test.testCaseAlert" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="sendInvitation100Users - 2017.10.24 at 15h 11m 01s.xml">
-      <configuration name="sendInvitation100Users" configurationId="JUnit" />
+    <history-entry file="createQuestionToCheckAllCaseAlert_Test_testCaseAlert - 2017.11.01 at 12h 31m 38s.xml">
+      <configuration name="createQuestionToCheckAllCaseAlert_Test.testCaseAlert" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="sendInvitation100Users_sendInviteAndCheckSurveyFlow_Test - 2017.10.24 at 15h 13m 31s.xml">
-      <configuration name="sendInvitation100Users.sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="sendInvitation100Users_sendInviteAndCheckSurveyFlow_Test - 2017.10.24 at 15h 23m 51s.xml">
-      <configuration name="sendInvitation100Users.sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="sendInviteAndCheckSurveyFlow_Test - 2017.10.24 at 14h 36m 59s.xml">
-      <configuration name="sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="sendInviteAndCheckSurveyFlow_Test - 2017.10.24 at 14h 38m 58s.xml">
-      <configuration name="sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="sendInviteAndCheckSurveyFlow_Test - 2017.10.24 at 14h 40m 09s.xml">
-      <configuration name="sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="sendInviteAndCheckSurveyFlow_Test - 2017.10.24 at 14h 42m 05s.xml">
-      <configuration name="sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="sendInviteAndCheckSurveyFlow_Test - 2017.10.24 at 14h 43m 51s.xml">
-      <configuration name="sendInviteAndCheckSurveyFlow_Test" configurationId="JUnit" />
+    <history-entry file="createQuestionToCheckAllCaseAlert_Test_testCaseAlert - 2017.11.01 at 12h 43m 57s.xml">
+      <configuration name="createQuestionToCheckAllCaseAlert_Test.testCaseAlert" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86708000" />
+    <option name="totallyTimeSpent" value="94786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2869" y="-11" width="2902" height="1582" extended-state="6" />
@@ -923,19 +956,19 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32580262" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3244026" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32699168" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29978275" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29905865" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05141202" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.104996376" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2039146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2039146" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1111,13 +1144,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="891">
-          <caret line="54" column="5" lean-forward="true" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/st/CaseAlertProd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1520">
@@ -1202,6 +1228,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1672">
           <caret line="51" column="63" lean-forward="false" selection-start-line="51" selection-start-column="63" selection-end-line="51" selection-end-column="63" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1237,6 +1264,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1259,16 +1287,8 @@
         <state relative-caret-position="266">
           <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1277,24 +1297,8 @@
         <state relative-caret-position="152">
           <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlerts_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1342,25 +1346,59 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Question.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="532">
-          <caret line="35" column="76" lean-forward="false" selection-start-line="35" selection-start-column="76" selection-end-line="35" selection-end-column="76" />
+        <state relative-caret-position="456">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/QuestionType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="151" column="87" lean-forward="false" selection-start-line="151" selection-start-column="87" selection-end-line="151" selection-end-column="87" />
+        <state relative-caret-position="731">
+          <caret line="181" column="9" lean-forward="false" selection-start-line="181" selection-start-column="9" selection-end-line="181" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlerts_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+        <state relative-caret-position="684">
+          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="10" column="35" lean-forward="false" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1378">
+          <caret line="76" column="24" lean-forward="true" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

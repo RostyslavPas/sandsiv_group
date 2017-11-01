@@ -25,6 +25,35 @@ public class CaseAlert {
     int caseAlert = ((int)(Math.random()*10000));
     String textCaseAlertName = "testNameForCaseAlert" + caseAlert;
 
+    ElementsCollection addCaseAlertCondition = $$(".btn.btn-link.btn-xs");
+    SelenideElement chooseAlertConditionType = $(By.xpath(".//*[@id='type']/option[1]"));
+    SelenideElement chooseAlertConditionType1 = $(By.xpath(".//*[@id='type']/option[2]"));
+    SelenideElement btnAddCondition = $(".ladda-button.btn.btn-primary");
+
+    SelenideElement questionExternalID = $("#question");
+    SelenideElement answerValue = $("#value");
+    SelenideElement joinCondition = $(By.xpath(".//*[@id='alert_condition_link_condition']/option[2]"));
+    ElementsCollection btnSave = $$(".ladda-button.btn.btn-primary");
+    SelenideElement alertSave = $(".noty_message");
+    String textAlert = "Case alert condition was successfully saved";
+
+    String externalID [] = {"Conditions_\"<\"", "Conditions_\"<=\"", "Conditions_\">\"", "Conditions_\"=\"",
+            "Conditions_\">=\"", "Conditions_\"!=\"", "Conditions_\"like%\"", "Conditions_\"%like%\"",
+            "Conditions_\"likeNot%\"", "Conditions_\"%likeNot%\""};
+    String answerValueText [] = {"10", "9", "5", "10", "5", "1", "test", "test_test", "sandsiv", "sandsiv_sandsiv"};
+
+    SelenideElement element1 = $(By.xpath("//option[@value='<']"));
+    SelenideElement element2 = $(By.xpath("//option[@value='<=']"));
+    SelenideElement element3 = $(By.xpath("//option[@value='>']"));
+    SelenideElement element4 = $(By.xpath("//option[@value='=']"));
+    SelenideElement element5 = $(By.xpath("//option[@value='>=']"));
+    SelenideElement element6 = $(By.xpath("//option[@value='!=']"));
+    SelenideElement element7 = $(By.xpath("//option[@value='like%']"));
+    SelenideElement element8 = $(By.xpath("//option[@value='%like%']"));
+    SelenideElement element9 = $(By.xpath("//option[@value='likeNot%']"));
+    SelenideElement element10 = $(By.xpath("//option[@value='%likeNot%']"));
+
+
     public void createCaseAlert(){
         CaseAlert caseAlert = new CaseAlert();
         caseAlert.menuGlobalSetting.get(3).click();
@@ -38,26 +67,54 @@ public class CaseAlert {
         caseAlert.saveCaseAlertSuccess.shouldHave(text(caseAlert.textAlertSuccess));
     }
     public void createCaseAlertCondition(){
-        SelenideElement questionExternalID = $("#question");
-        questionExternalID.setValue("1");
-        SelenideElement alertCondition = $(By.xpath(".//*[@id='alert_condition_comparison']/option[2]"));
-        alertCondition.click();
-        SelenideElement answerValue = $("#value");
-        answerValue.setValue("55");
-        SelenideElement joinCondition = $(By.xpath(".//*[@id='alert_condition_link_condition']/option[2]"));
-        joinCondition.click();
-        ElementsCollection btnSave = $$(".ladda-button.btn.btn-primary");
-        btnSave.get(1).click();
-        sleep(3000);
-        SelenideElement alertSave = $(".noty_message");
-        String textAlert = "Case alert condition was successfully saved";
-        alertSave.shouldHave(text(textAlert));
+
+        for (int conditionsAnswer = 0; conditionsAnswer <= 9 ; conditionsAnswer++) {
+
+            addCaseAlertCondition.get(1).click();
+            sleep(2000);
+            chooseAlertConditionType.click();
+            btnAddCondition.click();
+            sleep(2000);
+
+            questionExternalID.setValue(externalID[conditionsAnswer]);
+
+            if (conditionsAnswer == 0){
+                element1.click();
+            }
+            if (conditionsAnswer == 1){
+                element2.click();
+            }
+            if (conditionsAnswer == 2){
+                element3.click();
+            }
+            if (conditionsAnswer == 3){
+                element4.click();
+            }
+            if (conditionsAnswer == 4){
+                element5.click();
+            }
+            if (conditionsAnswer == 5){
+                element6.click();
+            }
+            if (conditionsAnswer == 6){
+                element7.click();
+            }
+            if (conditionsAnswer == 7){
+                element8.click();
+            }
+            if (conditionsAnswer == 8){
+                element9.click();
+            }
+            if (conditionsAnswer == 9){
+                element10.click();
+            }
+            answerValue.setValue(answerValueText[conditionsAnswer]);
+            joinCondition.click();
+            btnSave.get(1).click();
+            sleep(3000);
+            alertSave.shouldHave(text(textAlert));
+
+        }
     }
-
-
-    ElementsCollection addCaseAlertCondition = $$(".btn.btn-link.btn-xs");
-    SelenideElement chooseAlertConditionType = $(By.xpath(".//*[@id='type']/option[1]"));
-    SelenideElement chooseAlertConditionType1 = $(By.xpath(".//*[@id='type']/option[2]"));
-    SelenideElement btnAddCondition = $(".ladda-button.btn.btn-primary");
 
 }
