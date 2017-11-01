@@ -53,6 +53,11 @@ public class CaseAlert {
     SelenideElement element9 = $(By.xpath("//option[@value='likeNot%']"));
     SelenideElement element10 = $(By.xpath("//option[@value='%likeNot%']"));
 
+    ElementsCollection btnDelCaseAlert = $$(".btn.btn-link.btn-xs");
+    SelenideElement btnConfirmDelCaseAlert = $(".btn.ng-binding.btn-primary");
+    SelenideElement messageAlert = $(".noty_message");
+    String caseAlertSuccessfullyDel = "Case alert was successfully deleted";
+
 
     public void createCaseAlert(){
         CaseAlert caseAlert = new CaseAlert();
@@ -65,6 +70,7 @@ public class CaseAlert {
         caseAlert.pressCaseAlertMail.setValue(caseAlert.userMail);
         caseAlert.btnSaveCaseAlert.click();
         caseAlert.saveCaseAlertSuccess.shouldHave(text(caseAlert.textAlertSuccess));
+        sleep(2000);
     }
     public void createCaseAlertCondition(){
 
@@ -117,4 +123,12 @@ public class CaseAlert {
         }
     }
 
+    public void delCaseAlert(){
+        for (int testCaseAlert = 0; testCaseAlert < 6; testCaseAlert++) {
+            btnDelCaseAlert.get(0).click();
+            btnConfirmDelCaseAlert.click();
+            messageAlert.shouldHave(text(caseAlertSuccessfullyDel));
+            sleep(2000);
+        }
+    }
 }

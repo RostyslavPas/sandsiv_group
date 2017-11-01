@@ -15,7 +15,8 @@ public class createQuestionToCheckAllCaseAlert_Test {
             question.QuestionTypeScalableForCaseAlert();
             question.QuestionTypeOpenForCaseAlert();
             question.QuestionTypeFinishSurvey();
-
-
+        CaseAlert caseAlert = new CaseAlert();
+            caseAlert.createCaseAlert();
+            caseAlert.createCaseAlertCondition();
     }
 }
