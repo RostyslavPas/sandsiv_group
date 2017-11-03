@@ -11,7 +11,8 @@ import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class CaseAlert {
-    ElementsCollection menuGlobalSetting = $$(".dropdown-menu>li>a");
+    ElementsCollection menuGlobalSettingCI = $$(".dropdown-menu>li>a");
+
     ElementsCollection menuCaseAlertSetting = $$(".pointer>a");
     SelenideElement btnAddCaseAlert = $(".btn.btn-success.btn-invitation.pull-right");
     SelenideElement caseAlertName = $("#name");
@@ -61,7 +62,7 @@ public class CaseAlert {
 
     public void createCaseAlert(){
         CaseAlert caseAlert = new CaseAlert();
-        caseAlert.menuGlobalSetting.get(3).click();
+//        caseAlert.menuGlobalSettingCI.get(3).click();    if testing ST
         sleep(4000);
         caseAlert.menuCaseAlertSetting.get(2).click();
         caseAlert.btnAddCaseAlert.click();

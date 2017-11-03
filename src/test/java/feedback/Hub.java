@@ -1,4 +1,4 @@
-package st;
+package feedback;
 
 import com.codeborne.selenide.SelenideElement;
 import org.junit.Test;
@@ -35,22 +35,22 @@ public class Hub {
     }
     public void pageSurvey(){
         open(pageSurvey);
-        sleep(15000);
+        sleep(20000);
     }
     public void pageExport(){
         open(pageExport);
-        sleep(10000);
+        sleep(20000);
     }
     public void pageImport(){
         open(pageImport);
-        sleep(10000);
+        sleep(20000);
     }
     public void pageGlobalSetting(){
         open(pageGlobalSetting);
-        sleep(10000);
+        sleep(20000);
     }
     public void pageCustomers(){
         open(pageCustomer);
-        sleep(10000);
+        sleep(20000);
     }
 }

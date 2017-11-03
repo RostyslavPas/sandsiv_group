@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+<meta charset="utf-8" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="max-age=0" http-equiv="cache-control" />
+<meta content="no-cache" http-equiv="cache-control" />
+<meta content="0" http-equiv="expires" />
+<meta content="Tue, 01 Jan 1980 1:00:00 GMT" http-equiv="expires" />
+<meta content="no-cache" http-equiv="pragma" />
+<script async="" charset="utf-8" src="https://v2.zopim.com/?2EMg9n2aUvZPA4wxYjx4vUMBUEttsLFJ" type="text/javascript"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/dist/feedback.js" src="/dist/feedback.js?v.1.7.52"></script><base href="/feedback/" />
+<title ng-bind="'Feedback :: ' + pageTitle" class="ng-binding">Feedback :: Import History</title>
+<script src="/js/vendor_feedback/requirejs/require.js"></script>
+<link href="/bundles/xirclxirclfeedback/css/app.css?v.1.7.52" rel="stylesheet" />
+    <!-- Start of sandsiv Zendesk Widget script -->
+    <iframe src="javascript:false" title="" style="width: 0; height: 0; border: 0; position: absolute; top: -9999px"></iframe><script>
+        // Start of sandsiv Zendesk Widget script
+        var jwtUrl = '/zendesk_jwt';
+        var xhr = new XMLHttpRequest(jwtUrl);
+        xhr.open('GET', jwtUrl, false);
+        xhr.send();
+        window.zESettings = {
+            authenticate: { jwt: xhr.responseText }
+        };
+        /*&lt;![CDATA[*/
+        window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&amp;&amp;(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="support.sandsiv.com",this.zEQueue=a,this.body.appendChild(e)},o.write('&lt;body onload="document._l();"&gt;'),o.close()}();
+        /*]]&gt;*/
+        zE(function() {
+            var identifyData = parseJwt(xhr.responseText);
+            zE.identify({
+              name: identifyData.name || '',
+              email: identifyData.email || ''
+            });
+        });
+        function parseJwt(token) {
+            var base64Url = token.split('.')[1];
+            var base64 = base64Url.replace('-', '+').replace('_', '/');
+            return JSON.parse(window.atob(base64));
+        }
+    </script>
+    <!-- End of sandsiv Zendesk Widget script -->
+<style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled &gt; .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_text-input-ios {position: absolute !important;top: -100000px !important;left: -100000px !important;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style type="text/css"></style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style><style media="print" type="text/css">.tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}</style><style media="print" type="text/css">.tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}</style></head>
+<body class="modal-open"><div class="zopim" __jx__id="___$_64 ___$_64" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000002; width: 180px; height: 30px; bottom: 0px; left: 10px; display: none;" data-test-id="ChatWidgetButton"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetButton-iframe"></iframe></div><div class="zopim" __jx__id="___$_4 ___$_4" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000001; bottom: 0px; left: 15px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: none; width: 350px; height: 450px; box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);" data-test-id="ChatWidgetWindow"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetWindow-iframe"></iframe></div>            <link href="/bundles/xirclcore/css/navbar.css?v.1.7.52" rel="stylesheet" />
+    
+            <div role="navigation" class="navbar navbar-default navbar-static-top" id="top-navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">
+                    Navigation
+                </span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+                <img src="/bundles/xirclcore/images/vochub_logo_svg.svg" alt="Voc Hub logo" />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+                            <div class="container">
+                    <ul class="nav navbar-nav navbar-left">
+                                                            <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <img src="/bundles/xirclcore/images/apps/feedback.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">
+                    VOC Feedback
+                    <b class="caret"></b>
+                </p>
+                <p class="app-description">
+                <span counter-initial-value="254" counter-id="feedback-dashboard-counter" counter="" class="ng-binding ng-isolate-scope">254</span>
+                    surveys
+                </p>
+            </div>
+        </a>
+
+                <ul class="dropdown-menu">
+    <li><a href="/feedback/#/survey_list">Surveys</a></li>
+    <li class="divider" role="presentation"></li>
+    <li><a href="/feedback/#/export/results">Export</a></li>
+    <li><a href="/feedback/#/import">Import</a></li>
+    <li class="divider" role="presentation"></li>
+    <li><a href="/feedback/#/settings/advanced">Global settings</a></li>
+    <li class="divider" role="presentation"></li>
+    <li><a href="/feedback/#/customers">Customers</a></li>
+</ul>
+    </li>
+
+                                                                                <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <img width="15px" src="/bundles/xirclcore/images/apps/mine.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">
+                    VOC Mine
+                    <b class="caret"></b>
+                </p>
+                <p class="app-description">0 queries</p>
+            </div>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/store/upload/">Upload data</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/mine/query/#list-queries">Queries</a></li>
+            <li class="divider" role="presentation"></li>
+                        <li>
+                <a href="/mine/dictionary/synonyms/">Synonym dictionaries</a>
+            </li>
+            <li>
+                <a href="/mine/dictionary/stop-words/">Stop word dictionaries</a>
+            </li>
+        </ul>
+    </li>
+                                                                                <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <img src="/bundles/xirclcore/images/apps/classify.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">
+                    VOC Classify
+                    <b class="caret"></b>
+                </p>
+                <p class="app-description">0 classifiers</p>
+            </div>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/classify/files/">Upload data</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/classify/texts/training">Training texts</a></li>
+            <li><a href="/classify/texts/verification">Verification texts</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/classify/classifier/">Classifiers</a></li>
+                                    <li><a href="/classify/single-text/">Single text processing</a></li>
+            <li><a href="/classify/stats/overview">Statistics</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/classify/output/">Export data</a></li>
+        </ul>
+    </li>
+                                                                                    <li class="dropdown">
+        <a href="/dashboard/">
+            <img src="/bundles/xirclcore/images/apps/visual.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">VOC Visual</p>
+                <p class="app-description">
+                <span counter-initial-value="1" counter-id="visual-dashboard-counter" counter="" class="ng-binding ng-isolate-scope">1</span>
+                    dashboards
+                </p>
+            </div>
+        </a>
+    </li>
+                                                                                <li>
+        <a href="/xqare/">
+            <img src="/bundles/xirclcore/images/apps/monitoring.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">VOC Monitoring</p>
+                <p class="app-description">45 counters</p>
+            </div>
+        </a>
+    </li>
+                                                                                <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <img src="/bundles/xirclcore/images/apps/labs.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">
+                    VOC Labs
+                    <b class="caret"></b>
+                </p>
+                <p class="app-description">2 products</p>
+            </div>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/labs/clustering">Clustering</a></li>
+            <li><a href="/labs/predict">Prediction</a></li>
+        </ul>
+    </li>
+                                            </ul>
+                </div>
+                <ul style="position: absolute; right: 15px; top: 0px; margin-right: 0!important;" class="nav navbar-nav navbar-right">
+                                            <li>
+                            <a id="voc-notifications-button" tabindex="0" href="#">
+                                <div class="bell-container">
+                                    <span class="glyphicon glyphicon-bell"></span>
+                                    <span class="blue-dot has-notifications hide"></span>
+                                </div>
+                            </a>
+                            <div id="voc-notifications-container" class="popover bottom">
+                                <div class="arrow"></div>
+                                <h3 class="popover-title">
+                                    Notifications
+                                </h3>
+                                <div class="popover-content">
+                                    <div class="has-no-notifications">
+                                        <span style="font-size: 48px;" class="glyphicon glyphicon-bell"></span>
+                                        <br />
+                                        No new notifications
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#" id="user-dropdown-menu">
+                                Rostislav
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/configuration/">Settings</a></li>
+                                <li><a href="/user-profile">Profile</a></li>
+                                <li><a href="/about">About Voc Hub</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                                    </ul>
+                    </div>
+    </div>
+</div>
+            
+    <main id="xircl-feedback-bundle" role="main">
+        <div class="container">
+            <!--Main View-->
+            <div class="xircl-alerts"></div>
+            <authorization></authorization>
+            <!-- ngView:  --><div ng-hide="viewLoading" ng-view="" class="ng-scope"><div class="row ng-scope">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+
+            <div class="panel-heading clearfix no-paddings">
+                <h5 class="pull-left padding-l-15">
+                    <strong>Import History</strong>
+                </h5>
+                <div class="pull-right no-paddings">
+                    <div class="btn-group">
+                        <button class="btn btn-default btn-in-panel pull-right" type="button" ng-click="addImport()">
+                            <span class="glyphicon glyphicon-plus color-green"></span>
+                            Add Import
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-show="(loadingLocal)" class="loader ng-hide">Loading...</div>
+
+            <p class="alert alert-danger alert-danger-light text-center no-border no-paddings margin-t-20 margin-b-20 ng-hide" ng-show="!imports &amp;&amp; !loadingLocal">
+                Import History is empty.
+            </p>
+
+            <table sticky-header="" ng-show="(imports &amp;&amp; imports.length &gt; 0) &amp;&amp; !loadingLocal" class="table table-hover" style="padding: 0px;">
+                <thead class="tableFloatingHeaderOriginal">
+                <tr>
+                    <th class="padding-l-15">Created</th>
+                    <th>Survey id</th>
+                    <th class="w-25pc">Survey Name</th>
+                    <th>Channel</th>
+                    <th>State</th>
+                    <th>Original File</th>
+                    <th>Completed</th>
+                    <th>Import Log File</th>
+                </tr>
+                </thead><thead class="tableFloatingHeader" style="display: none; opacity: 0;">
+                <tr>
+                    <th class="padding-l-15">Created</th>
+                    <th>Survey id</th>
+                    <th class="w-25pc">Survey Name</th>
+                    <th>Channel</th>
+                    <th>State</th>
+                    <th>Original File</th>
+                    <th>Completed</th>
+                    <th>Import Log File</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">27-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">11:14</span>
+                    </td>
+                    <td class="ng-binding">421</td>
+                    <td class="word-break ng-binding">QA_Test_Sandsiv::27.10.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1161/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">27-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">11:14</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1161/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">27-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">11:13</span>
+                    </td>
+                    <td class="ng-binding">421</td>
+                    <td class="word-break ng-binding">QA_Test_Sandsiv::27.10.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1160/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">27-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">11:14</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1160/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">26-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">15:22</span>
+                    </td>
+                    <td class="ng-binding">410</td>
+                    <td class="word-break ng-binding">QA_Test_Sandsiv::26.10.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1159/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">26-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">15:23</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1159/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">26-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">15:22</span>
+                    </td>
+                    <td class="ng-binding">410</td>
+                    <td class="word-break ng-binding">QA_Test_Sandsiv::26.10.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1158/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">26-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">15:22</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1158/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">25-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">15:45</span>
+                    </td>
+                    <td class="ng-binding">384</td>
+                    <td class="word-break ng-binding">QA_Test_Sandsiv::25.10.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1157/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">25-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">15:46</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1157/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">25-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">14:52</span>
+                    </td>
+                    <td class="ng-binding">395</td>
+                    <td class="word-break ng-binding">Test support sandsiv 25.10.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1156/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">25-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">14:53</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1156/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">25-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">14:52</span>
+                    </td>
+                    <td class="ng-binding">395</td>
+                    <td class="word-break ng-binding">Test support sandsiv 25.10.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1155/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">25-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">14:53</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1155/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">13-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">13:55</span>
+                    </td>
+                    <td class="ng-binding"></td>
+                    <td class="word-break ng-binding"></td>
+                    <td class="ng-binding"></td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1154/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">13-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">13:56</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1154/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">06-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">15:19</span>
+                    </td>
+                    <td class="ng-binding">376</td>
+                    <td class="word-break ng-binding">test st ai 06..10..17</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1153/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">06-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">15:20</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1153/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">06-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">14:54</span>
+                    </td>
+                    <td class="ng-binding">376</td>
+                    <td class="word-break ng-binding">test st ai 06..10..17</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1152/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">06-10-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">14:55</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="https://staging-rest.sandsiv.com/api/rest/import/1152/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJlbWFpbCI6InJvc3Rpc2xhdi5wYXNAc2FuZHNpdi5jb20iLCJpZCI6MjMsImN1bHR1cmUiOiJlbl9FTiIsImxhc3RfbmFtZSI6IlBhcyIsImZpcnN0X25hbWUiOiJSb3N0aXNsYXYiLCJzZXNzaWQiOiIxNzkxYWYzYy1hMGRlLTRhZmEtYTczYy03NGQ1ZDQ5MDZhYjQiLCJlbnRlcnByaXNlIjp7InNsdWciOiJzdGFnaW5nIiwiaWQiOjEwMDAsIm5hbWUiOiJzdGFnaW5nIn19.ehPAWT1VW14kE6B_3mC4LlCG4M5wvE5Qbsed4Eifz9Q" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports -->
+                </tbody>
+            </table>
+        </div>
+
+        <div ng-show="imports &amp;&amp; !loading" class="row">
+            <pagination-template>
+<div class="pagination-container noselect col-sm-12">
+    <ul class="pagination">
+        <li class="disabled">
+            <a ng-href="" class="no-borders">
+                <span class="entries-start ng-binding">1</span> –
+                <span class="entries-end ng-binding">10</span>
+                of
+                <span class="entries-total ng-binding">1161</span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="pagination-md pagination ng-isolate-scope ng-valid" ng-model="currentPage" total-items="itemsTotal" boundary-links="true" last-text="»" first-text="«" next-text="›" previous-text="‹" max-size="5" rotate="false" items-per-page="selectedAction ? selectedAction.id != '' ? selectedAction.id : itemsTotal : 10" ng-show="pages &gt; 1">
+  <!-- ngIf: boundaryLinks --><li ng-class="{disabled: noPrevious()}" ng-if="boundaryLinks" class="ng-scope disabled"><a ng-click="selectPage(1)" href="" class="ng-binding">«</a></li><!-- end ngIf: boundaryLinks -->
+  <!-- ngIf: directionLinks --><li ng-class="{disabled: noPrevious()}" ng-if="directionLinks" class="ng-scope disabled"><a ng-click="selectPage(page - 1)" href="" class="ng-binding">‹</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope active"><a ng-click="selectPage(page.number)" href="" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">...</a></li><!-- end ngRepeat: page in pages track by $index -->
+  <!-- ngIf: directionLinks --><li ng-class="{disabled: noNext()}" ng-if="directionLinks" class="ng-scope"><a ng-click="selectPage(page + 1)" href="" class="ng-binding">›</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngIf: boundaryLinks --><li ng-class="{disabled: noNext()}" ng-if="boundaryLinks" class="ng-scope"><a ng-click="selectPage(totalPages)" href="" class="ng-binding">»</a></li><!-- end ngIf: boundaryLinks -->
+</ul>
+
+    <set-page model="pageNumber" ng-show="pages &gt; 1" class="ng-isolate-scope"><div class="pagination-error-block">
+    <div class="alert alert-warning text-center pagination-error-content ng-hide" ng-show="pageNumberError">
+        <p>Not valid page number!</p>
+    </div>
+</div>
+<div class="pagination">
+    <form ng-submit="setPage(pageNo)" class="ng-pristine ng-valid">
+        <div class="input-group">
+        <span class="input-group-btn">
+            <button disabled="disabled" type="button" class="btn btn-default">Go to the page: </button>
+        </span>
+            <input type="text" name="pageNo" ng-model="pageNo" class="form-control ng-pristine ng-untouched ng-valid" />
+            <span class="input-group-btn">
+            <button type="submit" data-e2e="setPageNumber" class="btn btn-primary">
+                <span class="glyphicon glyphicon-ok"></span>
+            </button>
+        </span>
+        </div>
+    </form>
+</div></set-page>
+</div>
+</pagination-template>
+        </div>
+    </div>
+</div>
+</div>
+            <notifications-template><div data-ng-controller="NotificationCntr" class="messagesList ng-scope">
+    <p ng-hide="!notifications" ng-show="showNotices()" class="ng-hide">
+    </p><!-- ngRepeat: notification in notifications -->
+    <p></p>
+</div>
+</notifications-template>
+            <scrollup-template><a class="scrollup" ng-href=""><button class="btn btn-primary"><span class="glyphicon glyphicon-chevron-up"></span></button></a></scrollup-template>
+        </div>
+    </main>
+
+<script>
+    window.feedbackApiUrl = "https://feedback-admin55.sandsiv.com/";
+    window.feedbackV2ApiUrl = "https://staging-rest.sandsiv.com/";
+    window.ssoApiUrl = "https://st-sso.sandsiv.com/api/";
+    window.enterpriseSlug = "staging";
+    window.googleAnalyticsEnabled = false;
+    window.uxMetricsEnabled = false;
+    window.xirclxirclfeedback = '/bundles/xirclxirclfeedback/';
+    window.isTwig = true;
+    require.config({
+        urlArgs: 'v.1.7.52'
+    });
+    require(["/dist/feedback.js"], function () {
+        require(["boot"]);
+    });
+</script>
+<heatmap></heatmap>
+
+
+<script>
+    (function(d,s){var z=$zopim,$=z.s= d.createElement(s),e=d.getElementsByTagName(s)[0];
+    $.async=!0;$.setAttribute('charset','utf-8');
+    $.src='https://v2.zopim.com/?2EMg9n2aUvZPA4wxYjx4vUMBUEttsLFJ';
+    z.t=+new Date;$. type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+  </script><div><iframe data-reactroot="" id="automaticAnswers" class="zEWidget-automaticAnswers" tabindex="-1" style="border: medium none; background: transparent none repeat scroll 0% 0%; z-index: 2147483647; transform: translateZ(0px); position: fixed; opacity: 0; right: 0px; bottom: 0px; margin: 0px 6px 6px 0px; height: 188px; width: 410px; transition-property: none; transition-timing-function: unset; top: -9999px;"></iframe></div><div><iframe data-reactroot="" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: medium none; background: transparent none repeat scroll 0% 0%; z-index: 999998; transform: translateZ(0px); position: fixed; opacity: 1; left: 0px; bottom: 0px; width: 139px; height: 48px; margin: 10px 20px; transition-property: opacity, width, height, bottom; transition-timing-function: ease-out; transition-duration: 300ms;"></iframe></div><div><iframe data-reactroot="" id="ipm" class="zEWidget-ipm" tabindex="-1" style="border: medium none; background: transparent none repeat scroll 0% 0%; z-index: 2147483647; transform: translateZ(0px); position: fixed; opacity: 0; right: 0px; top: -245px; margin-right: 15px; margin-top: 0px; height: 195px; width: 395px; transition-property: none; transition-timing-function: unset;"></iframe></div><div><iframe data-reactroot="" id="webWidget" tabindex="-1" class="zEWidget-webWidget " style="border: medium none; background: transparent none repeat scroll 0% 0%; z-index: 999999; transform: translateZ(0px); position: fixed; opacity: 0; left: 0px; bottom: 0px; width: 357px; margin-left: 15px; margin-right: 15px; height: 15px; transition-property: none; transition-timing-function: unset; top: -9999px;"></iframe></div><style></style><div ng-style="{'z-index': 1040 + (index &amp;&amp; 1 || 0) + index*10}" ng-class="{in: animate}" class="modal-backdrop fade  in" modal-backdrop="" style="z-index: 1040;"></div><div ng-click="close($event)" ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-class="{in: animate}" class="modal fade ng-isolate-scope modal-wide in" role="dialog" tabindex="-1" modal-window="" window-class="modal modal-wide" index="0" animate="animate" style="z-index: 1050; display: block;">
+    <div ng-class="{'modal-sm': size == 'sm', 'modal-lg': size == 'lg'}" class="modal-dialog"><div modal-transclude="" class="modal-content"><div class="modal-content ng-scope">
+    <div class="modal-header">
+        <div class="bootstrap-dialog-header">
+            <button ng-click="cancel()" class="close" type="button">×</button>
+            <h4 class="modal-title">Import questionnaires for the survey</h4>
+        </div>
+    </div>
+    <div class="modal-body modal-body-add-import">
+        <div class="alert alert-info">
+            <strong>
+                <span class="glyphicon glyphicon-info-sign"></span> Info
+            </strong>
+
+            <p>Choose a file to import (txt or csv). Please consider export or backup your data first</p>
+        </div>
+
+        <form novalidate="" role="form" class="form-horizontal ng-pristine ng-invalid ng-invalid-required" name="importForm" ng-enter-submit="">
+            <fieldset ng-disabled="loading==true">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="survey">Survey</label>
+
+                    <div class="col-sm-9">
+                        <select ng-show="!surveyGroupsLoading" ng-model="survey" ng-options="s.name | trimFilter:80 for s in $parent.surveyGroup" ng-change="chooseChannel()" class="form-control opt-w-70 ng-pristine ng-untouched ng-valid" id="survey" name="survey"><option value="" class="">Without survey</option><option value="0" label="testCopySurvey">testCopySurvey</option><option value="1" label="First test survey">First test survey</option><option value="2" label="CaseAlerts test OG 2017.10.31">CaseAlerts test OG 2017.10.31</option><option value="3" label="harakiri traceback test">harakiri traceback test</option><option value="4" label="Test survey 27.10.2017 2rd">Test survey 27.10.2017 2rd</option><option value="5" label="Test  survey 27.10.2017">Test  survey 27.10.2017</option><option value="6" label="QA_Test_Sandsiv::27.10.2017">QA_Test_Sandsiv::27.10.2017</option><option value="7" label="Test  survey 26.10.2017">Test  survey 26.10.2017</option><option value="8" label="QA_Test_Sandsiv::26.10.2017">QA_Test_Sandsiv::26.10.2017</option><option value="9" label="TestSurveyQA4_Support">TestSurveyQA4_Support</option><option value="10" label="Test support sandsiv 25.10.2017">Test support sandsiv 25.10.2017</option><option value="11" label="QA_Test_Sandsiv::25.10.2017">QA_Test_Sandsiv::25.10.2017</option><option value="12" label="25.10.17 ST 9.3.1 Artem">25.10.17 ST 9.3.1 Artem</option><option value="13" label="test-1">test-1</option><option value="14" label="qqqqqqqqqqqqqqqq">qqqqqqqqqqqqqqqq</option><option value="15" label="survey ST artem 10.10.17">survey ST artem 10.10.17</option><option value="16" label="test st ai 09.10.17">test st ai 09.10.17</option><option value="17" label="test st ai 06...10...17">test st ai 06...10...17</option><option value="18" label="test st ai 06..10..17">test st ai 06..10..17</option><option value="19" label="QA_Test_Sandsiv: 06.10.17">QA_Test_Sandsiv: 06.10.17</option><option value="20" label="Test2 support sandsiv 06.10.2017">Test2 support sandsiv 06.10.2017</option><option value="21" label="Test support sandsiv 06.10.2017">Test support sandsiv 06.10.2017</option><option value="22" label="Test QA Sandsiv">Test QA Sandsiv</option><option value="23" label="Testing PATCH method">Testing PATCH method</option><option value="24" label="test st ai 05-10-17 2.0">test st ai 05-10-17 2.0</option><option value="25" label="test st ai 05.10.17">test st ai 05.10.17</option><option value="26" label="Test support sandsiv 05.10.2017">Test support sandsiv 05.10.2017</option><option value="27" label="QA_Test_Sandsiv_04.10.17">QA_Test_Sandsiv_04.10.17</option><option value="28" label="test st ai 04.10.17">test st ai 04.10.17</option><option value="29" label="TestSurveyQA4_Support12">TestSurveyQA4_Support12</option><option value="30" label="test 1">test 1</option><option value="31" label="TestSurveyQA_Support">TestSurveyQA_Support</option><option value="32" label="drty">drty</option><option value="33" label="dfgtre">dfgtre</option><option value="34" label="Test It">Test It</option><option value="35" label="QA_test_SMS_Channel">QA_test_SMS_Channel</option><option value="36" label="ZXx">ZXx</option><option value="37" label="asd">asd</option><option value="38" label="qwe">qwe</option><option value="39" label="TestSurveyQA4_Support2">TestSurveyQA4_Support2</option><option value="40" label="TestSurveyQA4_Support1">TestSurveyQA4_Support1</option><option value="41" label="New_Test_Survey_for_QA_v2">New_Test_Survey_for_QA_v2</option><option value="42" label="New_Test_Survey_for_QA">New_Test_Survey_for_QA</option><option value="43" label="TestItCopy">TestItCopy</option><option value="44" label="QA_Test_Sandsiv_21.09.2017_Copy">QA_Test_Sandsiv_21.09.2017_Copy</option><option value="45" label="QA_Test_Sandsiv_21.09.2017">QA_Test_Sandsiv_21.09.2017</option><option value="46" label="QA_Test_Sandsiv_20.09.2017-release_check">QA_Test_Sandsiv_20.09.2017-release_check</option><option value="47" label="Test Survey Group creation">Test Survey Group creation</option><option value="48" label="Test 190917">Test 190917</option><option value="49" label="QA_Test_Sandsiv_VOC-3124_last_fixed_version">QA_Test_Sandsiv_VOC-3124_last_fixed_version</option><option value="50" label="VOC-3124">VOC-3124</option><option value="51" label="QA_Test_Sandsiv_VOC-3124_v.release_2">QA_Test_Sandsiv_VOC-3124_v.release_2</option><option value="52" label="QA_Test_Sandsiv_VOC-3124_v.release_1">QA_Test_Sandsiv_VOC-3124_v.release_1</option><option value="53" label="QA_Test_Sandsiv_VOC-3124_v.release">QA_Test_Sandsiv_VOC-3124_v.release</option><option value="54" label="QA_Test_Sandsiv_VOC-3124_v.4">QA_Test_Sandsiv_VOC-3124_v.4</option><option value="55" label="QA_Test_Sandsiv_VOC-3124_v.3">QA_Test_Sandsiv_VOC-3124_v.3</option><option value="56" label="VOC-3124">VOC-3124</option><option value="57" label="QA_Test_Sandsiv_VOC-3124_v.2">QA_Test_Sandsiv_VOC-3124_v.2</option><option value="58" label="QA_Test_Sandsiv_VOC-3124">QA_Test_Sandsiv_VOC-3124</option><option value="59" label="QA_Test_Sandsiv_15.09.17">QA_Test_Sandsiv_15.09.17</option><option value="60" label="Test support sandsiv 12.09.2017">Test support sandsiv 12.09.2017</option><option value="61" label="Test 120917 staging">Test 120917 staging</option><option value="62" label="Test 110917">Test 110917</option><option value="63" label="SandSIV Support export bug-fixes test_11.09.17">SandSIV Support export bug-fixes test_11.09.17</option><option value="64" label="Test support sandsiv 11.09.2017 Renamed2">Test support sandsiv 11.09.2017 Renamed2</option><option value="65" label="Test 110917/renamed">Test 110917/renamed</option><option value="66" label="TestSurvey_Export_Process">TestSurvey_Export_Process</option><option value="67" label="Dev_Test_Sandsiv_11.09.17">Dev_Test_Sandsiv_11.09.17</option><option value="68" label="Test 310817">Test 310817</option><option value="69" label="TEST_DARIO_LOG">TEST_DARIO_LOG</option><option value="70" label="Test-VOC2580">Test-VOC2580</option><option value="71" label="QA_Test8_Sandsiv">QA_Test8_Sandsiv</option><option value="72" label="QA_Test7_Sandsiv">QA_Test7_Sandsiv</option><option value="73" label="QA_Test6_Sandsiv">QA_Test6_Sandsiv</option><option value="74" label="QA_Test5_Sandsiv">QA_Test5_Sandsiv</option><option value="75" label="QA_Test4_Sandsiv">QA_Test4_Sandsiv</option><option value="76" label="Test 150817">Test 150817</option><option value="77" label="QA_Test3_Sandsiv">QA_Test3_Sandsiv</option><option value="78" label="OG_test_2017_08_09">OG_test_2017_08_09</option><option value="79" label="QA_Test2_Sandsiv_Copy">QA_Test2_Sandsiv_Copy</option><option value="80" label="QA_Test2_Sandsiv">QA_Test2_Sandsiv</option><option value="81" label="Test 020817">Test 020817</option><option value="82" label="QA_Test1_Sandsiv">QA_Test1_Sandsiv</option><option value="83" label="Retest 010817">Retest 010817</option><option value="84" label="Test 010817">Test 010817</option><option value="85" label="Test support sandsiv 26.06.2017 - Renamed">Test support sandsiv 26.06.2017 - Renamed</option><option value="86" label="TestSurveySupportQA1">TestSurveySupportQA1</option><option value="87" label="Test 130617 clerk">Test 130617 clerk</option><option value="88" label="Test support sandsiv 13.06.2017">Test support sandsiv 13.06.2017</option><option value="89" label="QA Sandsiv Support 13.06.2017">QA Sandsiv Support 13.06.2017</option><option value="90" label="Test 130617">Test 130617</option><option value="91" label="Test 120617 multi">Test 120617 multi</option><option value="92" label="Test support sandsiv 12.06.2017">Test support sandsiv 12.06.2017</option><option value="93" label="QA Sandsiv Support">QA Sandsiv Support</option><option value="94" label="Test 090617">Test 090617</option><option value="95" label="question flow (metadata)">question flow (metadata)</option><option value="96" label="Test 060617">Test 060617</option><option value="97" label="Test support sandsiv 29.05.2017">Test support sandsiv 29.05.2017</option><option value="98" label="Test 290517 staging">Test 290517 staging</option><option value="99" label="TestQASupportSundsiv43681">TestQASupportSundsiv43681</option><option value="100" label="TestQASupport15609">TestQASupport15609</option><option value="101" label="TestQASupport7004">TestQASupport7004</option><option value="102" label="TestQASupport77469">TestQASupport77469</option><option value="103" label="Test 250517 staging with SMS answers">Test 250517 staging with SMS answers</option><option value="104" label="TestQASupport11481">TestQASupport11481</option><option value="105" label="Test 250517">Test 250517</option><option value="106" label="Test support sandsiv 24.05.2017">Test support sandsiv 24.05.2017</option><option value="107" label="Test 240517">Test 240517</option><option value="108" label="Test QA Sandsiv 24.05.2017 Copy">Test QA Sandsiv 24.05.2017 Copy</option><option value="109" label="Test QA Sandsiv 24.05.2017">Test QA Sandsiv 24.05.2017</option><option value="110" label="TestSurvey_Support Check">TestSurvey_Support Check</option><option value="111" label="Yan">Yan</option><option value="112" label="Test support sandsiv 22.05.2017">Test support sandsiv 22.05.2017</option><option value="113" label="Test support sandsiv 18.05.2017 + SMS">Test support sandsiv 18.05.2017 + SMS</option><option value="114" label="Test 180517">Test 180517</option><option value="115" label="Testing static link">Testing static link</option><option value="116" label="Test support sandsiv 15.05.2017">Test support sandsiv 15.05.2017</option><option value="117" label="Copy Test Support">Copy Test Support</option><option value="118" label="Copy Test Support">Copy Test Support</option><option value="119" label="Copy Test QA 11.05.17">Copy Test QA 11.05.17</option><option value="120" label="Test QA 11.05.17">Test QA 11.05.17</option><option value="121" label="Test 110517 staging">Test 110517 staging</option><option value="122" label="TestSurveyQA4_Support_SMS_Copy">TestSurveyQA4_Support_SMS_Copy</option><option value="123" label="Testing SMS Gateway 3">Testing SMS Gateway 3</option><option value="124" label="TestSurveyQA5_Support">TestSurveyQA5_Support</option><option value="125" label="Testing SMS Gateway 2">Testing SMS Gateway 2</option><option value="126" label="Test 030517">Test 030517</option><option value="127" label="copyFromQA4_Support">copyFromQA4_Support</option><option value="128" label="Survey # 2 (test copy from Survey # 1)">Survey # 2 (test copy from Survey # 1)</option><option value="129" label="TestSurveyQA6_Support">TestSurveyQA6_Support</option><option value="130" label="vg2">vg2</option><option value="131" label="Survey # 1 (test)">Survey # 1 (test)</option><option value="132" label="TestSurveyQA4_Support">TestSurveyQA4_Support</option><option value="133" label="vg2804">vg2804</option><option value="134" label="Test 280417">Test 280417</option><option value="135" label="TestSurveyQA4_Support_SMS">TestSurveyQA4_Support_SMS</option><option value="136" label="ID 1 Copy Test">ID 1 Copy Test</option><option value="137" label="TestSurveyQA3_Support">TestSurveyQA3_Support</option><option value="138" label="Testing SMS GW">Testing SMS GW</option><option value="139" label="Test 240417">Test 240417</option><option value="140" label="Test support sandsiv 21.04.2017">Test support sandsiv 21.04.2017</option><option value="141" label="test 210417/new">test 210417/new</option><option value="142" label="test 210417">test 210417</option><option value="143" label="test 200417">test 200417</option><option value="144" label="test 130417 clerk">test 130417 clerk</option><option value="145" label="test 050417">test 050417</option><option value="146" label="test 040417">test 040417</option><option value="147" label="Test support sandsiv 04.04.2017">Test support sandsiv 04.04.2017</option><option value="148" label="test 290317/test">test 290317/test</option><option value="149" label="Test support sandsiv 29.03.2017">Test support sandsiv 29.03.2017</option><option value="150" label="Test 220317">Test 220317</option><option value="151" label="Test replication 2103 final">Test replication 2103 final</option><option value="152" label="2">2</option><option value="153" label="Test support Sandsiv 21.03.2017 staging5">Test support Sandsiv 21.03.2017 staging5</option><option value="154" label="Test support Sandsiv 21.03.2017 staging4">Test support Sandsiv 21.03.2017 staging4</option><option value="155" label="Test support Sandsiv 21.03.2017 staging3">Test support Sandsiv 21.03.2017 staging3</option><option value="156" label="Test support Sandsiv 21.03.2017 staging2">Test support Sandsiv 21.03.2017 staging2</option><option value="157" label="retest replication 200317">retest replication 200317</option><option value="158" label="test 200317">test 200317</option><option value="159" label="copy test 130317">copy test 130317</option><option value="160" label="copy test 140317">copy test 140317</option><option value="161" label="copy test 160317">copy test 160317</option><option value="162" label="copy test 160317">copy test 160317</option><option value="163" label="test 160317mkm">test 160317mkm</option><option value="164" label="test 140317">test 140317</option><option value="165" label="VG20170313">VG20170313</option><option value="166" label="retest 130317">retest 130317</option><option value="167" label="test 130317">test 130317</option><option value="168" label="Test support sandsiv 06.03.2017">Test support sandsiv 06.03.2017</option><option value="169" label="test 060317">test 060317</option><option value="170" label="VG201714">VG201714</option><option value="171" label="retest 090217">retest 090217</option><option value="172" label="test 090217/1">test 090217/1</option><option value="173" label="test 090217">test 090217</option><option value="174" label="test 310117">test 310117</option><option value="175" label="Test support Sandsiv 27.01.2017">Test support Sandsiv 27.01.2017</option><option value="176" label="Mine2">Mine2</option><option value="177" label="MineTestVG">MineTestVG</option><option value="178" label="MineTest">MineTest</option><option value="179" label="Checking Template settings">Checking Template settings</option><option value="180" label="Survey Group # 1">Survey Group # 1</option><option value="181" label="VG-1">VG-1</option><option value="182" label="Test support Sandsiv 12.12.2016">Test support Sandsiv 12.12.2016</option><option value="183" label="550_0912">550_0912</option><option value="184" label="test 09112016">test 09112016</option><option value="185" label="Demo">Demo</option><option value="186" label="test 280916">test 280916</option><option value="187" label="test 270916/new">test 270916/new</option><option value="188" label="test 190916">test 190916</option><option value="189" label="sdsds">sdsds</option><option value="190" label="qqq">qqq</option><option value="191" label="test copy1">test copy1</option><option value="192" label="test 090916/1">test 090916/1</option><option value="193" label="test new 090916">test new 090916</option><option value="194" label="Nested graph test">Nested graph test</option><option value="195" label="test 080916">test 080916</option><option value="196" label="FlStGr">FlStGr</option><option value="197" label="test yulia 070916/1234">test yulia 070916/1234</option><option value="198" label="Test 07092016">Test 07092016</option><option value="199" label="t34">t34</option><option value="200" label="Test support Sandsiv 06.09.2016">Test support Sandsiv 06.09.2016</option><option value="201" label="test yulia 06.09.2016">test yulia 06.09.2016</option><option value="202" label="test 123">test 123</option><option value="203" label="test yulia 100816">test yulia 100816</option><option value="204" label="test yulia 090816">test yulia 090816</option><option value="205" label="test yulia 010816">test yulia 010816</option><option value="206" label="retest new yulia 280716">retest new yulia 280716</option><option value="207" label="test EN">test EN</option><option value="208" label="test DE">test DE</option><option value="209" label="test yulia 280716/3">test yulia 280716/3</option><option value="210" label="test yulia 2807162">test yulia 2807162</option><option value="211" label="test yulia 280716">test yulia 280716</option><option value="212" label="test yulia 280716">test yulia 280716</option><option value="213" label="test yulia 280716">test yulia 280716</option><option value="214" label="test yulia 280716">test yulia 280716</option><option value="215" label="blast">blast</option><option value="216" label="test 260716/1">test 260716/1</option><option value="217" label="test yulia 260716/1">test yulia 260716/1</option><option value="218" label="test 260716">test 260716</option><option value="219" label="test yulia 250716">test yulia 250716</option><option value="220" label="Test support Sandsiv andrii">Test support Sandsiv andrii</option><option value="221" label="t3">t3</option><option value="222" label="t2">t2</option><option value="223" label="vbif-gjw">vbif-gjw</option><option value="224" label="andrey test 23/05/2016">andrey test 23/05/2016</option><option value="225" label="ʎǝʌɹnS uɐıʃɐɹʇsn∀">ʎǝʌɹnS uɐıʃɐɹʇsn∀</option><option value="226" label="541Test">541Test</option><option value="227" label="testnew">testnew</option><option value="228" label="CSS test">CSS test</option><option value="229" label="test-Dario">test-Dario</option><option value="230" label="VOCHUB User Experience">VOCHUB User Experience</option><option value="231" label="test survey">test survey</option><option value="232" label="test andrey2">test andrey2</option><option value="233" label="test andrey">test andrey</option><option value="234" label="test">test</option><option value="235" label="oleksii-test">oleksii-test</option><option value="236" label="Another Test">Another Test</option><option value="237" label="Survey Test 2">Survey Test 2</option><option value="238" label="Survey Test">Survey Test</option><option value="239" label="test">test</option><option value="240" label="dwtest">dwtest</option><option value="241" label="flow copy">flow copy</option><option value="242" label="flow">flow</option><option value="243" label="Staging Test Copy">Staging Test Copy</option><option value="244" label="Staging Test">Staging Test</option><option value="245" label="QA_test">QA_test</option><option value="246" label="test survey">test survey</option><option value="247" label="119 IVR">119 IVR</option><option value="248" label="Test IVR">Test IVR</option><option value="249" label="Investor Visit">Investor Visit</option><option value="250" label="Investor Visit">Investor Visit</option><option value="251" label="Test Training">Test Training</option><option value="252" label="Mondadori Card">Mondadori Card</option><option value="253" label="Support Tickets Feedback">Support Tickets Feedback</option></select>
+                        <p class="control-label pull-left no-margins ng-hide" ng-show="surveyGroupsLoading">Loading...</p>
+                    </div>
+                </div>
+
+                <div ng-show="survey" class="form-group modal-fix-height-control ng-hide">
+                    <label class="col-sm-3 control-label" for="channel">Channel
+                    </label>
+
+                    <div ng-class="{'has-error': importForm.channel.$error.required &amp;&amp; statusValidation==false }" class="col-sm-9">
+                        <select ng-required="survey" ng-model="channel" class="form-control opt-w-70 ng-pristine ng-untouched ng-valid ng-valid-required" id="channel" name="channel">
+                            <option value="">Choose channel</option>
+                            <!-- ngRepeat: c in channels track by $index -->
+                        </select>
+                        <span ng-show="importForm.channel.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                    </div>
+                </div>
+
+                <div class="form-group modal-fix-height-control">
+                    <label class="col-sm-3 control-label">Upload file
+                    </label>
+
+                    <div ng-class="{'has-error': !original_file &amp;&amp; statusValidation==false}" id="import-input-container" class="col-sm-9">
+
+                        <!--Custom Vochub directive-->
+                        <ng-file-select required="true" file-type="import" class="ng-isolate-scope"><div ng-show="fileErrorMsg" class="has-error ng-hide">
+    <span class="help-block ng-binding"></span>
+</div>
+
+<p ng-show="progressBar" class="ng-hide">
+    <div class="progress ng-isolate-scope" animate="false" value="progressBar">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar" style="transition: none 0s ease 0s ; width: 0%;"><span class="ng-binding ng-scope">0%
+    </span></div>
+</div>
+</p>
+
+<div class="input-group">
+    <input type="text" readonly="readonly" ng-model="file.name" class="form-control bg-white ng-pristine ng-untouched ng-valid" name="file_upload" />
+
+    <span class="input-group-btn">
+        <span class="btn btn-primary btn-file">
+            <span class="glyphicon glyphicon-folder-open"></span>   Browse
+            <input type="file" id="file" name="original_file" />
+         </span>
+    </span>
+</div>
+</ng-file-select>
+
+                        <span ng-show="!original_file &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                        <span ng-show="errorMsg" class="help-block ng-binding ng-hide"></span>
+                    </div>
+                </div>
+
+                <!--Advanced settings-->
+                <div class="col-sm-12">
+                    <div class="form-group">
+
+                        <!--title-->
+                        <div class="well">
+                            <span class="glyphicon glyphicon-cog"></span> Advanced import settings
+                        </div>
+
+                        <!--controls-->
+                        <div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="delimiter">Delimiter
+                                </label>
+
+                                <div ng-class="{'has-error': importForm.delimiter.$error.required &amp;&amp; statusValidation==false,
+                                                'tab-delimiter-container':statusTabDelimiter}" class="col-sm-6">
+                                    <input type="text" required="" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" ng-model="delimiter" ng-trim="false" id="delimiter" name="delimiter" />
+                                    <span ng-show="importForm.delimiter.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button class="btn btn-default pull-right" type="button" ng-click="setTabDelimeter()">set 'tab' delimiter
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="customer_column">Customer Id column</label>
+
+                                <div ng-class="{'has-error': importForm.customer_id_column.$error.required &amp;&amp; statusValidation==false}" class="col-sm-9">
+                                    <input type="text" required="" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" name="customer_id_column" ng-model="customer_id_column" id="customer_column" />
+                                    <span ng-show="importForm.customer_id_column.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="address_column">Address column</label>
+
+                                <div ng-class="{'has-error': importForm.address_column.$error.required &amp;&amp; statusValidation==false}" class="col-sm-9">
+                                    <input type="text" required="" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" name="address_column" ng-model="address_column" id="address_column" />
+                                    <span ng-show="importForm.address_column.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="language_column">Language column</label>
+
+                                <div ng-class="{'has-error': importForm.language_column.$error.required &amp;&amp; statusValidation==false}" class="col-sm-9">
+                                    <input type="text" required="" name="language_column" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" ng-model="language_column" id="language_column" />
+                                    <span ng-show="importForm.language_column.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="survey_column">
+                                    Survey column
+                                </label>
+
+                                <div ng-class="{'has-error': importForm.survey_column.$error.required &amp;&amp; statusValidation==false}" class="col-sm-9">
+                                    <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" ng-required="!survey" name="survey_column" ng-model="survey_column" ng-trim="false" ng-disabled="survey" id="survey_column" required="required" />
+                                    <span ng-show="importForm.survey_column.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="channel_column">Channel column</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" ng-required="!survey" ng-disabled="survey" name="channel_column" ng-model="channel_column" id="channel_column" required="required" />
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 noselect pointer control-label" for="add_questionnaire_hash">Add Questionnaire Hash</label>
+                                <div class="col-sm-9">
+                                    <input type="checkbox" class="margin-t-10 ng-pristine ng-untouched ng-valid" name="add_questionnaire_hash" ng-model="add_questionnaire_hash" id="add_questionnaire_hash" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <div class="bootstrap-dialog-footer">
+            <div class="bootstrap-dialog-footer-buttons">
+                <button ng-click="cancel()" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span>
+                    Cancel
+                </button>
+                <button ng-click="continueUpload()" ladda="loading==true" data-style="zoom-in" class="ladda-button btn btn-primary" type="submit" ng-class="{'ladda-button': !importForm.$valid || !import.original_file || (selectedSurvey &amp;&amp; !import.survey)}"><span class="ladda-label">
+                    <span class="glyphicon glyphicon-ok"></span> Save Import
+                </span><span class="ladda-spinner"></span></button>
+            </div>
+        </div>
+    </div>
+</div>
+</div></div>
+</div></body></html>

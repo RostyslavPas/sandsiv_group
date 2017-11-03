@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="max-age=0" http-equiv="cache-control" />
+    <meta content="no-cache" http-equiv="cache-control" />
+    <meta content="0" http-equiv="expires" />
+    <meta content="Tue, 01 Jan 1980 1:00:00 GMT" http-equiv="expires" />
+    <meta content="no-cache" http-equiv="pragma" />
+    <script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="../dist/feedback.js" src="../dist/feedback.js"></script><base href="/feedback/" />
+    <title ng-bind="'Feedback :: ' + pageTitle" class="ng-binding">Feedback :: Import History</title>
+    <script src="../js/vendor_feedback/requirejs/require.js"></script>
+    <link href="/css/app.css" rel="stylesheet" />
+    <link href="/images/favicon.ico" rel="shortcut icon" />
+    
+<style>@charset "UTF-8";
+.modal__SandSIV_Template {
+  all: initial;
+  line-height: normal;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.SandSIV_Feedback_Button {
+  position: fixed;
+  z-index: 4000;
+  width: 250px;
+  height: 43px;
+  padding: 10px 20px;
+  background: #3F51B5;
+  color: #fff;
+  border-radius: 4px;
+  overflow: hidden;
+  outline: none;
+  transition: all 0.5s;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  border: 0;
+  right: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Button_PositionTopLeft {
+  left: 20px;
+  top: 20px;
+}
+
+.SandSIV_Feedback_Button_PositionTopRight {
+  right: 20px;
+  top: 20px;
+}
+
+.SandSIV_Feedback_Button_PositionBottomLeft {
+  left: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Button_PositionBottomRight {
+  right: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Button_Loading {
+  background: #78909C;
+  color: #CFD8DC;
+  pointer-events: none;
+}
+
+.SandSIV_Feedback_Button:hover {
+  box-shadow: inset 0 4px 2px 0 rgba(0, 0, 0, 0.26);
+}
+
+.SandSIV_Feedback_Button:active {
+  background: #313d8a;
+  box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+}
+
+.SandSIV_Feedback_Modal {
+  right: 20px;
+  bottom: 20px;
+  width: 650px;
+  height: 470px;
+  font-family: Roboto, Arial, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  display: none;
+  z-index: 16777270 !important;
+  position: fixed;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 7px 8px -4px rgba(0, 0, 0, 0.2), 0 13px 19px 2px rgba(0, 0, 0, 0.14), 0 5px 24px 4px rgba(0, 0, 0, 0.12);
+}
+
+.SandSIV_Feedback_Modal_PositionTopLeft {
+  left: 20px;
+  top: 20px;
+}
+
+.SandSIV_Feedback_Modal_PositionTopRight {
+  right: 20px;
+  top: 20px;
+}
+
+.SandSIV_Feedback_Modal_PositionBottomLeft {
+  left: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Modal_PositionBottomRight {
+  right: 20px;
+  bottom: 20px;
+}
+
+.SandSIV_Feedback_Modal .buttonsWrapper {
+  text-align: right;
+  margin: 4px 0;
+}
+
+.SandSIV_Feedback_Modal .button {
+  font-size: 15px;
+  border: none;
+  border-radius: 2px;
+  display: inline-block;
+  height: 36px;
+  line-height: 36px;
+  outline: 0;
+  padding: 0 2rem;
+  text-transform: uppercase;
+  vertical-align: middle;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  color: #fff;
+  background-color: #26a69a;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: .2s ease-out;
+  cursor: pointer;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.SandSIV_Feedback_Modal .button:hover {
+  background-color: #2bbbad;
+}
+
+.SandSIV_Feedback_Modal .button:active {
+  box-shadow: inset 0 2px 5px 0 rgba(0, 0, 0, 0.3), 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  background-color: #27a195;
+}
+
+.SandSIV_Feedback_Modal_Header {
+  background: #3F51B5;
+  color: #fff;
+  padding: 20px;
+  font-size: 17px;
+  text-align: left;
+  text-shadow: 1px 2px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: rgba(0, 0, 0, 0.117647) 0 1px 6px, rgba(0, 0, 0, 0.117647) 0 1px 4px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.SandSIV_Feedback_Modal_Body {
+  position: relative;
+  overflow-y: scroll;
+  padding-bottom: 10px;
+  transition: opacity 0.5s ease-in-out;
+  height: 360px;
+}
+
+.SandSIV_Feedback_Modal_Body::-webkit-scrollbar {
+  width: 12px;
+  height: 16px;
+}
+
+.SandSIV_Feedback_Modal_Body::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+.SandSIV_Feedback_Modal_Body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.SandSIV_Feedback_Modal_Body::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.SandSIV_Feedback_Modal_Body::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.SandSIV_Feedback_Modal_Body form {
+  text-align: left !important;
+}
+
+.SandSIV_Feedback_Modal_Body_InResize {
+  cursor: none;
+  background: rgba(172, 201, 219, 0.15);
+  opacity: 0.4;
+}
+
+.SandSIV_Feedback_Modal_Body .loader-wrapper {
+  display: none;
+  width: 650px;
+  height: 592px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.SandSIV_Feedback_Modal_Body .loader-wrapper .loader-spinner {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  text-align: center;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.SandSIV_Feedback_Modal_Body .message {
+  text-align: center;
+  padding: 15px;
+  margin: 20px 15px 30px 15px;
+  border-radius: 8px;
+  transition: all 0.7s;
+  box-shadow: inset 3px 3px 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+.SandSIV_Feedback_Modal_Body .message-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border: 1px solid #d6e9c6;
+  margin-bottom: 200px;
+}
+
+.SandSIV_Feedback_Modal_Body .message-error {
+  color: #762728;
+  background-color: rgba(240, 129, 93, 0.2);
+  border: 1px solid rgba(233, 136, 110, 0.44);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm {
+  margin: 20px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .required {
+  color: #d22d2d;
+  margin-left: 3px;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionItem {
+  background: #e7f2f6;
+  color: #000;
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 8px 15px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 25px;
+  text-align: left;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionItem.questionItemError {
+  background: #fff8d5;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionValidationMessage {
+  display: none;
+  text-align: left;
+  padding: 12px 20px;
+  border-radius: 4px;
+  line-height: 23px;
+  border: 1px dashed rgba(233, 136, 110, 0.44);
+  box-shadow: inset 3px 3px 1px 0 rgba(255, 255, 255, 0.25);
+  background: rgba(255, 218, 218, 0.47);
+  color: #762728;
+  margin: 5px 0;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer {
+  margin-bottom: 20px;
+  padding: 2px 12px 0 4px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer label {
+  margin-right: 20px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer label span {
+  color: #666;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer input {
+  margin-right: 10px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer, .SandSIV_Feedback_Modal_Body .questionForm .questionAnswer label, .SandSIV_Feedback_Modal_Body .questionForm .questionAnswer input, .SandSIV_Feedback_Modal_Body .questionForm .questionAnswer textarea {
+  font-size: 14px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.textAnswer {
+  background: rgba(253, 251, 211, 0.3);
+  color: #000;
+  box-shadow: inset 3px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: 1px solid #ead48e;
+  padding: 8px 0 5px 15px;
+  transition: all .2s;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.textAnswer.textAnswerActive {
+  box-shadow: inset 3px 2px 2px rgba(0, 0, 0, 0.1);
+  background: #fdfbd3;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.textAnswer textarea {
+  width: calc(100% - 3px);
+  min-height: 50px;
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  resize: none;
+  outline: none;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.textAnswer textarea::-webkit-scrollbar {
+  width: 8px;
+  height: 16px;
+  background-color: #ececec;
+  border-radius: 4px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.textAnswer textarea::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.textAnswer textarea::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.textAnswer textarea::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.textAnswer textarea::-webkit-scrollbar-button {
+  width: 0;
+  height: 0;
+  display: none;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating {
+  display: inline-block;
+  padding: 0 0 0 20px;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating input.star {
+  border: 0;
+  display: none;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star {
+  float: right;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  margin: 0 20px 0 0;
+  font-size: 28px;
+  color: #546E7A;
+  transition: all .2s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating input.star:checked ~ label.star:before {
+  content: '\2605';
+  color: #FFC107;
+  transition: all .25s;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating input.star-5:checked ~ label.star:before,
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating input.star-10:checked ~ label.star:before {
+  color: #FFC107;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating input.star-1:checked ~ label.star:before {
+  color: #F62;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star:hover {
+  transform: rotate(-15deg);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star:hover, .SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star:hover ~ label.star:before {
+  color: #FFC107;
+}
+
+.SandSIV_Feedback_Modal_Body .questionForm .questionAnswer.starRating label.star:before {
+  content: '\2605';
+  border: 0;
+}
+
+.SandSIV_Feedback_Modal_Body a {
+  color: #3F51B5;
+}
+
+.SandSIV_Feedback_Modal_Body a:hover {
+  color: #C51162;
+}
+
+.SandSIV_Feedback_Modal_Body pre {
+  font-size: 14px;
+  white-space: nowrap;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.SandSIV_Feedback_Modal_Close {
+  right: 10px;
+  top: 10px;
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  border-radius: 50%;
+  color: #fff;
+  overflow: hidden;
+  outline: none;
+  transition: all 0.5s;
+  cursor: pointer;
+  user-select: none;
+  border: 0;
+}
+
+.SandSIV_Feedback_Modal_Close:hover, .SandSIV_Feedback_Modal_Close:active {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.SandSIV_Feedback_Modal_Close svg {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 6px;
+  left: 6px;
+  fill: white;
+}
+
+.SandSIV_Feedback_Modal_Mobile {
+  width: 100vw;
+  height: 100vh !important;
+  top: 0;
+  left: 0;
+}
+
+.SandSIV_Feedback_Modal_Mobile .SandSIV_Feedback_Modal_Body {
+  height: 91vh !important;
+}
+
+.SandSIV_Feedback_Modal_Mobile .loader-wrapper {
+  width: 100%;
+  margin-top: 250px;
+}
+
+.SandSIV_Feedback_Modal_Mobile .questionForm {
+  margin: 20px 10px 0 20px;
+}
+
+.SandSIV_Feedback_Modal_Mobile .questionForm .button {
+  width: 90vw;
+  margin: 1.5vh auto 2vh auto;
+}
+
+.SandSIV_Feedback_Modal_Mobile .questionAnswer {
+  margin-bottom: 10px !important;
+}
+
+.SandSIV_Feedback_Modal_Mobile .questionAnswer.starRating {
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: row-reverse !important;
+  justify-content: flex-end !important;
+}
+
+.SandSIV_Feedback_Modal_Mobile .questionAnswer.starRating label.star {
+  float: none !important;
+  margin: 0 !important;
+  padding: 0 2px !important;
+  font-size: 7.5vw !important;
+}
+
+.SandSIV_Feedback_Modal_Mobile .questionAnswer.starRating label.star:hover {
+  transform: rotate(0deg) !important;
+}
+
+.SandSIV_Feedback_Modal_Mobile .message {
+  margin-right: 0;
+}
+
+#SandSIV_VOC_Documentation {
+  background: #fcfcfc;
+  padding: 1% 3%;
+  margin: 3% 5%;
+  font-family: "Open Sans";
+}
+
+#SandSIV_VOC_Documentation .file-loading {
+  background: #ececec;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#SandSIV_VOC_Documentation .file-loadError {
+  background: #fcffe0;
+  text-align: center;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#SandSIV_VOC_Documentation .voc_scroll_top {
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: #777;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+#SandSIV_VOC_Documentation .voc_download_link {
+  display: block;
+  margin: auto;
+  text-align: center;
+  color: #777;
+}
+
+#SandSIV_VOC_Documentation .voc_event {
+  cursor: pointer;
+}
+
+#SandSIV_VOC_Documentation .voc_hidden_input {
+  position: absolute;
+  left: -9999px;
+}
+
+#SandSIV_VOC_Documentation a {
+  color: #318acd;
+  transition: all 0.5s;
+}
+
+#SandSIV_VOC_Documentation a:hover {
+  color: #8b080f;
+}
+
+#SandSIV_VOC_Documentation img {
+  border: 1px solid #ccc;
+  padding: 2px;
+  border-radius: 10px;
+  background: #fff;
+  max-width: 100%;
+}
+
+#SandSIV_VOC_Documentation hr {
+  border: none;
+  border-top: 2px solid #ccc;
+  color: #fff;
+  background-color: #fff;
+  height: 2px;
+  width: 100%;
+  margin: 30px 0;
+}
+
+#SandSIV_VOC_Documentation em {
+  font-weight: normal;
+}
+
+#SandSIV_VOC_Documentation blockquote {
+  border-left: 4px solid #ccc;
+  padding: 5px 15px;
+  margin: 0;
+  background: #f8f8f5;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0em;
+  -webkit-margin-end: 0em;
+}
+
+#SandSIV_VOC_Documentation blockquote p {
+  margin: 3px 0;
+}
+
+#SandSIV_VOC_Documentation code {
+  position: relative;
+  overflow-x: auto;
+  padding: 3px 9px;
+  color: #333;
+  background: #f5f5f5;
+  border-radius: 4px;
+  word-break: break-all;
+  word-wrap: break-word;
+  border: 1px solid #ccc;
+}
+
+#SandSIV_VOC_Documentation code button {
+  display: none;
+}
+
+#SandSIV_VOC_Documentation code.language, #SandSIV_VOC_Documentation code.language-javascript, #SandSIV_VOC_Documentation code.language-html {
+  display: block;
+  padding: 15px 50px 15px 15px;
+  overflow: hidden;
+}
+
+#SandSIV_VOC_Documentation code.language button, #SandSIV_VOC_Documentation code.language-javascript button, #SandSIV_VOC_Documentation code.language-html button {
+  bottom: 0;
+  right: 0;
+  outline: none;
+  position: absolute;
+  display: block;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ffca72;
+  padding: 15px 20px;
+  border-radius: 4px;
+  background: #FFFFE0 center center no-repeat url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAQCAYAAADJViUEAAAAqUlEQVQ4T+3TPQ5BQRiF4ec2oqMQUVqABSjoxAJ0Ep1KotULnRaxAQVaqyAWwB7sgEImUdzcYvxE6WvPvOdMznyToI0dCuLTxSZ9JMEaTcxfwHtcsnBwq6L+FIrIR4zuuAY9JKfhEWYvbhDkJYZZ+IgbVhGDDhooZ+ETzuhF4HFIRekP83Fhg9Acpr6A06/ycfLP4ANy2EaWpIUaKmFJ0tPH4o2PEfqZPACA7TYRtR6Q8wAAAABJRU5ErkJggg==");
+}
+
+#SandSIV_VOC_Documentation code.language button:hover, #SandSIV_VOC_Documentation code.language-javascript button:hover, #SandSIV_VOC_Documentation code.language-html button:hover {
+  background-color: #ffca72;
+}
+
+#SandSIV_VOC_Documentation code, #SandSIV_VOC_Documentation pre {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+#SandSIV_VOC_Documentation table {
+  width: 100%;
+  border: 1px solid #666;
+  border-collapse: collapse;
+  margin: 15px auto;
+}
+
+#SandSIV_VOC_Documentation table, #SandSIV_VOC_Documentation table th, #SandSIV_VOC_Documentation table td {
+  border: 1px solid #ccc;
+}
+
+#SandSIV_VOC_Documentation table tr {
+  transition: all 0.5s;
+}
+
+#SandSIV_VOC_Documentation table tr:hover td {
+  background: #e9e9e9;
+}
+
+#SandSIV_VOC_Documentation table th {
+  font-weight: 900;
+}
+
+#SandSIV_VOC_Documentation table th, #SandSIV_VOC_Documentation table td {
+  padding: 10px;
+}
+
+#SandSIV_VOC_Documentation table td code.code_block {
+  display: block;
+}
+
+#SandSIV_VOC_Documentation table:first-of-type tr:nth-child(1) th:last-child {
+  width: 30%;
+}
+
+#SandSIV_VOC_Documentation table:first-of-type tr:nth-child(1) td:last-child code {
+  width: 280px;
+  white-space: pre;
+  overflow-x: scroll;
+}
+
+#SandSIV_VOC_Documentation ul {
+  list-style-type: none;
+}
+
+#SandSIV_VOC_Documentation ul li {
+  margin: 10px;
+}
+
+#SandSIV_VOC_Documentation ul &gt; li:before {
+  content: "–";
+  /* en dash here */
+  position: absolute;
+  margin-left: -1.1em;
+}</style><style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled &gt; .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_text-input-ios {position: absolute !important;top: -100000px !important;left: -100000px !important;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style type="text/css"></style><style media="print" type="text/css">.tableFloatingHeader{display:none !important;}.tableFloatingHeaderOriginal{position:static !important;}</style></head>
+<body class="modal-open">
+<header role="banner" class="navbar navbar-default bs-docs-nav">
+    <div class="navbar-header">
+        <button data-target=".bs-navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/feedback/#/survey_list">Voc Feedback</a>
+    </div>
+    <nav role="navigation" class="collapse navbar-collapse bs-navbar-collapse">
+        <ul class="dropdown-menu">
+            <li><a href="/feedback/#/survey_list">Surveys</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/feedback/#/export/results">Export</a></li>
+            <li><a href="/feedback/#/import">Import</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/feedback/#/settings/advanced">Global settings</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/feedback/#/customers">Customers</a></li>
+        </ul>
+    </nav>
+</header>
+<main id="xircl-feedback-bundle" role="main">
+    <div class="container">
+        <div class="xircl-alerts"></div>
+        <authorization></authorization>
+        <!-- ngView:  --><div ng-hide="viewLoading" ng-view="" class="ng-scope"><div class="row ng-scope">
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+
+            <div class="panel-heading clearfix no-paddings">
+                <h5 class="pull-left padding-l-15">
+                    <strong>Import History</strong>
+                </h5>
+                <div class="pull-right no-paddings">
+                    <div class="btn-group">
+                        <button class="btn btn-default btn-in-panel pull-right" type="button" ng-click="addImport()">
+                            <span class="glyphicon glyphicon-plus color-green"></span>
+                            Add Import
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div ng-show="(loadingLocal)" class="loader ng-hide">Loading...</div>
+
+            <p class="alert alert-danger alert-danger-light text-center no-border no-paddings margin-t-20 margin-b-20 ng-hide" ng-show="!imports &amp;&amp; !loadingLocal">
+                Import History is empty.
+            </p>
+
+            <table sticky-header="" ng-show="(imports &amp;&amp; imports.length &gt; 0) &amp;&amp; !loadingLocal" class="table table-hover" style="padding: 0px;">
+                <thead class="tableFloatingHeaderOriginal">
+                <tr>
+                    <th class="padding-l-15">Created</th>
+                    <th>Survey id</th>
+                    <th class="w-25pc">Survey Name</th>
+                    <th>Channel</th>
+                    <th>State</th>
+                    <th>Original File</th>
+                    <th>Completed</th>
+                    <th>Import Log File</th>
+                </tr>
+                </thead><thead class="tableFloatingHeader" style="display: none; opacity: 0;">
+                <tr>
+                    <th class="padding-l-15">Created</th>
+                    <th>Survey id</th>
+                    <th class="w-25pc">Survey Name</th>
+                    <th>Channel</th>
+                    <th>State</th>
+                    <th>Original File</th>
+                    <th>Completed</th>
+                    <th>Import Log File</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">14:08</span>
+                    </td>
+                    <td class="ng-binding">3402</td>
+                    <td class="word-break ng-binding">Check invitation place holder</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1506/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">14:10</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1506/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">13:56</span>
+                    </td>
+                    <td class="ng-binding">3409</td>
+                    <td class="word-break ng-binding">Test5 support sandsiv 03.11.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">in progress</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1505/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding ng-hide" ng-show="import.end_time"></span>
+                        <span class="color-gray ng-binding ng-hide" ng-show="import.end_time"></span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1505/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm ng-hide">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">13:55</span>
+                    </td>
+                    <td class="ng-binding">3402</td>
+                    <td class="word-break ng-binding">Check invitation place holder</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1504/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">13:56</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1504/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">13:53</span>
+                    </td>
+                    <td class="ng-binding">3409</td>
+                    <td class="word-break ng-binding">Test5 support sandsiv 03.11.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">error</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1503/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">13:54</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1503/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">12:22</span>
+                    </td>
+                    <td class="ng-binding">3402</td>
+                    <td class="word-break ng-binding">Check invitation place holder</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1502/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">12:22</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1502/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">12:19</span>
+                    </td>
+                    <td class="ng-binding">3402</td>
+                    <td class="word-break ng-binding">Check invitation place holder</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1501/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">12:20</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1501/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">12:16</span>
+                    </td>
+                    <td class="ng-binding">3409</td>
+                    <td class="word-break ng-binding">Test5 support sandsiv 03.11.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1500/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">12:17</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1500/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">12:15</span>
+                    </td>
+                    <td class="ng-binding"></td>
+                    <td class="word-break ng-binding"></td>
+                    <td class="ng-binding"></td>
+                    <td class="ng-binding">error</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1499/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">12:16</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1499/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">12:04</span>
+                    </td>
+                    <td class="ng-binding">3409</td>
+                    <td class="word-break ng-binding">Test5 support sandsiv 03.11.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1498/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">03-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">12:05</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1498/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports --><tr ng-repeat="import in imports" class="ng-scope">
+                    <td class="padding-l-15">
+                        <span class="margin-r-5 ng-binding" ng-show="import.creation">02-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.creation">17:11</span>
+                    </td>
+                    <td class="ng-binding">3408</td>
+                    <td class="word-break ng-binding">Test4 support sandsiv 02.11.2017</td>
+                    <td class="ng-binding">WEB</td>
+                    <td class="ng-binding">completed</td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1497/download-importfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download original file" ng-show="import.original_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                    <td>
+                        <span class="margin-r-5 ng-binding" ng-show="import.end_time">02-11-2017</span>
+                        <span class="color-gray ng-binding" ng-show="import.end_time">17:12</span>
+                    </td>
+                    <td class="text-center">
+                        <a href="http://demo-api.ci-fb.sandsiv.com/api/rest/import/1497/download-resultfile/?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzZXNzaWQiOiI1MzI0MzlmYS1mMTQyLTQwOWItOGY2MS0xNmQxYTZlNzZjMzMiLCJ1c2VybmFtZSI6InJvc3Rpc2xhdi5wYXMiLCJpZCI6NTYsImZpcnN0X25hbWUiOiJSb3N0eXNsYXYiLCJsYXN0X25hbWUiOiJQYXMiLCJlbnRlcnByaXNlIjp7InNsdWciOiJkZW1vIiwiaWQiOjYsIm5hbWUiOiJkZW1vIn0sImN1bHR1cmUiOiJlbl9FTiIsImVtYWlsIjoicm9zdGlzbGF2LnBhc0BzYW5kc2l2LmNvbSJ9.0dfQhYnxnLF8hSnFckRNm_7WbC9JDS8jeBl9Nw1HlNU" tooltip="Download log file" ng-show="import.result_file" class="btn btn-link btn-sm">
+                            <span class="glyphicon glyphicon-cloud-download"></span>
+                        </a>
+                    </td>
+                </tr><!-- end ngRepeat: import in imports -->
+                </tbody>
+            </table>
+        </div>
+
+        <div ng-show="imports &amp;&amp; !loading" class="row">
+            <pagination-template>
+<div class="pagination-container noselect col-sm-12">
+    <ul class="pagination">
+        <li class="disabled">
+            <a ng-href="" class="no-borders">
+                <span class="entries-start ng-binding">1</span> –
+                <span class="entries-end ng-binding">10</span>
+                of
+                <span class="entries-total ng-binding">1506</span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="pagination-md pagination ng-isolate-scope ng-valid" ng-model="currentPage" total-items="itemsTotal" boundary-links="true" last-text="»" first-text="«" next-text="›" previous-text="‹" max-size="5" rotate="false" items-per-page="selectedAction ? selectedAction.id != '' ? selectedAction.id : itemsTotal : 10" ng-show="pages &gt; 1">
+  <!-- ngIf: boundaryLinks --><li ng-class="{disabled: noPrevious()}" ng-if="boundaryLinks" class="ng-scope disabled"><a ng-click="selectPage(1)" href="" class="ng-binding">«</a></li><!-- end ngIf: boundaryLinks -->
+  <!-- ngIf: directionLinks --><li ng-class="{disabled: noPrevious()}" ng-if="directionLinks" class="ng-scope disabled"><a ng-click="selectPage(page - 1)" href="" class="ng-binding">‹</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope active"><a ng-click="selectPage(page.number)" href="" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">...</a></li><!-- end ngRepeat: page in pages track by $index -->
+  <!-- ngIf: directionLinks --><li ng-class="{disabled: noNext()}" ng-if="directionLinks" class="ng-scope"><a ng-click="selectPage(page + 1)" href="" class="ng-binding">›</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngIf: boundaryLinks --><li ng-class="{disabled: noNext()}" ng-if="boundaryLinks" class="ng-scope"><a ng-click="selectPage(totalPages)" href="" class="ng-binding">»</a></li><!-- end ngIf: boundaryLinks -->
+</ul>
+
+    <set-page model="pageNumber" ng-show="pages &gt; 1" class="ng-isolate-scope"><div class="pagination-error-block">
+    <div class="alert alert-warning text-center pagination-error-content ng-hide" ng-show="pageNumberError">
+        <p>Not valid page number!</p>
+    </div>
+</div>
+<div class="pagination">
+    <form ng-submit="setPage(pageNo)" class="ng-pristine ng-valid">
+        <div class="input-group">
+        <span class="input-group-btn">
+            <button disabled="disabled" type="button" class="btn btn-default">Go to the page: </button>
+        </span>
+            <input type="text" name="pageNo" ng-model="pageNo" class="form-control ng-pristine ng-untouched ng-valid" />
+            <span class="input-group-btn">
+            <button type="submit" data-e2e="setPageNumber" class="btn btn-primary">
+                <span class="glyphicon glyphicon-ok"></span>
+            </button>
+        </span>
+        </div>
+    </form>
+</div></set-page>
+</div>
+</pagination-template>
+        </div>
+    </div>
+</div>
+</div>
+        <notifications-template><div data-ng-controller="NotificationCntr" class="messagesList ng-scope">
+    <p ng-hide="!notifications" ng-show="showNotices()" class="ng-hide">
+    </p><!-- ngRepeat: notification in notifications -->
+    <p></p>
+</div>
+</notifications-template>
+        <scrollup-template><a class="scrollup" ng-href=""><button class="btn btn-primary"><span class="glyphicon glyphicon-chevron-up"></span></button></a></scrollup-template>
+    </div>
+</main>
+<script src="../js/config.js"></script>
+<script>
+    window.isTwig = false;
+    require.config({
+        urlArgs: ''
+    });
+    require([
+        "../dist/feedback.js"
+    ], function () {
+        require(["boot"]);
+    });
+</script>
+<heatmap></heatmap>
+<script src="//stand-ci.sandsiv.com/dist/sandsiv_feedback.js"></script>
+
+<div ng-style="{'z-index': 1040 + (index &amp;&amp; 1 || 0) + index*10}" ng-class="{in: animate}" class="modal-backdrop fade  in" modal-backdrop="" style="z-index: 1040;"></div><div ng-click="close($event)" ng-style="{'z-index': 1050 + index*10, display: 'block'}" ng-class="{in: animate}" class="modal fade ng-isolate-scope modal-wide in" role="dialog" tabindex="-1" modal-window="" window-class="modal modal-wide" index="0" animate="animate" style="z-index: 1050; display: block;">
+    <div ng-class="{'modal-sm': size == 'sm', 'modal-lg': size == 'lg'}" class="modal-dialog"><div modal-transclude="" class="modal-content"><div class="modal-content ng-scope">
+    <div class="modal-header">
+        <div class="bootstrap-dialog-header">
+            <button ng-click="cancel()" class="close" type="button">×</button>
+            <h4 class="modal-title">Import questionnaires for the survey</h4>
+        </div>
+    </div>
+    <div class="modal-body modal-body-add-import">
+        <div class="alert alert-info">
+            <strong>
+                <span class="glyphicon glyphicon-info-sign"></span> Info
+            </strong>
+
+            <p>Choose a file to import (txt or csv). Please consider export or backup your data first</p>
+        </div>
+
+        <form novalidate="" role="form" class="form-horizontal ng-pristine ng-invalid ng-invalid-required" name="importForm" ng-enter-submit="">
+            <fieldset ng-disabled="loading==true">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label" for="survey">Survey</label>
+
+                    <div class="col-sm-9">
+                        <select ng-show="!surveyGroupsLoading" ng-model="survey" ng-options="s.name | trimFilter:50 for s in $parent.surveyGroup" ng-change="chooseChannel()" class="form-control opt-w-70 ng-pristine ng-untouched ng-valid" id="survey" name="survey"><option value="" class="">Without survey</option><option value="0" label="Test5 support sandsiv 03.11.2017">Test5 support sandsiv 03.11.2017</option><option value="1" label="Test4 support sandsiv 02.11.2017">Test4 support sandsiv 02.11.2017</option><option value="2" label="Test3 support sandsiv 02.11.2017">Test3 support sandsiv 02.11.2017</option><option value="3" label="Test2 support sandsiv 02.11.2017">Test2 support sandsiv 02.11.2017</option><option value="4" label="Test support sandsiv 02.11.2017">Test support sandsiv 02.11.2017</option><option value="5" label="Check invitation place holder">Check invitation place holder</option><option value="6" label="qaTest28198">qaTest28198</option><option value="7" label="qaTest60953">qaTest60953</option><option value="8" label="qaTest34131">qaTest34131</option><option value="9" label="qaTest72120">qaTest72120</option><option value="10" label="qaTest25497">qaTest25497</option><option value="11" label="QA_____Case_Alerts_Placeholders">QA_____Case_Alerts_Placeholders</option><option value="12" label="qqq2">qqq2</option><option value="13" label="qqqqqqqqq">qqqqqqqqq</option><option value="14" label="qqqqqqqqqqq">qqqqqqqqqqq</option><option value="15" label="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...">WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...</option><option value="16" label="Selenium">Selenium</option><option value="17" label="QA_CREATE_101_FLOW_FOR_SANDSIV">QA_CREATE_101_FLOW_FOR_SANDSIV</option><option value="18" label="123">123</option><option value="19" label="survey L txadmin 10.10.17">survey L txadmin 10.10.17</option><option value="20" label="222">222</option><option value="21" label="d">d</option><option value="22" label="d">d</option><option value="23" label="s">s</option><option value="24" label="s">s</option><option value="25" label="hh">hh</option><option value="26" label="1111">1111</option><option value="27" label="d">d</option><option value="28" label="fff">fff</option><option value="29" label="d">d</option><option value="30" label="QA_Questions_New">QA_Questions_New</option><option value="31" label="77">77</option><option value="32" label="666">666</option><option value="33" label="55">55</option><option value="34" label="44">44</option><option value="35" label="3333">3333</option><option value="36" label="222">222</option><option value="37" label="cvb">cvb</option><option value="38" label="bnm">bnm</option><option value="39" label="ghj">ghj</option><option value="40" label="tyu">tyu</option><option value="41" label="bnm">bnm</option><option value="42" label="ghj">ghj</option><option value="43" label="tyu">tyu</option><option value="44" label="rty">rty</option><option value="45" label="fgh">fgh</option><option value="46" label="dfg">dfg</option><option value="47" label="xcv">xcv</option><option value="48" label="vbn">vbn</option><option value="49" label="ghj">ghj</option><option value="50" label="dfg">dfg</option><option value="51" label="zxc">zxc</option><option value="52" label="asd">asd</option><option value="53" label="1">1</option><option value="54" label="1">1</option><option value="55" label="qwe">qwe</option><option value="56" label="dfgregt">dfgregt</option><option value="57" label="sdf">sdf</option><option value="58" label="sdf">sdf</option><option value="59" label="zxc">zxc</option><option value="60" label="asd">asd</option><option value="61" label="qwe">qwe</option><option value="62" label="zxcvserf">zxcvserf</option><option value="63" label="cvb">cvb</option><option value="64" label="cxvsdfe">cxvsdfe</option><option value="65" label="jkhujkhuj">jkhujkhuj</option><option value="66" label="jkhujkhuj">jkhujkhuj</option><option value="67" label="uhjkuyh">uhjkuyh</option><option value="68" label="uhjkuyh">uhjkuyh</option><option value="69" label="bnmghjukj">bnmghjukj</option><option value="70" label="guyjyikyuhki">guyjyikyuhki</option><option value="71" label="hjukuhyiyuik">hjukuhyiyuik</option><option value="72" label="rsdtfgrw">rsdtfgrw</option><option value="73" label="XLS Export without questions # 2">XLS Export without questions # 2</option><option value="74" label="XLS Export without questions # 1">XLS Export without questions # 1</option><option value="75" label="VOC-3450">VOC-3450</option><option value="76" label="ZD-3343 Original TS Import">ZD-3343 Original TS Import</option><option value="77" label="ZD-3343 #3">ZD-3343 #3</option><option value="78" label="ZD-3343 #2">ZD-3343 #2</option><option value="79" label="ZD-3343">ZD-3343</option><option value="80" label="fdsgdrrd">fdsgdrrd</option><option value="81" label="AXA">AXA</option><option value="82" label="Question order">Question order</option><option value="83" label="в">в</option><option value="84" label="123">123</option><option value="85" label="VOC-3124">VOC-3124</option><option value="86" label="Survey____For____QA">Survey____For____QA</option><option value="87" label="fghrtyt">fghrtyt</option><option value="88" label="dfgrt">dfgrt</option><option value="89" label="aesdfedf">aesdfedf</option><option value="90" label="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...">WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...</option><option value="91" label="zxcsdfasfgvrfgvsdfvsejido;nb;dfngbkljdfngbirfvurif...">zxcsdfasfgvrfgvsdfvsejido;nb;dfngbkljdfngbirfvurif...</option><option value="92" label="null">null</option><option value="93" label="CACOLUMN">CACOLUMN</option><option value="94" label="Tset supprot sandsiv 11.08.2017">Tset supprot sandsiv 11.08.2017</option><option value="95" label="External_ID_Scalable_2_">External_ID_Scalable_2_</option><option value="96" label="asd">asd</option><option value="97" label="asdwe">asdwe</option><option value="98" label="sdfewr">sdfewr</option><option value="99" label="sdfwe">sdfwe</option><option value="100" label="nmj,jhk">nmj,jhk</option><option value="101" label="dfg">dfg</option><option value="102" label="vbnvbn">vbnvbn</option><option value="103" label="ert">ert</option><option value="104" label="wer">wer</option><option value="105" label="asd">asd</option><option value="106" label="qwe">qwe</option><option value="107" label="QA_EndToEnd_Survey">QA_EndToEnd_Survey</option><option value="108" label="Multi 260717">Multi 260717</option><option value="109" label="dfdfed">dfdfed</option><option value="110" label="Survey Runner Demo">Survey Runner Demo</option><option value="111" label="Customer Experience">Customer Experience</option><option value="112" label="567">567</option><option value="113" label="456">456</option><option value="114" label="435">435</option><option value="115" label="435">435</option><option value="116" label="342">342</option><option value="117" label="213">213</option><option value="118" label="321">321</option><option value="119" label="567">567</option><option value="120" label="456">456</option><option value="121" label="345">345</option><option value="122" label="234">234</option><option value="123" label="234">234</option><option value="124" label="123">123</option><option value="125" label="ghty">ghty</option><option value="126" label="yhty">yhty</option><option value="127" label="hjukuyhjik">hjukuyhjik</option><option value="128" label="yth">yth</option><option value="129" label="yjyuj">yjyuj</option><option value="130" label="fgjhryh">fgjhryh</option><option value="131" label="fgjhryh">fgjhryh</option><option value="132" label="tghtry">tghtry</option><option value="133" label="sfdefrwef">sfdefrwef</option><option value="134" label="sfdefrwef">sfdefrwef</option><option value="135" label="dsffr">dsffr</option><option value="136" label="gh">gh</option><option value="137" label="12gdrgt">12gdrgt</option><option value="138" label="12gdrgt">12gdrgt</option><option value="139" label="12gdrgt">12gdrgt</option><option value="140" label="zxc">zxc</option><option value="141" label="zxc">zxc</option><option value="142" label="zxc">zxc</option><option value="143" label="asd">asd</option><option value="144" label="sdfe">sdfe</option><option value="145" label="tryh">tryh</option><option value="146" label="sdfr">sdfr</option><option value="147" label="sdfer">sdfer</option><option value="148" label="asd">asd</option><option value="149" label="123">123</option><option value="150" label="qwe">qwe</option><option value="151" label="qwe">qwe</option><option value="152" label="qwe">qwe</option><option value="153" label="asd">asd</option><option value="154" label="123">123</option><option value="155" label="Sssss">Sssss</option><option value="156" label="1231">1231</option><option value="157" label="My first WEC survey">My first WEC survey</option><option value="158" label="1234">1234</option><option value="159" label="Nice site,  I think I'll take it. &lt;script&gt;alert('E...">Nice site,  I think I'll take it. &lt;script&gt;alert('E...</option><option value="160" label="Nice site,  I think I'll take it. &lt;script&gt;alert('E...">Nice site,  I think I'll take it. &lt;script&gt;alert('E...</option><option value="161" label="ad31">ad31</option><option value="162" label="smthng nml24">smthng nml24</option><option value="163" label="smthng nml29">smthng nml29</option><option value="164" label="smthng nml23">smthng nml23</option><option value="165" label="smthng nml23">smthng nml23</option><option value="166" label="smthng nml23">smthng nml23</option><option value="167" label="smthng nml2">smthng nml2</option><option value="168" label="somthng normal">somthng normal</option><option value="169" label="vxcvxcv">vxcvxcv</option><option value="170" label="ytutyutyu">ytutyutyu</option><option value="171" label="ggfdgfg">ggfdgfg</option><option value="172" label="trwtrewrtert">trwtrewrtert</option><option value="173" label="yytytyhth">yytytyhth</option><option value="174" label="adsad">adsad</option><option value="175" label="jjjjjjjjjjjjjjjjjjjjj">jjjjjjjjjjjjjjjjjjjjj</option><option value="176" label="ghfgh">ghfgh</option><option value="177" label="hfgh">hfgh</option><option value="178" label="TTTRDF">TTTRDF</option><option value="179" label="ds">ds</option><option value="180" label="tesd asdsa">tesd asdsa</option><option value="181" label="yyt">yyt</option><option value="182" label="fddsf">fddsf</option><option value="183" label="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...">WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...</option><option value="184" label="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...">WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...</option><option value="185" label="WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...">WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW...</option><option value="186" label="1">1</option><option value="187" label="1">1</option><option value="188" label="1">1</option><option value="189" label="1">1</option><option value="190" label="1">1</option><option value="191" label="1">1</option><option value="192" label="1">1</option><option value="193" label="1">1</option><option value="194" label="1">1</option><option value="195" label="1">1</option><option value="196" label="1">1</option><option value="197" label="1">1</option><option value="198" label="1">1</option><option value="199" label="1">1</option><option value="200" label="1">1</option><option value="201" label="1">1</option><option value="202" label="1">1</option><option value="203" label="1">1</option><option value="204" label="1">1</option><option value="205" label="1">1</option><option value="206" label="1">1</option><option value="207" label="1">1</option><option value="208" label="1">1</option><option value="209" label="1">1</option><option value="210" label="1">1</option><option value="211" label="1">1</option><option value="212" label="1">1</option><option value="213" label="1">1</option><option value="214" label="1">1</option><option value="215" label="1">1</option><option value="216" label="1">1</option><option value="217" label="1">1</option><option value="218" label="1">1</option><option value="219" label="1">1</option><option value="220" label="1">1</option><option value="221" label="1">1</option><option value="222" label="1">1</option><option value="223" label="1">1</option><option value="224" label="1">1</option><option value="225" label="1">1</option><option value="226" label="1">1</option><option value="227" label="1">1</option><option value="228" label="1">1</option><option value="229" label="1">1</option><option value="230" label="1">1</option><option value="231" label="1">1</option><option value="232" label="1">1</option><option value="233" label="1">1</option><option value="234" label="1">1</option><option value="235" label="1">1</option><option value="236" label="1">1</option><option value="237" label="1">1</option><option value="238" label="1">1</option><option value="239" label="1">1</option><option value="240" label="1">1</option><option value="241" label="1">1</option><option value="242" label="1">1</option><option value="243" label="1">1</option><option value="244" label="1">1</option><option value="245" label="1">1</option><option value="246" label="1">1</option><option value="247" label="1">1</option><option value="248" label="1">1</option><option value="249" label="1">1</option><option value="250" label="1">1</option><option value="251" label="1">1</option><option value="252" label="1">1</option><option value="253" label="1">1</option><option value="254" label="1">1</option><option value="255" label="1">1</option><option value="256" label="1">1</option><option value="257" label="1">1</option><option value="258" label="svyat_sg">svyat_sg</option><option value="259" label="svyat_sg">svyat_sg</option><option value="260" label="SurveyFor___________QA">SurveyFor___________QA</option><option value="261" label="Wec Runner">Wec Runner</option><option value="262" label="tetst">tetst</option><option value="263" label="bbgggff">bbgggff</option><option value="264" label="SMS">SMS</option><option value="265" label="LLaAA">LLaAA</option><option value="266" label="123">123</option><option value="267" label="Survey for Demo # 1">Survey for Demo # 1</option><option value="268" label="Language Reset">Language Reset</option><option value="269" label="Question Text">Question Text</option><option value="270" label="NewSurveyForQA">NewSurveyForQA</option><option value="271" label="NewSurveyForTC">NewSurveyForTC</option><option value="272" label="&lt;script&gt;&lt;/script&gt;">&lt;script&gt;&lt;/script&gt;</option><option value="273" label="Question flow based on metadata">Question flow based on metadata</option><option value="274" label="SMS Channel">SMS Channel</option><option value="275" label="clerk_fix">clerk_fix</option><option value="276" label="clerk_survey_check">clerk_survey_check</option><option value="277" label="clerk_another_Survey">clerk_another_Survey</option><option value="278" label="pussyy">pussyy</option><option value="279" label="clerk_hot_fox">clerk_hot_fox</option><option value="280" label="Water">Water</option><option value="281" label="MegaPizdec">MegaPizdec</option><option value="282" label="Pizdec">Pizdec</option><option value="283" label="Pizdec">Pizdec</option><option value="284" label="svyat_survey_2">svyat_survey_2</option><option value="285" label="svyat_Survey">svyat_Survey</option><option value="286" label="dgergrtht">dgergrtht</option><option value="287" label="123">123</option><option value="288" label="123">123</option><option value="289" label="Condition_based_on_Metadata">Condition_based_on_Metadata</option><option value="290" label="QA_SurveyForPublishers">QA_SurveyForPublishers</option><option value="291" label="Roma3">Roma3</option><option value="292" label="Roma2">Roma2</option><option value="293" label="My new">My new</option><option value="294" label="Roma">Roma</option><option value="295" label="Question flows">Question flows</option><option value="296" label="dddd">dddd</option><option value="297" label="var timeoutId = $browserDefer(timeoutRequest, time...">var timeoutId = $browserDefer(timeoutRequest, time...</option><option value="298" label="IE Copy with WEB">IE Copy with WEB</option><option value="299" label="IE Copy">IE Copy</option><option value="300" label="IE">IE</option><option value="301" label="qaqaqaqaqaqa">qaqaqaqaqaqa</option><option value="302" label="123123">123123</option><option value="303" label="ttt">ttt</option><option value="304" label="Survey # 2 (WEC)">Survey # 2 (WEC)</option><option value="305" label="This_Survey's_Name_Doesn't_Contain_Spaces">This_Survey's_Name_Doesn't_Contain_Spaces</option><option value="306" label="WEC demo">WEC demo</option><option value="307" label="VOC-1978">VOC-1978</option><option value="308" label="Survey # 1 (WEC)">Survey # 1 (WEC)</option><option value="309" label="1">1</option><option value="310" label="quarantine period">quarantine period</option><option value="311" label="111">111</option><option value="312" label="CST-4288">CST-4288</option><option value="313" label="1">1</option><option value="314" label="123">123</option><option value="315" label="nnm">nnm</option><option value="316" label="vchcv">vchcv</option><option value="317" label="5t46">5t46</option><option value="318" label=".">.</option><option value="319" label=",">,</option><option value="320" label=".">.</option><option value="321" label="fgdgfd">fgdgfd</option><option value="322" label="123">123</option><option value="323" label="Copy">Copy</option><option value="324" label="asdsa">asdsa</option><option value="325" label="CST-4286 Copy">CST-4286 Copy</option><option value="326" label="CST-4286 Copy">CST-4286 Copy</option><option value="327" label="CST-4286">CST-4286</option><option value="328" label="Copy">Copy</option><option value="329" label="Copy">Copy</option><option value="330" label="Copy">Copy</option><option value="331" label="Copy">Copy</option><option value="332" label="Copy">Copy</option><option value="333" label="Copy">Copy</option><option value="334" label="Copy">Copy</option><option value="335" label="Copy">Copy</option><option value="336" label="Copy">Copy</option><option value="337" label="Copy">Copy</option><option value="338" label="Copy">Copy</option><option value="339" label="Copy">Copy</option><option value="340" label="Copy">Copy</option><option value="341" label="Copy">Copy</option><option value="342" label="Copy">Copy</option><option value="343" label="Copy">Copy</option><option value="344" label="Copy">Copy</option><option value="345" label="Copy">Copy</option><option value="346" label="36666">36666</option><option value="347" label="SurveyGroup for unit 2 # 1">SurveyGroup for unit 2 # 1</option><option value="348" label="qf2">qf2</option><option value="349" label="qf2">qf2</option><option value="350" label="New survey">New survey</option><option value="351" label="123">123</option><option value="352" label="question flow">question flow</option><option value="353" label="11111">11111</option><option value="354" label="123">123</option><option value="355" label="123">123</option><option value="356" label="3412341">3412341</option><option value="357" label="123">123</option><option value="358" label="123">123</option><option value="359" label="12111">12111</option><option value="360" label="123123">123123</option><option value="361" label="123">123</option><option value="362" label="123123123">123123123</option><option value="363" label="2212123231">2212123231</option><option value="364" label="123123123">123123123</option><option value="365" label="1111111">1111111</option><option value="366" label="SG # 2">SG # 2</option><option value="367" label="41269325326+">41269325326+</option><option value="368" label="41269325326+">41269325326+</option><option value="369" label="123556">123556</option><option value="370" label="SG # 1">SG # 1</option><option value="371" label="123">123</option><option value="372" label="dawd">dawd</option><option value="373" label="1234">1234</option><option value="374" label="111">111</option><option value="375" label="erttawe123">erttawe123</option><option value="376" label="223">223</option><option value="377" label="213">213</option><option value="378" label="hh">hh</option><option value="379" label="312">312</option><option value="380" label="123">123</option><option value="381" label="sandsiv123">sandsiv123</option><option value="382" label="111">111</option><option value="383" label="sss">sss</option><option value="384" label="222">222</option><option value="385" label="123">123</option><option value="386" label="113">113</option><option value="387" label="12312312">12312312</option><option value="388" label="How are you">How are you</option><option value="389" label="eqrwerqwer">eqrwerqwer</option><option value="390" label="113">113</option><option value="391" label="123313">123313</option><option value="392" label="12312312">12312312</option><option value="393" label="ertwertwert">ertwertwert</option><option value="394" label="ttt">ttt</option><option value="395" label="fffff">fffff</option><option value="396" label="xzczx">xzczx</option><option value="397" label="123">123</option><option value="398" label="123">123</option><option value="399" label="e">e</option><option value="400" label="ddd">ddd</option><option value="401" label="gggg">gggg</option><option value="402" label="Language Coupling #1">Language Coupling #1</option><option value="403" label="sslink2">sslink2</option><option value="404" label="SSlink">SSlink</option><option value="405" label="new 3464-1">new 3464-1</option><option value="406" label="new 3464">new 3464</option><option value="407" label="3464d">3464d</option><option value="408" label="La">La</option><option value="409" label="Survey with first question2">Survey with first question2</option><option value="410" label="df">df</option><option value="411" label="foruicopy25">foruicopy25</option><option value="412" label="copy_tesst123">copy_tesst123</option><option value="413" label="copy_tesst123">copy_tesst123</option><option value="414" label="Empty Survey with no channels">Empty Survey with no channels</option><option value="415" label="New survey">New survey</option><option value="416" label="first q sent">first q sent</option><option value="417" label="dddd">dddd</option><option value="418" label="some interesting survay">some interesting survay</option><option value="419" label="SGUI">SGUI</option><option value="420" label="Lorem ipsum dolor sit amet, nonummy ligula volutpa...">Lorem ipsum dolor sit amet, nonummy ligula volutpa...</option><option value="421" label="12312321312">12312321312</option><option value="422" label="seaqw11111123">seaqw11111123</option><option value="423" label="Question rest create">Question rest create</option><option value="424" label="Relational survey 2">Relational survey 2</option><option value="425" label="Victorio">Victorio</option><option value="426" label="Question creation process 1">Question creation process 1</option><option value="427" label="rest stub">rest stub</option><option value="428" label="Hyper survey">Hyper survey</option><option value="429" label="CST-2835-extra">CST-2835-extra</option><option value="430" label="Relational survey">Relational survey</option><option value="431" label="STU4">STU4</option><option value="432" label="Lorem ipsum dolor sit amet, nonummy ligula volutpa...">Lorem ipsum dolor sit amet, nonummy ligula volutpa...</option><option value="433" label="tst">tst</option><option value="434" label="netst">netst</option><option value="435" label="tst">tst</option><option value="436" label="Survey">Survey</option><option value="437" label="MLN3">MLN3</option><option value="438" label="MLN2">MLN2</option><option value="439" label="MLN">MLN</option><option value="440" label="xircl">xircl</option><option value="441" label="® fdfd ֍">® fdfd ֍</option><option value="442" label="gfdsfgdsgrfd">gfdsfgdsgrfd</option><option value="443" label="asdfasdfdf">asdfasdfdf</option><option value="444" label="Purchasing decisions [Good one]">Purchasing decisions [Good one]</option><option value="445" label="Purchasing decisions [Valery's studies]">Purchasing decisions [Valery's studies]</option><option value="446" label="Purchasing decisions [Valery's studies]">Purchasing decisions [Valery's studies]</option><option value="447" label="Purchasing decisions [Valery's studies]">Purchasing decisions [Valery's studies]</option><option value="448" label="wwwwwww">wwwwwww</option><option value="449" label="CST-2798">CST-2798</option><option value="450" label="gghgg">gghgg</option><option value="451" label="sfqswfqsfsd">sfqswfqsfsd</option><option value="452" label="wewfwefwerferfwefwef">wewfwefwerferfwefwef</option><option value="453" label="2766-2">2766-2</option><option value="454" label="СЫЕ-2753">СЫЕ-2753</option><option value="455" label="options">options</option><option value="456" label="options">options</option><option value="457" label="Pervertion">Pervertion</option><option value="458" label="Valery's Lunch Survey">Valery's Lunch Survey</option><option value="459" label="Lunch Survey">Lunch Survey</option><option value="460" label="Lunch Survey">Lunch Survey</option><option value="461" label="asdasd">asdasd</option><option value="462" label="12">12</option><option value="463" label="1">1</option><option value="464" label="name">name</option><option value="465" label="2695-copy">2695-copy</option><option value="466" label="2689">2689</option><option value="467" label="2695-3">2695-3</option><option value="468" label="2695-2">2695-2</option><option value="469" label="Answer check">Answer check</option><option value="470" label="2695">2695</option><option value="471" label="Tttttt">Tttttt</option><option value="472" label="ttt">ttt</option><option value="473" label="CST-2671">CST-2671</option><option value="474" label="All question types *DO NOT CHANGE*">All question types *DO NOT CHANGE*</option><option value="475" label="2570">2570</option><option value="476" label="CST-2648 &quot;Don't know&quot; not present">CST-2648 "Don't know" not present</option><option value="477" label="d">d</option><option value="478" label="CST-2642 IVR: Last question is not played">CST-2642 IVR: Last question is not played</option><option value="479" label="layout ID">layout ID</option><option value="480" label="VD-473">VD-473</option><option value="481" label="open options">open options</option><option value="482" label="sdfg">sdfg</option><option value="483" label="open">open</option><option value="484" label="open">open</option><option value="485" label="Food NPS">Food NPS</option><option value="486" label="CST-2572-2">CST-2572-2</option><option value="487" label="CST-2572-1">CST-2572-1</option><option value="488" label="Don't know">Don't know</option><option value="489" label="Conditional options">Conditional options</option><option value="490" label="newsettings">newsettings</option><option value="491" label="xcvbxcvb">xcvbxcvb</option><option value="492" label="zxcv">zxcv</option><option value="493" label="no cust 6">no cust 6</option><option value="494" label="MONSTER Survey">MONSTER Survey</option><option value="495" label="Gen Flow Demo">Gen Flow Demo</option><option value="496" label="SandSIV Support">SandSIV Support</option><option value="497" label="quarantine check 2">quarantine check 2</option><option value="498" label="quarantine check 1">quarantine check 1</option><option value="499" label="2563_status date/time">2563_status date/time</option><option value="500" label="CST-965">CST-965</option><option value="501" label="CST-2549. Flow Conditions">CST-2549. Flow Conditions</option><option value="502" label="CST-2559">CST-2559</option><option value="503" label="fdgh">fdgh</option><option value="504" label="rfy">rfy</option><option value="505" label="eeee">eeee</option><option value="506" label="demo">demo</option><option value="507" label="CST-1500 New static link demo">CST-1500 New static link demo</option><option value="508" label="CST-981">CST-981</option><option value="509" label="CST-1884. Case alert by metadata">CST-1884. Case alert by metadata</option><option value="510" label="new survey dw">new survey dw</option><option value="511" label="CST-2493">CST-2493</option><option value="512" label="jkljkljl">jkljkljl</option><option value="513" label="123">123</option><option value="514" label="!!">!!</option><option value="515" label=""></option><option value="516" label="special symbols">special symbols</option><option value="517" label="andrey s">andrey s</option><option value="518" label="copy mobile template">copy mobile template</option><option value="519" label="mobile template for Android">mobile template for Android</option><option value="520" label="dw reminder">dw reminder</option><option value="521" label=""></option><option value="522" label="case alert">case alert</option><option value="523" label="quart2">quart2</option><option value="524" label="Reminder demo">Reminder demo</option><option value="525" label="Question_in_layout_for_Eugene">Question_in_layout_for_Eugene</option><option value="526" label="ftytfytfytfyftytfy">ftytfytfytfyftytfy</option><option value="527" label="fhfghgfhgfh">fhfghgfhgfh</option><option value="528" label="ju">ju</option><option value="529" label="dfdfd">dfdfd</option><option value="530" label="tetstefsdf">tetstefsdf</option><option value="531" label="dual upload">dual upload</option><option value="532" label="еуые">еуые</option><option value="533" label="demo">demo</option><option value="534" label="cowndaun">cowndaun</option><option value="535" label="jhgfjhgfvkju">jhgfjhgfvkju</option><option value="536" label="1111">1111</option><option value="537" label="123">123</option><option value="538" label="Survey for 2389">Survey for 2389</option><option value="539" label="IVR copy">IVR copy</option><option value="540" label="CST-2384">CST-2384</option><option value="541" label="jkh">jkh</option><option value="542" label="IVR_noscale">IVR_noscale</option><option value="543" label="Aleksey`s survey">Aleksey`s survey</option><option value="544" label="IVR no last question">IVR no last question</option><option value="545" label="dw languages">dw languages</option><option value="546" label="survey after refactor">survey after refactor</option><option value="547" label="727">727</option><option value="548" label="Zendesk survey">Zendesk survey</option><option value="549" label="wefwefwef">wefwefwef</option><option value="550" label="large imports">large imports</option><option value="551" label="new">new</option><option value="552" label="don't know at stats">don't know at stats</option><option value="553" label="CST-1962">CST-1962</option><option value="554" label="zvdfv">zvdfv</option><option value="555" label="paused">paused</option><option value="556" label="paused?">paused?</option><option value="557" label="survey for passing copy">survey for passing copy</option><option value="558" label="don't touch please :)">don't touch please :)</option><option value="559" label="new survey">new survey</option><option value="560" label="JJA">JJA</option><option value="561" label="sdadf">sdadf</option><option value="562" label="put first try">put first try</option><option value="563" label="Purchasing decisions [Valery's studies]">Purchasing decisions [Valery's studies]</option></select>
+                        <p class="control-label pull-left no-margins ng-hide" ng-show="surveyGroupsLoading">Loading...</p>
+                    </div>
+                </div>
+
+                <div ng-show="survey" class="form-group modal-fix-height-control ng-hide">
+                    <label class="col-sm-3 control-label" for="channel">Channel
+                    </label>
+
+                    <div ng-class="{'has-error': importForm.channel.$error.required &amp;&amp; statusValidation==false }" class="col-sm-9">
+                        <select ng-required="survey" ng-model="channel" class="form-control opt-w-70 ng-pristine ng-untouched ng-valid ng-valid-required" id="channel" name="channel">
+                            <option value="">Choose channel</option>
+                            <!-- ngRepeat: c in channels track by $index -->
+                        </select>
+                        <span ng-show="importForm.channel.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                    </div>
+                </div>
+
+                <div class="form-group modal-fix-height-control">
+                    <label class="col-sm-3 control-label">Upload file
+                    </label>
+
+                    <div ng-class="{'has-error': !original_file &amp;&amp; statusValidation==false}" id="import-input-container" class="col-sm-9">
+
+                        <!--Custom Vochub directive-->
+                        <ng-file-select required="true" file-type="import" class="ng-isolate-scope"><div ng-show="fileErrorMsg" class="has-error ng-hide">
+    <span class="help-block ng-binding"></span>
+</div>
+
+<p ng-show="progressBar" class="ng-hide">
+    <div class="progress ng-isolate-scope" animate="false" value="progressBar">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar" style="transition: none 0s ease 0s ; width: 0%;"><span class="ng-binding ng-scope">0%
+    </span></div>
+</div>
+</p>
+
+<div class="input-group">
+    <input type="text" readonly="readonly" ng-model="file.name" class="form-control bg-white ng-pristine ng-untouched ng-valid" name="file_upload" />
+
+    <span class="input-group-btn">
+        <span class="btn btn-primary btn-file">
+            <span class="glyphicon glyphicon-folder-open"></span>   Browse
+            <input type="file" id="file" name="original_file" />
+         </span>
+    </span>
+</div>
+</ng-file-select>
+
+                        <span ng-show="!original_file &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                        <span ng-show="errorMsg" class="help-block ng-binding ng-hide"></span>
+                    </div>
+                </div>
+
+                <!--Advanced settings-->
+                <div class="col-sm-12">
+                    <div class="form-group">
+
+                        <!--title-->
+                        <div class="well">
+                            <span class="glyphicon glyphicon-cog"></span> Advanced import settings
+                        </div>
+
+                        <!--controls-->
+                        <div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="delimiter">Delimiter
+                                </label>
+
+                                <div ng-class="{'has-error': importForm.delimiter.$error.required &amp;&amp; statusValidation==false,
+                                                'tab-delimiter-container':statusTabDelimiter}" class="col-sm-6">
+                                    <input type="text" required="" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" ng-model="delimiter" ng-trim="false" id="delimiter" name="delimiter" />
+                                    <span ng-show="importForm.delimiter.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                                <div class="col-sm-3">
+                                    <button class="btn btn-default pull-right" type="button" ng-click="setTabDelimeter()">set 'tab' delimiter
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="customer_column">Customer Id column</label>
+
+                                <div ng-class="{'has-error': importForm.customer_id_column.$error.required &amp;&amp; statusValidation==false}" class="col-sm-9">
+                                    <input type="text" required="" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" name="customer_id_column" ng-model="customer_id_column" id="customer_column" />
+                                    <span ng-show="importForm.customer_id_column.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="address_column">Address column</label>
+
+                                <div ng-class="{'has-error': importForm.address_column.$error.required &amp;&amp; statusValidation==false}" class="col-sm-9">
+                                    <input type="text" required="" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" name="address_column" ng-model="address_column" id="address_column" />
+                                    <span ng-show="importForm.address_column.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="language_column">Language column</label>
+
+                                <div ng-class="{'has-error': importForm.language_column.$error.required &amp;&amp; statusValidation==false}" class="col-sm-9">
+                                    <input type="text" required="" name="language_column" class="form-control ng-pristine ng-untouched ng-valid ng-valid-required" ng-model="language_column" id="language_column" />
+                                    <span ng-show="importForm.language_column.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="survey_column">
+                                    Survey column
+                                </label>
+
+                                <div ng-class="{'has-error': importForm.survey_column.$error.required &amp;&amp; statusValidation==false}" class="col-sm-9">
+                                    <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" ng-required="!survey" name="survey_column" ng-model="survey_column" ng-trim="false" ng-disabled="survey" id="survey_column" required="required" />
+                                    <span ng-show="importForm.survey_column.$error.required &amp;&amp; statusValidation==false" class="help-block ng-hide">This field is required</span>
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 control-label" for="channel_column">Channel column</label>
+
+                                <div class="col-sm-9">
+                                    <input type="text" class="form-control ng-pristine ng-untouched ng-invalid ng-invalid-required" ng-required="!survey" ng-disabled="survey" name="channel_column" ng-model="channel_column" id="channel_column" required="required" />
+                                </div>
+                            </div>
+                            <div class="form-group modal-fix-height-control">
+                                <label class="col-sm-3 noselect pointer control-label" for="add_questionnaire_hash">Add Questionnaire Hash</label>
+                                <div class="col-sm-9">
+                                    <input type="checkbox" class="margin-t-10 ng-pristine ng-untouched ng-valid" name="add_questionnaire_hash" ng-model="add_questionnaire_hash" id="add_questionnaire_hash" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="modal-footer">
+        <div class="bootstrap-dialog-footer">
+            <div class="bootstrap-dialog-footer-buttons">
+                <button ng-click="cancel()" class="btn btn-default"><span class="glyphicon glyphicon-remove"></span>
+                    Cancel
+                </button>
+                <button ng-click="continueUpload()" ladda="loading==true" data-style="zoom-in" class="ladda-button btn btn-primary" type="submit" ng-class="{'ladda-button': !importForm.$valid || !import.original_file || (selectedSurvey &amp;&amp; !import.survey)}"><span class="ladda-label">
+                    <span class="glyphicon glyphicon-ok"></span> Save Import
+                </span><span class="ladda-spinner"></span></button>
+            </div>
+        </div>
+    </div>
+</div>
+</div></div>
+</div></body></html>

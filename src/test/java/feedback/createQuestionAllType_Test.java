@@ -10,8 +10,12 @@ public class createQuestionAllType_Test {
     @Test
     public void createQuestionAllType() {
 
-        OpenCI page = new OpenCI();
-        page.openCI();
+//        OpenCI page = new OpenCI();
+//        page.openCI();
+        Hub staging = new Hub();
+        staging.loginST();
+        staging.pageSurvey();
+
         SurveyCreate surveyNew = new SurveyCreate();
             surveyNew.addSurveyBtn.click();
             surveyNew.popupAddSurvey.shouldBe(exist);
