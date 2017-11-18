@@ -18,7 +18,7 @@ public class CaseAlert {
     SelenideElement caseAlertName = $("#name");
     SelenideElement addCaseAlert = $(".case-alert-emails-button.btn.btn-primary");
     SelenideElement pressCaseAlertMail = $(".form-control.text-lighter.ng-pristine.ng-untouched.ng-valid.ng-valid-email");
-    String userMail = "rotislav.pas@sandsiv.com";
+    String userMail = "rostislav.pas@sandsiv.com";
     SelenideElement btnSaveCaseAlert = $(".ladda-button.btn.btn-primary");
     SelenideElement saveCaseAlertSuccess = $(".noty_message");
     String textAlertSuccess = "Case alert was successfully saved";

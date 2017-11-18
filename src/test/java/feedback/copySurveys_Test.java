@@ -8,11 +8,12 @@ import static com.codeborne.selenide.Selenide.sleep;
 public class copySurveys_Test {
     @Test
     public void copySurveysTest(){
-//        OpenCI page = new OpenCI();
-//        page.openCI();
-        Hub staging = new Hub();
-            staging.loginST();
-            staging.pageSurvey();
+        OpenCI page = new OpenCI();
+        page.openCI();
+//        Hub staging = new Hub();
+//            staging.loginST();
+//            staging.pageSurvey();
+
 
         CopySurvey copy = new CopySurvey();
             copy.functionButton.get(1).click();

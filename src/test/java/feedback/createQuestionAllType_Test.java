@@ -10,11 +10,13 @@ public class createQuestionAllType_Test {
     @Test
     public void createQuestionAllType() {
 
-//        OpenCI page = new OpenCI();
-//        page.openCI();
-        Hub staging = new Hub();
-        staging.loginST();
-        staging.pageSurvey();
+        OpenCI page = new OpenCI();
+        page.openCI();
+//        Hub staging = new Hub();
+//        staging.loginST();
+//        staging.pageSurvey();
+
+
 
         SurveyCreate surveyNew = new SurveyCreate();
             surveyNew.addSurveyBtn.click();

@@ -25,7 +25,10 @@ public class Question {
     SelenideElement questionTitle = $("#title");
     String questionTitleText = "Test Title";
     SelenideElement questionId = $("#external_id");
-    String questionIdText = "Test Id";
+    String questionIdText = "Text_External_ID";
+    String questionIdTextForCaseAlert [] = {"Conditions_\"<\"", "Conditions_\"<=\"", "Conditions_\">\"", "Conditions_\"=\"",
+            "Conditions_\">=\"", "Conditions_\"!=\"", "Conditions_\"like%\"", "Conditions_\"%like%\"",
+            "Conditions_\"likeNot%\"", "Conditions_\"%likeNot%\""};
     SelenideElement questionText = $("#text");
     String questionTextText = "Question Text";
     String questionTextScalableForCaseAlert [] = {"Conditions_\"<\" must be < 10 ", "Conditions_\"<=\" must be <= 9 ",

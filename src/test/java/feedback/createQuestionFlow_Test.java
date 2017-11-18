@@ -9,12 +9,12 @@ public class createQuestionFlow_Test {
     @Test
     public void createQuestionFlow(){
 
-//        OpenCI page = new OpenCI();
-//        page.openCI();
+       OpenCI page = new OpenCI();
+        page.openCI();
 
-        Hub staging = new Hub();
-        staging.loginST();
-        staging.pageSurvey();
+//        Hub staging = new Hub();
+//        staging.loginST();
+//        staging.pageSurvey();
 
         SurveyCreate surveyNew = new SurveyCreate();
         surveyNew.addSurveyBtn.click();

@@ -1,6 +1,9 @@
 package feedback;
 
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Condition.present;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Selenide.page;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class QuestionType {
@@ -23,6 +26,7 @@ public class QuestionType {
             question.highestValue.setValue(question.highestValueText);
             question.numberOfValue.setValue(question.numberOfValueText);
             question.btnSaveQuestion.click();
+        question.notyMessage.waitUntil(present,5000);
             question.notyMessage.shouldHave(text(question.successfullySaved));
     sleep(4000);
     }
@@ -41,6 +45,7 @@ public class QuestionType {
          question.questionText.setValue(question.questionTextText);
          question.questionErrorText.setValue(question.questionErrorTextText);
          question.btnSaveQuestion.click();
+        question.notyMessage.waitUntil(present,5000);
          question.notyMessage.shouldHave(text(question.successfullySaved));
          sleep(4000);
      }
@@ -59,6 +64,7 @@ public class QuestionType {
      question.questionText.setValue(question.questionTextText);
      question.questionErrorText.setValue(question.questionErrorTextText);
      question.btnSaveQuestion.click();
+        question.notyMessage.waitUntil(present,5000);
      question.notyMessage.shouldHave(text(question.successfullySaved));
      sleep(4000);
  }
@@ -77,6 +83,7 @@ public class QuestionType {
         question.questionText.setValue(question.questionTextText);
         question.questionErrorText.setValue(question.questionErrorTextText);
         question.btnSaveQuestion.click();
+        question.notyMessage.waitUntil(present,5000);
         question.notyMessage.shouldHave(text(question.successfullySaved));
         sleep(4000);
     }
@@ -95,6 +102,7 @@ public class QuestionType {
             question.questionText.setValue(question.questionTextText);
             question.questionErrorText.setValue(question.questionErrorTextText);
             question.btnSaveQuestion.click();
+            question.notyMessage.waitUntil(present,5000);
             question.notyMessage.shouldHave(text(question.successfullySaved));
             sleep(4000);
         }
@@ -113,6 +121,7 @@ public class QuestionType {
             question.questionText.setValue(question.questionTextText);
             question.questionErrorText.setValue(question.questionErrorTextText);
             question.btnSaveQuestion.click();
+            question.notyMessage.waitUntil(present,5000);
             question.notyMessage.shouldHave(text(question.successfullySaved));
             sleep(4000);
         }
@@ -131,6 +140,7 @@ public class QuestionType {
             question.questionText.setValue(question.questionTextText);
             question.questionErrorText.setValue(question.questionErrorTextText);
             question.btnSaveQuestion.click();
+            question.notyMessage.waitUntil(present,5000);
             question.notyMessage.shouldHave(text(question.successfullySaved));
             sleep(4000);
         }
@@ -146,8 +156,7 @@ public class QuestionType {
             sleep(10000);
             question.validationTitleAlert.shouldHave(text(question.textAlertValidation));
             question.questionTitle.setValue(question.questionTitleText);
-            question.questionId.setValue(question.questionIdText);
-
+            question.questionId.setValue(question.questionIdTextForCaseAlert[i]);
 
             question.questionText.setValue(question.questionTextScalableForCaseAlert[i]);
 
@@ -157,8 +166,14 @@ public class QuestionType {
             question.highestValue.setValue(question.highestValueText);
             question.numberOfValue.setValue(question.numberOfValueText);
             question.btnSaveQuestion.click();
+
+            sleep(3000);
+
+//            waitUntil(question.notyMessage, hasText(question.successfullySaved));
+            question.notyMessage.waitUntil(present,5000);
             question.notyMessage.shouldHave(text(question.successfullySaved));
             sleep(4000);
+
         }
 
     }
@@ -175,10 +190,13 @@ public class QuestionType {
             sleep(10000);
             question.validationTitleAlert.shouldHave(text(question.textAlertValidation));
             question.questionTitle.setValue(question.questionTitleText);
-            question.questionId.setValue(question.questionIdText);
+            question.questionId.setValue(question.questionIdTextForCaseAlert[i]);
             question.questionText.setValue(question.questionTextOpenForCaseAlert[i]);
             question.questionErrorText.setValue(question.questionErrorTextText);
             question.btnSaveQuestion.click();
+            sleep(3000);
+            question.notyMessage.waitUntil(present,5000);
+
             question.notyMessage.shouldHave(text(question.successfullySaved));
             sleep(4000);
         }

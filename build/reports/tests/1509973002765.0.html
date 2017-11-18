@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}</style>
+<meta charset="utf-8" />
+<meta content="IE=edge" http-equiv="X-UA-Compatible" />
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+<meta content="max-age=0" http-equiv="cache-control" />
+<meta content="no-cache" http-equiv="cache-control" />
+<meta content="0" http-equiv="expires" />
+<meta content="Tue, 01 Jan 1980 1:00:00 GMT" http-equiv="expires" />
+<meta content="no-cache" http-equiv="pragma" />
+<script async="" charset="utf-8" src="https://v2.zopim.com/?2EMg9n2aUvZPA4wxYjx4vUMBUEttsLFJ" type="text/javascript"></script><script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="/dist/feedback.js" src="/dist/feedback.js?v.1.7.53"></script><base href="/feedback/" />
+<title ng-bind="'Feedback :: ' + pageTitle" class="ng-binding">Feedback :: Surveys List</title>
+<script src="/js/vendor_feedback/requirejs/require.js"></script>
+<link href="/bundles/xirclxirclfeedback/css/app.css?v.1.7.53" rel="stylesheet" />
+    <!-- Start of sandsiv Zendesk Widget script -->
+    <iframe src="javascript:false" title="" style="width: 0; height: 0; border: 0; position: absolute; top: -9999px"></iframe><script>
+        // Start of sandsiv Zendesk Widget script
+        var jwtUrl = '/zendesk_jwt';
+        var xhr = new XMLHttpRequest(jwtUrl);
+        xhr.open('GET', jwtUrl, false);
+        xhr.send();
+        window.zESettings = {
+            authenticate: { jwt: xhr.responseText }
+        };
+        /*&lt;![CDATA[*/
+        window.zEmbed||function(e,t){var n,o,d,i,s,a=[],r=document.createElement("iframe");window.zEmbed=function(){a.push(arguments)},window.zE=window.zE||window.zEmbed,r.src="javascript:false",r.title="",r.role="presentation",(r.frameElement||r).style.cssText="display: none",d=document.getElementsByTagName("script"),d=d[d.length-1],d.parentNode.insertBefore(r,d),i=r.contentWindow,s=i.document;try{o=s}catch(e){n=document.domain,r.src='javascript:var d=document.open();d.domain="'+n+'";void(0);',o=s}o.open()._l=function(){var e=this.createElement("script");n&amp;&amp;(this.domain=n),e.id="js-iframe-async",e.src="https://assets.zendesk.com/embeddable_framework/main.js",this.t=+new Date,this.zendeskHost="support.sandsiv.com",this.zEQueue=a,this.body.appendChild(e)},o.write('&lt;body onload="document._l();"&gt;'),o.close()}();
+        /*]]&gt;*/
+        zE(function() {
+            var identifyData = parseJwt(xhr.responseText);
+            zE.identify({
+              name: identifyData.name || '',
+              email: identifyData.email || ''
+            });
+        });
+        function parseJwt(token) {
+            var base64Url = token.split('.')[1];
+            var base64 = base64Url.replace('-', '+').replace('_', '/');
+            return JSON.parse(window.atob(base64));
+        }
+    </script>
+    <!-- End of sandsiv Zendesk Widget script -->
+<style id="ace_editor.css">.ace_editor {position: relative;overflow: hidden;font: 12px/normal 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'source-code-pro', monospace;direction: ltr;text-align: left;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);}.ace_scroller {position: absolute;overflow: hidden;top: 0;bottom: 0;background-color: inherit;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;cursor: text;}.ace_content {position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;min-width: 100%;}.ace_dragging .ace_scroller:before{position: absolute;top: 0;left: 0;right: 0;bottom: 0;content: '';background: rgba(250, 250, 250, 0.01);z-index: 1000;}.ace_dragging.ace_dark .ace_scroller:before{background: rgba(0, 0, 0, 0.01);}.ace_selecting, .ace_selecting * {cursor: text !important;}.ace_gutter {position: absolute;overflow : hidden;width: auto;top: 0;bottom: 0;left: 0;cursor: default;z-index: 4;-ms-user-select: none;-moz-user-select: none;-webkit-user-select: none;user-select: none;}.ace_gutter-active-line {position: absolute;left: 0;right: 0;}.ace_scroller.ace_scroll-left {box-shadow: 17px 0 16px -16px rgba(0, 0, 0, 0.4) inset;}.ace_gutter-cell {padding-left: 19px;padding-right: 6px;background-repeat: no-repeat;}.ace_gutter-cell.ace_error {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAABOFBMVEX/////////QRswFAb/Ui4wFAYwFAYwFAaWGAfDRymzOSH/PxswFAb/SiUwFAYwFAbUPRvjQiDllog5HhHdRybsTi3/Tyv9Tir+Syj/UC3////XurebMBIwFAb/RSHbPx/gUzfdwL3kzMivKBAwFAbbvbnhPx66NhowFAYwFAaZJg8wFAaxKBDZurf/RB6mMxb/SCMwFAYwFAbxQB3+RB4wFAb/Qhy4Oh+4QifbNRcwFAYwFAYwFAb/QRzdNhgwFAYwFAbav7v/Uy7oaE68MBK5LxLewr/r2NXewLswFAaxJw4wFAbkPRy2PyYwFAaxKhLm1tMwFAazPiQwFAaUGAb/QBrfOx3bvrv/VC/maE4wFAbRPBq6MRO8Qynew8Dp2tjfwb0wFAbx6eju5+by6uns4uH9/f36+vr/GkHjAAAAYnRSTlMAGt+64rnWu/bo8eAA4InH3+DwoN7j4eLi4xP99Nfg4+b+/u9B/eDs1MD1mO7+4PHg2MXa347g7vDizMLN4eG+Pv7i5evs/v79yu7S3/DV7/498Yv24eH+4ufQ3Ozu/v7+y13sRqwAAADLSURBVHjaZc/XDsFgGIBhtDrshlitmk2IrbHFqL2pvXf/+78DPokj7+Fz9qpU/9UXJIlhmPaTaQ6QPaz0mm+5gwkgovcV6GZzd5JtCQwgsxoHOvJO15kleRLAnMgHFIESUEPmawB9ngmelTtipwwfASilxOLyiV5UVUyVAfbG0cCPHig+GBkzAENHS0AstVF6bacZIOzgLmxsHbt2OecNgJC83JERmePUYq8ARGkJx6XtFsdddBQgZE2nPR6CICZhawjA4Fb/chv+399kfR+MMMDGOQAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: 2px center;}.ace_gutter-cell.ace_warning {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAmVBMVEX///8AAAD///8AAAAAAABPSzb/5sAAAAB/blH/73z/ulkAAAAAAAD85pkAAAAAAAACAgP/vGz/rkDerGbGrV7/pkQICAf////e0IsAAAD/oED/qTvhrnUAAAD/yHD/njcAAADuv2r/nz//oTj/p064oGf/zHAAAAA9Nir/tFIAAAD/tlTiuWf/tkIAAACynXEAAAAAAAAtIRW7zBpBAAAAM3RSTlMAABR1m7RXO8Ln31Z36zT+neXe5OzooRDfn+TZ4p3h2hTf4t3k3ucyrN1K5+Xaks52Sfs9CXgrAAAAjklEQVR42o3PbQ+CIBQFYEwboPhSYgoYunIqqLn6/z8uYdH8Vmdnu9vz4WwXgN/xTPRD2+sgOcZjsge/whXZgUaYYvT8QnuJaUrjrHUQreGczuEafQCO/SJTufTbroWsPgsllVhq3wJEk2jUSzX3CUEDJC84707djRc5MTAQxoLgupWRwW6UB5fS++NV8AbOZgnsC7BpEAAAAABJRU5ErkJggg==");background-position: 2px center;}.ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAJ0Uk5TAAB2k804AAAAPklEQVQY02NgIB68QuO3tiLznjAwpKTgNyDbMegwisCHZUETUZV0ZqOquBpXj2rtnpSJT1AEnnRmL2OgGgAAIKkRQap2htgAAAAASUVORK5CYII=");background-position: 2px center;}.ace_dark .ace_gutter-cell.ace_info {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAJFBMVEUAAAChoaGAgIAqKiq+vr6tra1ZWVmUlJSbm5s8PDxubm56enrdgzg3AAAAAXRSTlMAQObYZgAAAClJREFUeNpjYMAPdsMYHegyJZFQBlsUlMFVCWUYKkAZMxZAGdxlDMQBAG+TBP4B6RyJAAAAAElFTkSuQmCC");}.ace_scrollbar {position: absolute;right: 0;bottom: 0;z-index: 6;}.ace_scrollbar-inner {position: absolute;cursor: text;left: 0;top: 0;}.ace_scrollbar-v{overflow-x: hidden;overflow-y: scroll;top: 0;}.ace_scrollbar-h {overflow-x: scroll;overflow-y: hidden;left: 0;}.ace_print-margin {position: absolute;height: 100%;}.ace_text-input {position: absolute;z-index: 0;width: 0.5em;height: 1em;opacity: 0;background: transparent;-moz-appearance: none;appearance: none;border: none;resize: none;outline: none;overflow: hidden;font: inherit;padding: 0 1px;margin: 0 -1px;text-indent: -1em;-ms-user-select: text;-moz-user-select: text;-webkit-user-select: text;user-select: text;white-space: pre!important;}.ace_text-input.ace_composition {background: inherit;color: inherit;z-index: 1000;opacity: 1;text-indent: 0;}.ace_layer {z-index: 1;position: absolute;overflow: hidden;word-wrap: normal;white-space: pre;height: 100%;width: 100%;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;pointer-events: none;}.ace_gutter-layer {position: relative;width: auto;text-align: right;pointer-events: auto;}.ace_text-layer {font: inherit !important;}.ace_cjk {display: inline-block;text-align: center;}.ace_cursor-layer {z-index: 4;}.ace_cursor {z-index: 4;position: absolute;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;border-left: 2px solid;transform: translatez(0);}.ace_multiselect .ace_cursor {border-left-width: 1px;}.ace_slim-cursors .ace_cursor {border-left-width: 1px;}.ace_overwrite-cursors .ace_cursor {border-left-width: 0;border-bottom: 1px solid;}.ace_hidden-cursors .ace_cursor {opacity: 0.2;}.ace_smooth-blinking .ace_cursor {-webkit-transition: opacity 0.18s;transition: opacity 0.18s;}.ace_marker-layer .ace_step, .ace_marker-layer .ace_stack {position: absolute;z-index: 3;}.ace_marker-layer .ace_selection {position: absolute;z-index: 5;}.ace_marker-layer .ace_bracket {position: absolute;z-index: 6;}.ace_marker-layer .ace_active-line {position: absolute;z-index: 2;}.ace_marker-layer .ace_selected-word {position: absolute;z-index: 4;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}.ace_line .ace_fold {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;display: inline-block;height: 11px;margin-top: -2px;vertical-align: middle;background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACJJREFUeNpi+P//fxgTAwPDBxDxD078RSX+YeEyDFMCIMAAI3INmXiwf2YAAAAASUVORK5CYII=");background-repeat: no-repeat, repeat-x;background-position: center center, top left;color: transparent;border: 1px solid black;border-radius: 2px;cursor: pointer;pointer-events: auto;}.ace_dark .ace_fold {}.ace_fold:hover{background-image:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJpJREFUeNpi/P//PwOlgAXGYGRklAVSokD8GmjwY1wasKljQpYACtpCFeADcHVQfQyMQAwzwAZI3wJKvCLkfKBaMSClBlR7BOQikCFGQEErIH0VqkabiGCAqwUadAzZJRxQr/0gwiXIal8zQQPnNVTgJ1TdawL0T5gBIP1MUJNhBv2HKoQHHjqNrA4WO4zY0glyNKLT2KIfIMAAQsdgGiXvgnYAAAAASUVORK5CYII="),url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAA3CAYAAADNNiA5AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACBJREFUeNpi+P//fz4TAwPDZxDxD5X4i5fLMEwJgAADAEPVDbjNw87ZAAAAAElFTkSuQmCC");}.ace_tooltip {background-color: #FFF;background-image: -webkit-linear-gradient(top, transparent, rgba(0, 0, 0, 0.1));background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.1));border: 1px solid gray;border-radius: 1px;box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);color: black;max-width: 100%;padding: 3px 4px;position: fixed;z-index: 999999;-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;cursor: default;white-space: pre;word-wrap: break-word;line-height: normal;font-style: normal;font-weight: normal;letter-spacing: normal;pointer-events: none;}.ace_folding-enabled &gt; .ace_gutter-cell {padding-right: 13px;}.ace_fold-widget {-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;margin: 0 -12px 0 1px;display: none;width: 11px;vertical-align: top;background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42mWKsQ0AMAzC8ixLlrzQjzmBiEjp0A6WwBCSPgKAXoLkqSot7nN3yMwR7pZ32NzpKkVoDBUxKAAAAABJRU5ErkJggg==");background-repeat: no-repeat;background-position: center;border-radius: 3px;border: 1px solid transparent;cursor: pointer;}.ace_folding-enabled .ace_fold-widget {display: inline-block;   }.ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAANElEQVR42m3HwQkAMAhD0YzsRchFKI7sAikeWkrxwScEB0nh5e7KTPWimZki4tYfVbX+MNl4pyZXejUO1QAAAABJRU5ErkJggg==");}.ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAGCAYAAAAG5SQMAAAAOUlEQVR42jXKwQkAMAgDwKwqKD4EwQ26sSOkVWjgIIHAzPiCgaqiqnJHZnKICBERHN194O5b9vbLuAVRL+l0YWnZAAAAAElFTkSuQmCCXA==");}.ace_fold-widget:hover {border: 1px solid rgba(0, 0, 0, 0.3);background-color: rgba(255, 255, 255, 0.2);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.7);}.ace_fold-widget:active {border: 1px solid rgba(0, 0, 0, 0.4);background-color: rgba(0, 0, 0, 0.05);box-shadow: 0 1px 1px rgba(255, 255, 255, 0.8);}.ace_dark .ace_fold-widget {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHklEQVQIW2P4//8/AzoGEQ7oGCaLLAhWiSwB146BAQCSTPYocqT0AAAAAElFTkSuQmCC");}.ace_dark .ace_fold-widget.ace_end {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAH0lEQVQIW2P4//8/AxQ7wNjIAjDMgC4AxjCVKBirIAAF0kz2rlhxpAAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget.ace_closed {background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAFCAYAAACAcVaiAAAAHElEQVQIW2P4//+/AxAzgDADlOOAznHAKgPWAwARji8UIDTfQQAAAABJRU5ErkJggg==");}.ace_dark .ace_fold-widget:hover {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);background-color: rgba(255, 255, 255, 0.1);}.ace_dark .ace_fold-widget:active {box-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);}.ace_fold-widget.ace_invalid {background-color: #FFB4B4;border-color: #DE5555;}.ace_fade-fold-widgets .ace_fold-widget {-webkit-transition: opacity 0.4s ease 0.05s;transition: opacity 0.4s ease 0.05s;opacity: 0;}.ace_fade-fold-widgets:hover .ace_fold-widget {-webkit-transition: opacity 0.05s ease 0.05s;transition: opacity 0.05s ease 0.05s;opacity:1;}.ace_underline {text-decoration: underline;}.ace_bold {font-weight: bold;}.ace_nobold .ace_bold {font-weight: normal;}.ace_italic {font-style: italic;}.ace_error-marker {background-color: rgba(255, 0, 0,0.2);position: absolute;z-index: 9;}.ace_highlight-marker {background-color: rgba(255, 255, 0,0.2);position: absolute;z-index: 8;}.ace_br1 {border-top-left-radius    : 3px;}.ace_br2 {border-top-right-radius   : 3px;}.ace_br3 {border-top-left-radius    : 3px; border-top-right-radius:    3px;}.ace_br4 {border-bottom-right-radius: 3px;}.ace_br5 {border-top-left-radius    : 3px; border-bottom-right-radius: 3px;}.ace_br6 {border-top-right-radius   : 3px; border-bottom-right-radius: 3px;}.ace_br7 {border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px;}.ace_br8 {border-bottom-left-radius : 3px;}.ace_br9 {border-top-left-radius    : 3px; border-bottom-left-radius:  3px;}.ace_br10{border-top-right-radius   : 3px; border-bottom-left-radius:  3px;}.ace_br11{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-left-radius:  3px;}.ace_br12{border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br13{border-top-left-radius    : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br14{border-top-right-radius   : 3px; border-bottom-right-radius: 3px; border-bottom-left-radius:  3px;}.ace_br15{border-top-left-radius    : 3px; border-top-right-radius:    3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;}.ace_text-input-ios {position: absolute !important;top: -100000px !important;left: -100000px !important;}
+/*# sourceURL=ace/css/ace_editor.css */</style><style id="ace-tm">.ace-tm .ace_gutter {background: #f0f0f0;color: #333;}.ace-tm .ace_print-margin {width: 1px;background: #e8e8e8;}.ace-tm .ace_fold {background-color: #6B72E6;}.ace-tm {background-color: #FFFFFF;color: black;}.ace-tm .ace_cursor {color: black;}.ace-tm .ace_invisible {color: rgb(191, 191, 191);}.ace-tm .ace_storage,.ace-tm .ace_keyword {color: blue;}.ace-tm .ace_constant {color: rgb(197, 6, 11);}.ace-tm .ace_constant.ace_buildin {color: rgb(88, 72, 246);}.ace-tm .ace_constant.ace_language {color: rgb(88, 92, 246);}.ace-tm .ace_constant.ace_library {color: rgb(6, 150, 14);}.ace-tm .ace_invalid {background-color: rgba(255, 0, 0, 0.1);color: red;}.ace-tm .ace_support.ace_function {color: rgb(60, 76, 114);}.ace-tm .ace_support.ace_constant {color: rgb(6, 150, 14);}.ace-tm .ace_support.ace_type,.ace-tm .ace_support.ace_class {color: rgb(109, 121, 222);}.ace-tm .ace_keyword.ace_operator {color: rgb(104, 118, 135);}.ace-tm .ace_string {color: rgb(3, 106, 7);}.ace-tm .ace_comment {color: rgb(76, 136, 107);}.ace-tm .ace_comment.ace_doc {color: rgb(0, 102, 255);}.ace-tm .ace_comment.ace_doc.ace_tag {color: rgb(128, 159, 191);}.ace-tm .ace_constant.ace_numeric {color: rgb(0, 0, 205);}.ace-tm .ace_variable {color: rgb(49, 132, 149);}.ace-tm .ace_xml-pe {color: rgb(104, 104, 91);}.ace-tm .ace_entity.ace_name.ace_function {color: #0000A2;}.ace-tm .ace_heading {color: rgb(12, 7, 255);}.ace-tm .ace_list {color:rgb(185, 6, 144);}.ace-tm .ace_meta.ace_tag {color:rgb(0, 22, 142);}.ace-tm .ace_string.ace_regex {color: rgb(255, 0, 0)}.ace-tm .ace_marker-layer .ace_selection {background: rgb(181, 213, 255);}.ace-tm.ace_multiselect .ace_selection.ace_start {box-shadow: 0 0 3px 0px white;}.ace-tm .ace_marker-layer .ace_step {background: rgb(252, 255, 0);}.ace-tm .ace_marker-layer .ace_stack {background: rgb(164, 229, 101);}.ace-tm .ace_marker-layer .ace_bracket {margin: -1px 0 0 -1px;border: 1px solid rgb(192, 192, 192);}.ace-tm .ace_marker-layer .ace_active-line {background: rgba(0, 0, 0, 0.07);}.ace-tm .ace_gutter-active-line {background-color : #dcdcdc;}.ace-tm .ace_marker-layer .ace_selected-word {background: rgb(250, 250, 255);border: 1px solid rgb(200, 200, 250);}.ace-tm .ace_indent-guide {background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAACCAYAAACZgbYnAAAAE0lEQVQImWP4////f4bLly//BwAmVgd1/w11/gAAAABJRU5ErkJggg==") right repeat-y;}
+/*# sourceURL=ace/css/ace-tm */</style><style>    .error_widget_wrapper {        background: inherit;        color: inherit;        border:none    }    .error_widget {        border-top: solid 2px;        border-bottom: solid 2px;        margin: 5px 0;        padding: 10px 40px;        white-space: pre-wrap;    }    .error_widget.ace_error, .error_widget_arrow.ace_error{        border-color: #ff5a5a    }    .error_widget.ace_warning, .error_widget_arrow.ace_warning{        border-color: #F1D817    }    .error_widget.ace_info, .error_widget_arrow.ace_info{        border-color: #5a5a5a    }    .error_widget.ace_ok, .error_widget_arrow.ace_ok{        border-color: #5aaa5a    }    .error_widget_arrow {        position: absolute;        border: solid 5px;        border-top-color: transparent!important;        border-right-color: transparent!important;        border-left-color: transparent!important;        top: -5px;    }</style><style type="text/css"></style><style media="print" class="jx_ui_StyleSheet" __jx__id="___$_2" type="text/css">.zopim { display: none !important }</style></head>
+<body><div class="zopim" __jx__id="___$_64 ___$_64" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000002; width: 180px; height: 30px; bottom: 0px; left: 10px; display: none;" data-test-id="ChatWidgetButton"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetButton-iframe"></iframe></div><div class="zopim" __jx__id="___$_4 ___$_4" style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px; border: 0px none; background: transparent none repeat scroll 0% 0%; overflow: hidden; position: fixed; z-index: 16000001; bottom: 0px; left: 15px; border-top-left-radius: 5px; border-top-right-radius: 5px; display: none; width: 350px; height: 450px; box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.1);" data-test-id="ChatWidgetWindow"><iframe frameborder="0" style="background-color: transparent; vertical-align: text-bottom; position: relative; width: 100%; height: 100%; min-width: 100%; min-height: 100%; max-width: 100%; max-height: 100%; margin: 0px; overflow: hidden; display: block;" src="about:blank" data-test-id="ChatWidgetWindow-iframe"></iframe></div>            <link href="/bundles/xirclcore/css/navbar.css?v.1.7.53" rel="stylesheet" />
+    
+            <div role="navigation" class="navbar navbar-default navbar-static-top" id="top-navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle" type="button">
+                <span class="sr-only">
+                    Navigation
+                </span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+                <img src="/bundles/xirclcore/images/vochub_logo_svg.svg" alt="Voc Hub logo" />
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+                            <div class="container">
+                    <ul class="nav navbar-nav navbar-left">
+                                                            <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <img src="/bundles/xirclcore/images/apps/feedback.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">
+                    VOC Feedback
+                    <b class="caret"></b>
+                </p>
+                <p class="app-description">
+                <span counter-initial-value="256" counter-id="feedback-dashboard-counter" counter="" class="ng-binding ng-isolate-scope">256</span>
+                    surveys
+                </p>
+            </div>
+        </a>
+
+                <ul class="dropdown-menu">
+    <li><a href="/feedback/#/survey_list">Surveys</a></li>
+    <li class="divider" role="presentation"></li>
+    <li><a href="/feedback/#/export/results">Export</a></li>
+    <li><a href="/feedback/#/import">Import</a></li>
+    <li class="divider" role="presentation"></li>
+    <li><a href="/feedback/#/settings/advanced">Global settings</a></li>
+    <li class="divider" role="presentation"></li>
+    <li><a href="/feedback/#/customers">Customers</a></li>
+</ul>
+    </li>
+
+                                                                                <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <img width="15px" src="/bundles/xirclcore/images/apps/mine.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">
+                    VOC Mine
+                    <b class="caret"></b>
+                </p>
+                <p class="app-description">0 queries</p>
+            </div>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/store/upload/">Upload data</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/mine/query/#list-queries">Queries</a></li>
+            <li class="divider" role="presentation"></li>
+                        <li>
+                <a href="/mine/dictionary/synonyms/">Synonym dictionaries</a>
+            </li>
+            <li>
+                <a href="/mine/dictionary/stop-words/">Stop word dictionaries</a>
+            </li>
+        </ul>
+    </li>
+                                                                                <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <img src="/bundles/xirclcore/images/apps/classify.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">
+                    VOC Classify
+                    <b class="caret"></b>
+                </p>
+                <p class="app-description">0 classifiers</p>
+            </div>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/classify/files/">Upload data</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/classify/texts/training">Training texts</a></li>
+            <li><a href="/classify/texts/verification">Verification texts</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/classify/classifier/">Classifiers</a></li>
+                                    <li><a href="/classify/single-text/">Single text processing</a></li>
+            <li><a href="/classify/stats/overview">Statistics</a></li>
+            <li class="divider" role="presentation"></li>
+            <li><a href="/classify/output/">Export data</a></li>
+        </ul>
+    </li>
+                                                                                    <li class="dropdown">
+        <a href="/dashboard/">
+            <img src="/bundles/xirclcore/images/apps/visual.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">VOC Visual</p>
+                <p class="app-description">
+                <span counter-initial-value="1" counter-id="visual-dashboard-counter" counter="" class="ng-binding ng-isolate-scope">1</span>
+                    dashboards
+                </p>
+            </div>
+        </a>
+    </li>
+                                                                                <li>
+        <a href="/xqare/">
+            <img src="/bundles/xirclcore/images/apps/monitoring.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">VOC Monitoring</p>
+                <p class="app-description">45 counters</p>
+            </div>
+        </a>
+    </li>
+                                                                                <li class="dropdown">
+        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+            <img src="/bundles/xirclcore/images/apps/labs.svg" class="app-icon" />
+            <div class="navigation-item-text">
+                <p class="app-name">
+                    VOC Labs
+                    <b class="caret"></b>
+                </p>
+                <p class="app-description">2 products</p>
+            </div>
+        </a>
+        <ul class="dropdown-menu">
+            <li><a href="/labs/clustering">Clustering</a></li>
+            <li><a href="/labs/predict">Prediction</a></li>
+        </ul>
+    </li>
+                                            </ul>
+                </div>
+                <ul style="position: absolute; right: 15px; top: 0px; margin-right: 0!important;" class="nav navbar-nav navbar-right">
+                                            <li>
+                            <a id="voc-notifications-button" tabindex="0" href="#">
+                                <div class="bell-container">
+                                    <span class="glyphicon glyphicon-bell"></span>
+                                    <span class="blue-dot has-notifications hide"></span>
+                                </div>
+                            </a>
+                            <div id="voc-notifications-container" class="popover bottom">
+                                <div class="arrow"></div>
+                                <h3 class="popover-title">
+                                    Notifications
+                                </h3>
+                                <div class="popover-content">
+                                    <div class="has-no-notifications">
+                                        <span style="font-size: 48px;" class="glyphicon glyphicon-bell"></span>
+                                        <br />
+                                        No new notifications
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#" id="user-dropdown-menu">
+                                Rostislav
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/configuration/">Settings</a></li>
+                                <li><a href="/user-profile">Profile</a></li>
+                                <li><a href="/about">About Voc Hub</a></li>
+                                <li><a href="/logout">Logout</a></li>
+                            </ul>
+                        </li>
+                                    </ul>
+                    </div>
+    </div>
+</div>
+            
+    <main id="xircl-feedback-bundle" role="main">
+        <div class="container">
+            <!--Main View-->
+            <div class="xircl-alerts"></div>
+            <authorization></authorization>
+            <!-- ngView:  --><div ng-hide="viewLoading" ng-view="" class="ng-scope"><div class="row row-clearfix margin-b-20 surveys-list-panel ng-scope">
+    <div class="col-lg-2">
+        <div dropdown="" class="btn-group w-100pc">
+            <button dropdown-toggle="" type="button" class="btn btn-default dropdown-with-caret dropdown-toggle w-100pc text-left ng-binding" aria-haspopup="true" aria-expanded="false">
+                All units
+                <span class="caret caret-right"></span>
+            </button>
+            <ul role="menu" class="dropdown-menu dropdown-menu-unit w-100pc">
+                <li ng-class="(unit == null) ? 'active' : ''" ng-click="customSwitchUnit({id: null, name: 'All units'});" class="active">
+                    <a href="#">All units</a>
+                </li>
+                <!-- ngRepeat: unitItem in units --><li ng-click="customSwitchUnit(unitItem);" ng-class="(unitItem.id == unit) ? 'active' : ''" ng-repeat="unitItem in units" class="ng-scope">
+                    <a href="#" class="ng-binding">SandSIV</a>
+                </li><!-- end ngRepeat: unitItem in units -->
+            </ul>
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <search-directive><form role="search" class="form-horizontal ng-pristine ng-valid">
+    <div class="input-group">
+        <input type="text" placeholder="Search" class="form-control ng-pristine ng-untouched ng-valid" ng-model="search" ng-enter="searchString()" ng-class="{'on-focus': search != undefined || search != null }" />
+        <div class="input-group-btn">
+            <button class="btn btn-default" ng-click="removeSearch()" type="submit">
+                <span class="glyphicon glyphicon-remove"></span>
+            </button>
+            <button ng-click="searchString()" class="btn btn-success" type="submit">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+        </div>
+    </div>
+</form>
+</search-directive>
+    </div>
+    <div class="col-lg-2">
+        <button tooltip-placement="bottom" tooltip="Click to show deleted surveys" ng-click="toggleDeletedSurveysFilter()" class="btn btn-default btn-icon btn-icon-large" type="button">
+            <span ng-show="!hideDeletedSurveys" class="ng-hide"><i aria-hidden="true" class="fa fa-toggle-on color-gray"></i> Hide</span>
+            <span ng-show="hideDeletedSurveys"><i aria-hidden="true" class="fa fa-toggle-off color-gray"></i> Show</span>
+            deleted surveys
+        </button>
+    </div>
+    <div class="col-lg-2">
+        <entries-dropdown-directive><div dropdown="" class="btn-group entries-dropdown">
+    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" class="btn btn-default dropdown-toggle ng-binding" type="button">
+        Show 10 rows per page <span class="caret"></span>
+    </button>
+    <ul role="menu" class="dropdown-menu">
+
+        <!-- ngRepeat: action in actions --><li role="menuitem" ng-repeat="action in actions" ng-class="(selectedAction.name == action.name) ? 'active' : ''" class="ng-scope active">
+                <a ng-click="setAction(action)" ng-href="" class="ng-binding">Show 10 rows per page</a>
+        </li><!-- end ngRepeat: action in actions --><li role="menuitem" ng-repeat="action in actions" ng-class="(selectedAction.name == action.name) ? 'active' : ''" class="ng-scope">
+                <a ng-click="setAction(action)" ng-href="" class="ng-binding">Show 20 rows per page</a>
+        </li><!-- end ngRepeat: action in actions --><li role="menuitem" ng-repeat="action in actions" ng-class="(selectedAction.name == action.name) ? 'active' : ''" class="ng-scope">
+                <a ng-click="setAction(action)" ng-href="" class="ng-binding">Show 50 rows per page</a>
+        </li><!-- end ngRepeat: action in actions --><li role="menuitem" ng-repeat="action in actions" ng-class="(selectedAction.name == action.name) ? 'active' : ''" class="ng-scope">
+                <a ng-click="setAction(action)" ng-href="" class="ng-binding">Show 100 rows per page</a>
+        </li><!-- end ngRepeat: action in actions -->
+
+        <!-- ngIf: ableShowAll --><li role="menuitem" ng-if="ableShowAll" ng-class="(selectedAction.name == allRecords.name) ? 'active' : ''" class="ng-scope">
+            <a ng-click="setAction(allRecords)" ng-href="" class="ng-binding">Show All</a>
+        </li><!-- end ngIf: ableShowAll -->
+    </ul>
+</div>
+</entries-dropdown-directive>
+    </div>
+</div>
+
+<div ng-class="{'surveys-list-reorder': enableReorder}" class="panel panel-default surveys-list ng-scope surveys-list-reorder">
+    <div class="panel-heading clearfix no-paddings">
+        <h5 class="pull-left padding-l-15">
+            <strong>Surveys</strong>
+        </h5>
+        <div class="pull-right no-paddings filter-deletedSurveys">
+            <div class="btn-group">
+                <button class="btn btn-default pull-right" type="button" ng-click="createSurvey()">
+                    <span class="glyphicon glyphicon-plus color-green"></span>
+                    Add Survey
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="panel-body no-paddings noselect">
+
+        <div class="alert alert-danger alert-danger-light text-center no-border no-margins margin-b-5 ng-hide" ng-show="errorMsg">
+            <p ng-class="(params.page &gt; 1 ? 'text-bold' : '')" ng-bind="errorMsg" class="ng-binding"></p>
+            <!-- ngIf: errorMsg && params.page > 1 -->
+        </div>
+
+        <div ng-show="loading" class="loader ng-hide">Loading...</div>
+
+        <!-- ngIf: !loading && surveys.length --><div class="grid ui-grid ng-isolate-scope grid1509972996446" ui-i18n="en" ui-grid="gridOptions" ui-grid-draggable-rows="" ng-if="!loading &amp;&amp; surveys.length" style="height: auto !important"><!-- TODO (c0bra): add "scoped" attr here, eventually? --><style ui-grid-style="" class="ng-binding">.grid1509972996446 {
+      /* Styles for the grid */
+    }
+
+    .grid1509972996446 .ui-grid-row, .grid1509972996446 .ui-grid-cell, .grid1509972996446 .ui-grid-cell .ui-grid-vertical-bar {
+      height: 62px;
+    }
+
+    .grid1509972996446 .ui-grid-row:last-child .ui-grid-cell {
+      border-bottom-width: 0px;
+    }
+
+    
+    
+
+    /*
+    .ui-grid[dir=rtl] .ui-grid-viewport {
+      padding-left: px;
+    }
+    */
+
+    
+ .grid1509972996446 .ui-grid-coluiGrid-0004 { min-width: 95px; max-width: 95px; } .grid1509972996446 .ui-grid-coluiGrid-0005 { min-width: 400px; max-width: 400px; } .grid1509972996446 .ui-grid-coluiGrid-0006 { min-width: 230px; max-width: 230px; } .grid1509972996446 .ui-grid-coluiGrid-0007 { min-width: 230px; max-width: 230px; } .grid1509972996446 .ui-grid-coluiGrid-0008 { min-width: 180px; max-width: 180px; }
+
+ .grid1509972996446 .ui-grid-render-container-body .ui-grid-canvas { width: 1135px; height: 620px; }
+ .grid1509972996446 .ui-grid-render-container-body .ui-grid-header-canvas { width: 1135px; }
+ .grid1509972996446 .ui-grid-render-container-body .ui-grid-header-canvas { height: inherit; }
+ .grid1509972996446 .ui-grid-render-container-body .ui-grid-viewport { width: 1138.67px; height: 599.3333px; }
+ .grid1509972996446 .ui-grid-render-container-body .ui-grid-header-viewport { width: 1138.67px; }
+ .grid1509972996446 .ui-grid-render-container-body .ui-grid-footer-canvas { width: 1135px; }
+ .grid1509972996446 .ui-grid-render-container-body .ui-grid-footer-viewport { width: 1138.67px; }
+.grid1509972996446 .ui-grid-footer-aggregates-row { height: 30px; } .grid1509972996446 .ui-grid-footer-info { height: 30px; }
+ .grid1509972996446 .ui-grid-coluiGrid-0004 { min-width: 95px; max-width: 95px; } .grid1509972996446 .ui-grid-coluiGrid-0005 { min-width: 400px; max-width: 400px; } .grid1509972996446 .ui-grid-coluiGrid-0006 { min-width: 230px; max-width: 230px; } .grid1509972996446 .ui-grid-coluiGrid-0007 { min-width: 230px; max-width: 230px; } .grid1509972996446 .ui-grid-coluiGrid-0008 { min-width: 180px; max-width: 180px; }</style><div class="ui-grid-contents-wrapper"><!-- ngIf: grid.options.enableGridMenu --><!-- ngIf: grid.hasLeftContainer() --><div ng-style="{ 'margin-left': colContainer.getMargin('left') + 'px', 'margin-right': colContainer.getMargin('right') + 'px' }" class="ui-grid-render-container ng-isolate-scope ui-grid-render-container-body" ui-grid-one-bind-id-grid="'grid-container'" role="grid" enable-vertical-scrollbar="grid.options.enableVerticalScrollbar" enable-horizontal-scrollbar="grid.options.enableHorizontalScrollbar" bind-scroll-vertical="true" bind-scroll-horizontal="true" row-container-name="'body'" col-container-name="'body'" container-id="'body'" ui-grid-render-container="" id="1509972996446-grid-container" style="margin-left: 0px; margin-right: 0px;"><!-- All of these dom elements are replaced in place --><div class="ui-grid-header ng-scope" role="rowgroup" style="position: relative; z-index: 100;"><!-- theader --><div class="ui-grid-top-panel"><div class="ui-grid-header-viewport"><div class="ui-grid-header-canvas" style=""><div ng-style="colContainer.headerCellWrapperStyle()" class="ui-grid-header-cell-wrapper" style=""><div class="ui-grid-header-cell-row" role="row"><!-- ngRepeat: col in colContainer.renderedColumns track by col.uid --><div render-index="$index" col="col" ui-grid-header-cell="" ng-repeat="col in colContainer.renderedColumns track by col.uid" class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-0004 underline no-border"><div aria-sort="none" ui-grid-one-bind-aria-labelledby-grid="col.uid + '-header-text ' + col.uid + '-sortdir-text'" ng-class="{ 'sortable': sortable }" role="columnheader" class="ng-scope sortable" aria-labelledby="1509972996446-uiGrid-0004-header-text 1509972996446-uiGrid-0004-sortdir-text"><div col-index="renderIndex" class="ui-grid-cell-contents ui-grid-header-cell-primary-focus" tabindex="0" role="button"><span ui-grid-one-bind-id-grid="col.uid + '-header-text'" class="ui-grid-header-cell-label ng-binding" id="1509972996446-uiGrid-0004-header-text">ID</span> <span aria-label="Sort None" ui-grid-visible="col.sort.direction" ui-grid-one-bind-id-grid="col.uid + '-sortdir-text'" class="ui-grid-invisible" id="1509972996446-uiGrid-0004-sortdir-text"><i aria-hidden="true" title="" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" class="ui-grid-icon-blank"></i> <sub class="ui-grid-sort-priority-number ng-binding ui-grid-invisible" ui-grid-visible="isSortPriorityVisible()">1</sub></span></div><!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><div ui-grid-filter=""></div></div></div><!-- end ngRepeat: col in colContainer.renderedColumns track by col.uid --><div render-index="$index" col="col" ui-grid-header-cell="" ng-repeat="col in colContainer.renderedColumns track by col.uid" class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-0005 underline no-border"><div aria-sort="none" ui-grid-one-bind-aria-labelledby-grid="col.uid + '-header-text ' + col.uid + '-sortdir-text'" ng-class="{ 'sortable': sortable }" role="columnheader" class="ng-scope sortable" aria-labelledby="1509972996446-uiGrid-0005-header-text 1509972996446-uiGrid-0005-sortdir-text"><div col-index="renderIndex" class="ui-grid-cell-contents ui-grid-header-cell-primary-focus" tabindex="0" role="button"><span ui-grid-one-bind-id-grid="col.uid + '-header-text'" class="ui-grid-header-cell-label ng-binding" id="1509972996446-uiGrid-0005-header-text">Title</span> <span aria-label="Sort None" ui-grid-visible="col.sort.direction" ui-grid-one-bind-id-grid="col.uid + '-sortdir-text'" class="ui-grid-invisible" id="1509972996446-uiGrid-0005-sortdir-text"><i aria-hidden="true" title="" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" class="ui-grid-icon-blank"></i> <sub class="ui-grid-sort-priority-number ng-binding ui-grid-invisible" ui-grid-visible="isSortPriorityVisible()">1</sub></span></div><!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><div ui-grid-filter=""></div></div></div><!-- end ngRepeat: col in colContainer.renderedColumns track by col.uid --><div render-index="$index" col="col" ui-grid-header-cell="" ng-repeat="col in colContainer.renderedColumns track by col.uid" class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-0006 disableColumnMenu no-border"><div aria-sort="none" ui-grid-one-bind-aria-labelledby-grid="col.uid + '-header-text ' + col.uid + '-sortdir-text'" ng-class="{ 'sortable': sortable }" role="columnheader" class="ng-scope" aria-labelledby="1509972996446-uiGrid-0006-header-text 1509972996446-uiGrid-0006-sortdir-text"><div col-index="renderIndex" class="ui-grid-cell-contents ui-grid-header-cell-primary-focus" tabindex="0" role="button"><span ui-grid-one-bind-id-grid="col.uid + '-header-text'" class="ui-grid-header-cell-label ng-binding" id="1509972996446-uiGrid-0006-header-text">Channels / Status</span> <span aria-label="Sort None" ui-grid-visible="col.sort.direction" ui-grid-one-bind-id-grid="col.uid + '-sortdir-text'" class="ui-grid-invisible" id="1509972996446-uiGrid-0006-sortdir-text"><i aria-hidden="true" title="" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" class="ui-grid-icon-blank"></i> <sub class="ui-grid-sort-priority-number ng-binding ui-grid-invisible" ui-grid-visible="isSortPriorityVisible()">1</sub></span></div><!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><div ui-grid-filter=""></div></div></div><!-- end ngRepeat: col in colContainer.renderedColumns track by col.uid --><div render-index="$index" col="col" ui-grid-header-cell="" ng-repeat="col in colContainer.renderedColumns track by col.uid" class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-0007 disableColumnMenu no-border"><div aria-sort="none" ui-grid-one-bind-aria-labelledby-grid="col.uid + '-header-text ' + col.uid + '-sortdir-text'" ng-class="{ 'sortable': sortable }" role="columnheader" class="ng-scope" aria-labelledby="1509972996446-uiGrid-0007-header-text 1509972996446-uiGrid-0007-sortdir-text"><div col-index="renderIndex" class="ui-grid-cell-contents ui-grid-header-cell-primary-focus" tabindex="0" role="button"><span ui-grid-one-bind-id-grid="col.uid + '-header-text'" class="ui-grid-header-cell-label ng-binding" id="1509972996446-uiGrid-0007-header-text">Response Rate</span> <span aria-label="Sort None" ui-grid-visible="col.sort.direction" ui-grid-one-bind-id-grid="col.uid + '-sortdir-text'" class="ui-grid-invisible" id="1509972996446-uiGrid-0007-sortdir-text"><i aria-hidden="true" title="" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" class="ui-grid-icon-blank"></i> <sub class="ui-grid-sort-priority-number ng-binding ui-grid-invisible" ui-grid-visible="isSortPriorityVisible()">1</sub></span></div><!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><div ui-grid-filter=""></div></div></div><!-- end ngRepeat: col in colContainer.renderedColumns track by col.uid --><div render-index="$index" col="col" ui-grid-header-cell="" ng-repeat="col in colContainer.renderedColumns track by col.uid" class="ui-grid-header-cell ui-grid-clearfix ng-scope ng-isolate-scope ui-grid-coluiGrid-0008 disableColumnMenu no-border"><div aria-sort="none" ui-grid-one-bind-aria-labelledby-grid="col.uid + '-header-text ' + col.uid + '-sortdir-text'" ng-class="{ 'sortable': sortable }" role="columnheader" class="ng-scope" aria-labelledby="1509972996446-uiGrid-0008-header-text 1509972996446-uiGrid-0008-sortdir-text"><div col-index="renderIndex" class="ui-grid-cell-contents ui-grid-header-cell-primary-focus" tabindex="0" role="button"><span ui-grid-one-bind-id-grid="col.uid + '-header-text'" class="ui-grid-header-cell-label ng-binding" id="1509972996446-uiGrid-0008-header-text"></span> <span aria-label="Sort None" ui-grid-visible="col.sort.direction" ui-grid-one-bind-id-grid="col.uid + '-sortdir-text'" class="ui-grid-invisible" id="1509972996446-uiGrid-0008-sortdir-text"><i aria-hidden="true" title="" ng-class="{ 'ui-grid-icon-up-dir': col.sort.direction == asc, 'ui-grid-icon-down-dir': col.sort.direction == desc, 'ui-grid-icon-blank': !col.sort.direction }" class="ui-grid-icon-blank"></i> <sub class="ui-grid-sort-priority-number ng-binding ui-grid-invisible" ui-grid-visible="isSortPriorityVisible()">1</sub></span></div><!-- ngIf: grid.options.enableColumnMenus && !col.isRowHeader  && col.colDef.enableColumnMenu !== false --><div ui-grid-filter=""></div></div></div><!-- end ngRepeat: col in colContainer.renderedColumns track by col.uid --></div></div></div></div></div></div><div ng-style="colContainer.getViewportStyle()" class="ui-grid-viewport ng-isolate-scope" role="rowgroup" ui-grid-viewport="" style="overflow: hidden;"><!-- tbody --><div class="ui-grid-canvas"><!-- ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    318
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/318/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/318/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">qaTest1421</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="paused" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-warning">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/318/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/318/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/318/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/318/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    313
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/313/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/313/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">Test survey 06.11.2017</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="paused" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-warning">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/313/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/313/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/313/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/313/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    308
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/308/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/308/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">testCopySurvey</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/308/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/308/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/308/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/308/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    307
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/307/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/307/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">First test survey</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="paused" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-warning">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/307/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/307/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/307/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/307/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    306
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/306/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/306/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">CaseAlerts test OG 2017.10.31</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="active" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-success">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="100%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 100%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">100%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/306/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/306/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/306/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/306/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    305
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/305/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/305/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">harakiri traceback test</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="paused" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-warning">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/305/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/305/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/305/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/305/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    304
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/304/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/304/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">Test survey 27.10.2017 2rd</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="paused" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-warning">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="inactive" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding inactive">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/304/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/304/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/304/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/304/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    300
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/300/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/300/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">QA_Test_Sandsiv::27.10.2017</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="active" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-success">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="active" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-success">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="active" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-success">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="67%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="66.7" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 66.7%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">66.7%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/300/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/300/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/300/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/300/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    301
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/301/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/301/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">1st Test  survey 27.10.2017</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="active" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-success">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="paused" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-warning">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="paused" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-warning">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="43%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="42.9" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 42.9%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">42.9%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/301/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/301/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/301/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/301/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --><div ng-style="Viewport.rowStyle(rowRenderIndex)" class="ui-grid-row ng-scope" ng-repeat="(rowRenderIndex, row) in rowContainer.renderedRows track by $index"><div row-render-index="rowRenderIndex" ui-grid-row="row" role="row" class="ng-isolate-scope"><div draggable="true" grid="grid" class="ui-grid-draggable-row ui-grid-draggable-row-handle ng-scope ng-isolate-scope">
+    <!-- ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0004 enableReorder no-border custom no-float">
+    <!-- ngIf: grid.appScope.enableReorder --><span ng-if="grid.appScope.enableReorder" tooltip-placement="left" tooltip="Reorder" class="glyphicon glyphicon-menu-hamburger margin-r-10 ng-scope"></span><!-- end ngIf: grid.appScope.enableReorder -->
+<span class="ng-binding ng-scope">
+    295
+</span></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0005 no-border custom no-float">
+    <!-- Small title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length <= 45 --><a ng-if="row.entity.name.length &lt;= 45" ng-href="#/survey/295/questions" class="long-url surveyTitle ng-scope" data-nodrag="" href="#/survey/295/questions">
+    <i aria-hidden="true" class="fa fa-comments-o text-primary margin-r-5 margin-l-15"></i>
+    <span class="ng-binding">QA_Test_Sandsiv::26.10.2017</span>
+</a><!-- end ngIf: row.entity.name.length <= 45 -->
+
+<!-- Large title case (more then 100 symbols) -->
+<!-- ngIf: row.entity.name.length > 45 --></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0006 no-border custom no-float">
+    <div class="survey-status-cell ng-scope">
+    <!-- ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="active" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-success">
+            WEB
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="paused" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-warning">
+            SMS
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) --><div class="survey-status-item ng-scope" ng-repeat="c in grid.appScope.trimChannels(grid, row)">
+        <span tooltip="deleted" tooltip-placement="bottom" ng-class="{'inactive': c.isInactive, 'label-success': c.state == '1', 'label-warning': c.state == '2', 'label-info': c.state == '131', 'label-danger': c.state == '541'}" class="cursorDefault label label-default label-size-sm survey-channel-label text-uppercase margin-r-5 ng-binding label-danger">
+            IVR
+        </span>
+    </div><!-- end ngRepeat: c in grid.appScope.trimChannels(grid, row) -->
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0007 no-border custom no-float">
+    <div class="hiddenInTree no-paddings ng-scope">
+    <div class="text-center ng-hide" ng-show="!grid.appScope.responseRateLoaded">
+        <span class="label label-light">Loading...</span>
+    </div>
+    <table class="survey-rates marginAuto" ng-show="grid.appScope.responseRateLoaded">
+        <tbody><!-- ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">yesterday</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="0%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 0%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">0%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates --><tr class="survey-rates-item ng-scope" ng-repeat="r in row.entity.rates">
+            <td class="survey-rates-left text-right">
+                <small ng-bind="r.period" class="ng-binding">last 30 days</small>
+            </td>
+            <td class="survey-rates-center text-center">
+                <div class="progress ng-isolate-scope" type="success" value="r.rate">
+  <div ng-transclude="" aria-valuetext="100%" ng-style="{width: percent + '%'}" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar" ng-class="type &amp;&amp; 'progress-bar-' + type" class="progress-bar progress-bar-success" style="width: 100%;"></div>
+</div>
+            </td>
+            <td class="survey-rates-right">
+                <small class="ng-binding">100%</small>
+            </td>
+        </tr><!-- end ngRepeat: r in row.entity.rates -->
+    </tbody></table>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name --><div ui-grid-cell="" ng-class="{ 'ui-grid-row-header-cell': col.isRowHeader, 'custom': true, 'no-float': true }" ng-repeat="(colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name" style="background-color: white;" class="ui-grid-cell ng-scope ui-grid-coluiGrid-0008 no-border custom no-float">
+    <div class="btn-toolbar padding-r-10 ng-scope">
+    <div class="btn-group pull-right">
+        <a ng-href="#/survey/295/questions" class="btn btn-link-light btn-sm" type="button" tooltip="Edit survey" data-nodrag="" href="#/survey/295/questions">
+            <span class="glyphicon glyphicon-cog"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-click="grid.appScope.copySurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Copy survey" data-nodrag="">
+            <span class="glyphicon glyphicons more_items"></span>
+        </button>
+    </div>
+    <div class="btn-group pull-right">
+        <a ng-show="row.entity.surveys.length" ng-href="#/survey/295/questions_statistics" data-nodrag="" tooltip="Survey statistics" class="btn btn-link-light btn-sm" href="#/survey/295/questions_statistics">
+            <span class="glyphicon glyphicon-stats"></span>
+        </a>
+    </div>
+    <div class="btn-group pull-right">
+        <button ng-show="row.entity.surveys.length" ng-click="grid.appScope.inviteForSurvey(row.entity)" class="btn btn-link-light btn-sm" type="button" tooltip="Send invitation" data-nodrag="">
+            <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+    </div>
+</div></div><!-- end ngRepeat: (colRenderIndex, col) in colContainer.renderedColumns track by col.colDef.name -->
+</div></div></div><!-- end ngRepeat: (rowRenderIndex, row) in rowContainer.renderedRows track by $index --></div></div><!-- ngIf: colContainer.needsHScrollbarPlaceholder() --><!-- ngIf: grid.options.showColumnFooter --></div><!-- ngIf: grid.hasRightContainer() --><!-- ngIf: grid.options.showGridFooter --><!-- ngIf: grid.options.enableColumnMenus --><div class="ui-grid-column-menu" ng-if="grid.options.enableColumnMenus" ui-grid-column-menu=""><!-- ngIf: shown --></div><!-- end ngIf: grid.options.enableColumnMenus --><div ng-transclude=""></div></div></div><!-- end ngIf: !loading && surveys.length -->
+
+    </div>
+</div>
+
+<div ng-show="surveys.length &amp;&amp; pages &amp;&amp; !loading" class="row ng-scope">
+    <pagination-template>
+<div class="pagination-container noselect col-sm-12">
+    <ul class="pagination">
+        <li class="disabled">
+            <a ng-href="" class="no-borders">
+                <span class="entries-start ng-binding">1</span> –
+                <span class="entries-end ng-binding">10</span>
+                of
+                <span class="entries-total ng-binding">256</span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="pagination-md pagination ng-isolate-scope ng-valid" ng-model="currentPage" total-items="itemsTotal" boundary-links="true" last-text="»" first-text="«" next-text="›" previous-text="‹" max-size="5" rotate="false" items-per-page="selectedAction ? selectedAction.id != '' ? selectedAction.id : itemsTotal : 10" ng-show="pages &gt; 1">
+  <!-- ngIf: boundaryLinks --><li ng-class="{disabled: noPrevious()}" ng-if="boundaryLinks" class="ng-scope disabled"><a ng-click="selectPage(1)" href="" class="ng-binding">«</a></li><!-- end ngIf: boundaryLinks -->
+  <!-- ngIf: directionLinks --><li ng-class="{disabled: noPrevious()}" ng-if="directionLinks" class="ng-scope disabled"><a ng-click="selectPage(page - 1)" href="" class="ng-binding">‹</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope active"><a ng-click="selectPage(page.number)" href="" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">4</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">5</a></li><!-- end ngRepeat: page in pages track by $index --><li ng-class="{active: page.active}" ng-repeat="page in pages track by $index" class="ng-scope"><a ng-click="selectPage(page.number)" href="" class="ng-binding">...</a></li><!-- end ngRepeat: page in pages track by $index -->
+  <!-- ngIf: directionLinks --><li ng-class="{disabled: noNext()}" ng-if="directionLinks" class="ng-scope"><a ng-click="selectPage(page + 1)" href="" class="ng-binding">›</a></li><!-- end ngIf: directionLinks -->
+  <!-- ngIf: boundaryLinks --><li ng-class="{disabled: noNext()}" ng-if="boundaryLinks" class="ng-scope"><a ng-click="selectPage(totalPages)" href="" class="ng-binding">»</a></li><!-- end ngIf: boundaryLinks -->
+</ul>
+
+    <set-page model="pageNumber" ng-show="pages &gt; 1" class="ng-isolate-scope"><div class="pagination-error-block">
+    <div class="alert alert-warning text-center pagination-error-content ng-hide" ng-show="pageNumberError">
+        <p>Not valid page number!</p>
+    </div>
+</div>
+<div class="pagination">
+    <form ng-submit="setPage(pageNo)" class="ng-pristine ng-valid">
+        <div class="input-group">
+        <span class="input-group-btn">
+            <button disabled="disabled" type="button" class="btn btn-default">Go to the page: </button>
+        </span>
+            <input type="text" name="pageNo" ng-model="pageNo" class="form-control ng-pristine ng-untouched ng-valid" />
+            <span class="input-group-btn">
+            <button type="submit" data-e2e="setPageNumber" class="btn btn-primary">
+                <span class="glyphicon glyphicon-ok"></span>
+            </button>
+        </span>
+        </div>
+    </form>
+</div></set-page>
+</div>
+</pagination-template>
+</div>
+
+<div ng-show="surveys.length &amp;&amp; !pages &amp;&amp; !loading" class="row ng-scope ng-hide">
+    <div class="col-lg-3 padding-t-10">
+        <p class="text-muted ng-binding"> 1 – 10 of 256</p>
+    </div>
+    <div class="col-lg-3 col-lg-offset-6 text-right dropup">
+        <entries-dropdown-directive><div dropdown="" class="btn-group entries-dropdown">
+    <button aria-expanded="false" aria-haspopup="true" data-toggle="dropdown" class="btn btn-default dropdown-toggle ng-binding" type="button">
+        Show 10 rows per page <span class="caret"></span>
+    </button>
+    <ul role="menu" class="dropdown-menu">
+
+        <!-- ngRepeat: action in actions --><li role="menuitem" ng-repeat="action in actions" ng-class="(selectedAction.name == action.name) ? 'active' : ''" class="ng-scope active">
+                <a ng-click="setAction(action)" ng-href="" class="ng-binding">Show 10 rows per page</a>
+        </li><!-- end ngRepeat: action in actions --><li role="menuitem" ng-repeat="action in actions" ng-class="(selectedAction.name == action.name) ? 'active' : ''" class="ng-scope">
+                <a ng-click="setAction(action)" ng-href="" class="ng-binding">Show 20 rows per page</a>
+        </li><!-- end ngRepeat: action in actions --><li role="menuitem" ng-repeat="action in actions" ng-class="(selectedAction.name == action.name) ? 'active' : ''" class="ng-scope">
+                <a ng-click="setAction(action)" ng-href="" class="ng-binding">Show 50 rows per page</a>
+        </li><!-- end ngRepeat: action in actions --><li role="menuitem" ng-repeat="action in actions" ng-class="(selectedAction.name == action.name) ? 'active' : ''" class="ng-scope">
+                <a ng-click="setAction(action)" ng-href="" class="ng-binding">Show 100 rows per page</a>
+        </li><!-- end ngRepeat: action in actions -->
+
+        <!-- ngIf: ableShowAll --><li role="menuitem" ng-if="ableShowAll" ng-class="(selectedAction.name == allRecords.name) ? 'active' : ''" class="ng-scope">
+            <a ng-click="setAction(allRecords)" ng-href="" class="ng-binding">Show All</a>
+        </li><!-- end ngIf: ableShowAll -->
+    </ul>
+</div>
+</entries-dropdown-directive>
+    </div>
+</div>
+</div>
+            <notifications-template><div data-ng-controller="NotificationCntr" class="messagesList ng-scope">
+    <p ng-hide="!notifications" ng-show="showNotices()" class="ng-hide">
+    </p><!-- ngRepeat: notification in notifications -->
+    <p></p>
+</div>
+</notifications-template>
+            <scrollup-template><a class="scrollup" ng-href=""><button class="btn btn-primary"><span class="glyphicon glyphicon-chevron-up"></span></button></a></scrollup-template>
+        </div>
+    </main>
+
+<script>
+    window.feedbackApiUrl = "https://feedback-admin55.sandsiv.com/";
+    window.feedbackV2ApiUrl = "https://staging-rest.sandsiv.com/";
+    window.ssoApiUrl = "https://st-sso.sandsiv.com/api/";
+    window.enterpriseSlug = "staging";
+    window.googleAnalyticsEnabled = false;
+    window.uxMetricsEnabled = false;
+    window.xirclxirclfeedback = '/bundles/xirclxirclfeedback/';
+    window.isTwig = true;
+    require.config({
+        urlArgs: 'v.1.7.53'
+    });
+    require(["/dist/feedback.js"], function () {
+        require(["boot"]);
+    });
+</script>
+<heatmap></heatmap>
+
+
+<script>
+    (function(d,s){var z=$zopim,$=z.s= d.createElement(s),e=d.getElementsByTagName(s)[0];
+    $.async=!0;$.setAttribute('charset','utf-8');
+    $.src='https://v2.zopim.com/?2EMg9n2aUvZPA4wxYjx4vUMBUEttsLFJ';
+    z.t=+new Date;$. type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+  </script><div><iframe data-reactroot="" id="automaticAnswers" class="zEWidget-automaticAnswers" tabindex="-1" style="border: medium none; background: transparent none repeat scroll 0% 0%; z-index: 2147483647; transform: translateZ(0px); position: fixed; opacity: 0; right: 0px; bottom: 0px; margin: 0px 6px 6px 0px; height: 188px; width: 410px; transition-property: none; transition-timing-function: unset; top: -9999px;"></iframe></div><div><iframe data-reactroot="" id="launcher" tabindex="0" class="zEWidget-launcher zEWidget-launcher--active" style="border: medium none; background: transparent none repeat scroll 0% 0%; z-index: 999998; transform: translateZ(0px); position: fixed; opacity: 1; left: 0px; bottom: 0px; width: 139px; height: 48px; margin: 10px 20px; transition-property: opacity, width, height, bottom; transition-timing-function: ease-out; transition-duration: 300ms;"></iframe></div><div><iframe data-reactroot="" id="ipm" class="zEWidget-ipm" tabindex="-1" style="border: medium none; background: transparent none repeat scroll 0% 0%; z-index: 2147483647; transform: translateZ(0px); position: fixed; opacity: 0; right: 0px; top: -245px; margin-right: 15px; margin-top: 0px; height: 195px; width: 395px; transition-property: none; transition-timing-function: unset;"></iframe></div><div><iframe data-reactroot="" id="webWidget" tabindex="-1" class="zEWidget-webWidget " style="border: medium none; background: transparent none repeat scroll 0% 0%; z-index: 999999; transform: translateZ(0px); position: fixed; opacity: 0; left: 0px; bottom: 0px; width: 357px; margin-left: 15px; margin-right: 15px; height: 15px; transition-property: none; transition-timing-function: unset; top: -9999px;"></iframe></div><style></style></body></html>
