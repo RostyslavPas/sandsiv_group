@@ -1,119 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3edffc41-6b29-4035-8201-278cacb8f44f" name="Default" comment="test commit">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509965783484.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509965884712.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509966324539.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509971029629.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509971489528.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509971832323.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509972003709.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509972277620.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509972872912.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509973002765.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509979916465.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509983262699.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509983609531.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509983827176.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509984448657.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510039919499.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040093138.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040231475.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040354287.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040460705.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040549316.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040635450.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510042470657.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510043383291.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510043572337.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510043751722.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510044001196.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510044373772.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510051567629.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510052069481.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510057372181.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058310302.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058810766.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058868459.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058924501.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058991812.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510059091513.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510059267681.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510060273837.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510060815217.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510064185528.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510240725537.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510241306586.0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/target/test-classes/feedback/Prodhub.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509965783484.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509965884712.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509966324539.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509971029629.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509971489528.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509971832323.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509972003709.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509972277620.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509972872912.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509973002765.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509979916465.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509983262699.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509983609531.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509983827176.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1509984448657.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510039919499.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040093138.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040231475.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040354287.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040460705.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040549316.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510040635450.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510042470657.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510043383291.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510043572337.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510043751722.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510044001196.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510044373772.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510051567629.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510052069481.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510057372181.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058310302.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058810766.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058868459.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058924501.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510058991812.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510059091513.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510059267681.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510060273837.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510060815217.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510064185528.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510240725537.0.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/build/reports/tests/1510241306586.0.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/st/CaseAlertProd.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/st/ImportProd.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/st/QuestionFlowProd.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/st/QuestionProd.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/st/QuestionTypeProd.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/st/SurveyCreateProd.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/test-classes/st/SurveyUpdateProd.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/Question.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/Question.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/QuestionType.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/QuestionType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/copySurveys_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/copySurveys_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/createCaseAlertCondition_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/createCaseAlertCondition_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionAllType_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionAllType_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionFlow_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionFlow_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionToCheckAllCaseAlert_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionToCheckAllCaseAlert_Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/Question.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/Question.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/QuestionType.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/QuestionType.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow_Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java" />
-    </list>
+    <list default="true" id="3edffc41-6b29-4035-8201-278cacb8f44f" name="Default" comment="test commit" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -179,11 +67,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createCaseAlertCondition_Test.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="createCaseAlertCondition_Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="441">
               <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -973,7 +871,7 @@
       <workItem from="1509712682070" duration="23016000" />
       <workItem from="1510064042764" duration="3233000" />
       <workItem from="1510239385948" duration="2848000" />
-      <workItem from="1510821424828" duration="6468000" />
+      <workItem from="1510821424828" duration="8373000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1504873911857</created>
@@ -1018,7 +916,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133926000" />
+    <option name="totallyTimeSpent" value="135831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-10" y="0" width="1925" height="1030" extended-state="1" />
@@ -1134,13 +1032,6 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/st/QuestionTypeProd.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/st/QuestionProd.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/st/createQuestionFlowProd.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/OpenCI.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -1357,6 +1248,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="441">
           <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="15" column="31" lean-forward="false" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding />
         </state>
       </provider>
