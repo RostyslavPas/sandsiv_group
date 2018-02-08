@@ -12,10 +12,6 @@ public class createQuestionAllType_Test {
 
         OpenCI page = new OpenCI();
         page.openCI();
-//        Hub staging = new Hub();
-//        staging.loginST();
-//        staging.pageSurvey();
-
 
 
         SurveyCreate surveyNew = new SurveyCreate();

@@ -21,7 +21,7 @@ public class Import {
     SelenideElement alertInfo = $(".alert.alert-info>p");
     String alertInfoText = "Choose a file to import (txt or csv). Please consider export or backup your data first";
     SelenideElement uploadFile = $(By.xpath(".//*[@id='file']"));
-    String filePath = "X:\\Download\\Import_File_FeedbackTest.csv";
+    String filePath = "X:\\Download\\FeedbackTest (metadata).csv";
     SelenideElement delimiter = $("#delimiter");
     SelenideElement surveyColumn = $("#survey_column");
     SelenideElement btnSaveImport = $(".ladda-button.btn.btn-primary");

@@ -8,12 +8,12 @@ import static com.codeborne.selenide.Selenide.open;
 import static com.codeborne.selenide.Selenide.sleep;
 
 public class LoginSSO {
-    String pageSSO = "http://sso.ci-fb.sandsiv.com/account/login/";
+    String pageSSO = "http://sso-ci-fb.sandsiv.com/account/login/";
 
     SelenideElement userName = $("#id_username");
     SelenideElement password = $("#id_password");
 
-    String loginUserSSO = "rostislav.pas@sandsiv.com";
+    String loginUserSSO = "rostislav.pas";
     String passwordUserSSO = "Ros_0632059555_sandsiv";
 
     SelenideElement button = $(".btn.btn-block.btn-primary");

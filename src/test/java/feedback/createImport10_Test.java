@@ -11,16 +11,11 @@ public class createImport10_Test {
         OpenCI page = new OpenCI();
             page.openCI();
         Import importCI = new Import();
-            importCI.mainMenu.get(2).click();
+            importCI.mainMenu.get(3).click();
             importCI.importHistory.shouldHave(text(importCI.textImportHistory));
-//        Hub staging = new Hub();
-//        staging.loginST();
-//        staging.pageImport();
-//        Import importStaging = new Import();
-//        importStaging.addImportWithSurvey();
 
         for (int countSurvey = 0; countSurvey < 11; countSurvey++) {
-            importCI.addImportWithSurvey();
+            importCI.addImport();
 //            importStaging.addImportWithSurvey();
         }
 
