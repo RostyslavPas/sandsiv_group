@@ -62,7 +62,7 @@ public class CaseAlert {
 
     public void createCaseAlert(){
         CaseAlert caseAlert = new CaseAlert();
-//        caseAlert.menuGlobalSettingCI.get(3).click();    if testing ST
+       caseAlert.menuGlobalSettingCI.get(4).click();
         sleep(4000);
         caseAlert.menuCaseAlertSetting.get(2).click();
         caseAlert.btnAddCaseAlert.click();
