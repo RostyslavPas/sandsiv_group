@@ -11,8 +11,10 @@ public class CopySurvey {
     ElementsCollection functionButton = $$(".btn.btn-link-light.btn-sm");
     SelenideElement modalTitle = $(".modal-title");
     String textCopySurvey = "testCopySurvey";
-    SelenideElement newSurveyName = $("#name");
-    SelenideElement checkBox = $(By.xpath("html/body/div[6]/div/div/div/div[2]/form/fieldset/div[3]/div/label[1]/input"));
-    SelenideElement btnSaveNewSurvey = $(".btn.btn-primary.ladda-button");
-    SelenideElement newCreatedSurvey = $(By.xpath("//span[contains(.,'testCopySurvey')]"));
+    SelenideElement newSurveyName = $("#survey_name");
+    SelenideElement unitSurvey = $(".Select-placeholder");
+    SelenideElement selectUnitSurvey = $("#react-select-2--option-0");
+    SelenideElement checkBox = $("#WEB");
+    SelenideElement btnSaveNewSurvey = $(By.xpath("//button[contains(.,' Copy Survey')]"));
+    ElementsCollection newCreatedSurvey = $$(".wrap");
 }
