@@ -26,8 +26,10 @@ public class createQuestionFlow_Test {
         String userMail = "qaTest" + testMail;
 
         surveyNew.surveyName.setValue(userMail);
+        surveyNew.unitSurvey.click();
+        surveyNew.selectUnitSurvey.click();
         surveyNew.popupBtnAddSurvey.click();
-        surveyNew.alertSurveySaved.shouldHave(text("Survey was successfully saved"));
+        surveyNew.alertSurveySaved.shouldHave(text("Survey added successfully!"));
 //        surveyNew.surveyList.get(0).shouldHave(text(userMail));
         surveyNew.editSurvey.get(0).click();
         surveyNew.assertSurveyTitle.shouldHave(text(userMail));

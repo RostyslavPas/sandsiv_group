@@ -21,11 +21,13 @@ public class createQuestionAllType_Test {
 
 
         int testMail = ((int)(Math.random()*100000));
-        String userMail = "qaTest" + testMail;
+        String userMail = "QA::Test" + testMail;
 
             surveyNew.surveyName.setValue(userMail);
+            surveyNew.unitSurvey.click();
+            surveyNew.selectUnitSurvey.click();
             surveyNew.popupBtnAddSurvey.click();
-            surveyNew.alertSurveySaved.shouldHave(text("Survey was successfully saved"));
+            surveyNew.alertSurveySaved.shouldHave(text("Survey added successfully!"));
             surveyNew.editSurvey.get(0).click();
             surveyNew.assertSurveyTitle.shouldHave(text(userMail));
 

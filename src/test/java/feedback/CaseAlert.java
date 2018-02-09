@@ -125,7 +125,7 @@ public class CaseAlert {
     }
 
     public void delCaseAlert(){
-        for (int testCaseAlert = 0; testCaseAlert < 6; testCaseAlert++) {
+        for (int testCaseAlert = 0; testCaseAlert < 1; testCaseAlert++) {
             btnDelCaseAlert.get(0).click();
             btnConfirmDelCaseAlert.click();
             messageAlert.shouldHave(text(caseAlertSuccessfullyDel));

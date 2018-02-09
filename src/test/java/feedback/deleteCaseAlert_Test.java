@@ -11,7 +11,7 @@ public class deleteCaseAlert_Test {
         OpenCI page = new OpenCI();
             page.openCI();
         CaseAlert caseAlert = new CaseAlert();
-            caseAlert.menuGlobalSettingCI.get(3).click();
+            caseAlert.menuGlobalSettingCI.get(4).click();
                 sleep(4000);
             caseAlert.menuCaseAlertSetting.get(2).click();
             caseAlert.delCaseAlert();
