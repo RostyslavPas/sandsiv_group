@@ -17,15 +17,22 @@ public class sendInvitation100Users {
         sleep(5000);
 
         for (int invite = 0; invite < 101; invite++) {
-            sendInvitation.sendInvitationBtn.get(3).click();
+            sendInvitation.sendInvitationBtn.click();
             sendInvitation.modal.shouldBe(Condition.visible);
             sendInvitation.modalTitle.shouldHave(text(sendInvitation.modalText));
 
-            String userMail = "rostislav.pas+" + invite + "@sandsiv.com";
+                String userMail = "rostislav.pas+" + invite + "@sandsiv.com";
+                sleep(6000);
+
+            sendInvitation.channel.click();
+            sendInvitation.selectChannel.click();
+                sleep(3000);
+            sendInvitation.language.click();
+            sendInvitation.selectLanguage.click();
 
             sendInvitation.addressField.setValue(userMail);
             sendInvitation.btnSendInvitation.click();
-            sleep(1000);
+                sleep(1000);
         }
     }
 }

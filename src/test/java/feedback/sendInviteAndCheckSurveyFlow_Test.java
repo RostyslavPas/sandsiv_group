@@ -15,7 +15,7 @@ public class sendInviteAndCheckSurveyFlow_Test {
         SendInvite sendInvitation = new SendInvite();
             sendInvitation.searchField.setValue("4444").pressEnter();
             sleep(5000);
-            sendInvitation.sendInvitationBtn.get(3).click();
+            sendInvitation.sendInvitationBtn.click();
             sendInvitation.modal.shouldBe(Condition.visible);
             sendInvitation.modalTitle.shouldHave(text(sendInvitation.modalText));
             sendInvitation.addressField.setValue(sendInvitation.mailCustomer);
