@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3edffc41-6b29-4035-8201-278cacb8f44f" name="Default" comment="test commit">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/feedback/Import.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/Import.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/feedback/LoginSSO.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/LoginSSO.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java" afterPath="$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/feedback/Import.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/Import.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/feedback/LoginSSO.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/LoginSSO.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/feedback/createImport10_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/createImport10_Test.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionAllType_Test.class" afterPath="$PROJECT_DIR$/target/test-classes/feedback/createQuestionAllType_Test.class" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +18,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="copySurveys_Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="198">
+              <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createQuestionAllType_Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="29" column="82" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="82" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createQuestionFlow_Test.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow_Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="468">
+              <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createCaseAlertCondition_Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -40,62 +63,18 @@
       <file leaf-file-name="createImport10_Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Import.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Import.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OpenCI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/OpenCI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginSSO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/LoginSSO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="22" column="16" lean-forward="false" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="createQuestionFlow_Test.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow_Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SurveyCreate.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SurveyCreate.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
-              <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+              <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createQuestionToCheckAllCaseAlert_Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -104,8 +83,8 @@
       <file leaf-file-name="deleteCaseAlert_Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/deleteCaseAlert_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+            <state relative-caret-position="270">
+              <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -114,8 +93,20 @@
       <file leaf-file-name="sendInvitation100Users.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/sendInvitation100Users.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+            <state relative-caret-position="324">
+              <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SendInvite.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SendInvite.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
               <folding />
             </state>
           </provider>
@@ -124,11 +115,9 @@
       <file leaf-file-name="sendInviteAndCheckSurveyFlow_Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/feedback/sendInviteAndCheckSurveyFlow_Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="378">
+              <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -184,38 +173,38 @@
         <option value="$PROJECT_DIR$/src/test/java/st/createQuestionFlowProd.java" />
         <option value="$PROJECT_DIR$/src/test/java/st/QuestionFlowProd.java" />
         <option value="$PROJECT_DIR$/src/test/java/test/test1.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/CopySurvey.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/copySurveys.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/checkLanguageAndCreateQuestion.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/createImport10.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/GMAIL.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/SendInvite.java" />
         <option value="$PROJECT_DIR$/src/test/java/st/test1111.java" />
         <option value="$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/QuestionFlow.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/StartSurveyFlowGmail.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/SurveyCreate.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/SurveyUpdate.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/createCaseAlerts_Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/Question.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/QuestionType.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/Hub.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/Prodhub.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow_Test.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/deleteCaseAlert_Test.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/sendInvitation100Users.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/sendInviteAndCheckSurveyFlow_Test.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/LoginSSO.java" />
-        <option value="$PROJECT_DIR$/src/test/java/feedback/Import.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/Import.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/CopySurvey.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/deleteCaseAlert_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java" />
         <option value="$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/SurveyCreate.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/sendInviteAndCheckSurveyFlow_Test.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/SendInvite.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/sendInvitation100Users.java" />
+        <option value="$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow_Test.java" />
       </list>
     </option>
   </component>
@@ -232,8 +221,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="67" />
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1987" />
     <option name="y" value="27" />
     <option name="width" value="1853" />
     <option name="height" value="1030" />
@@ -255,7 +247,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -295,12 +286,13 @@
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/XirclFeedbackBundle" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -360,7 +352,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="createCaseAlertCondition_Test.createCaseAlertCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="copySurveys_Test.copySurveysTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="feedback.*" />
@@ -371,34 +363,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="feedback" />
-      <option name="MAIN_CLASS_NAME" value="feedback.createCaseAlertCondition_Test" />
-      <option name="METHOD_NAME" value="createCaseAlertCondition" />
+      <option name="MAIN_CLASS_NAME" value="feedback.copySurveys_Test" />
+      <option name="METHOD_NAME" value="copySurveysTest" />
       <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration name="createImport10_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="feedback.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="Sandsiv" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="feedback" />
-      <option name="MAIN_CLASS_NAME" value="feedback.createImport10_Test" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -435,7 +402,7 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="createQuestionFlow_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="createQuestionAllType_Test.createQuestionAllType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="feedback.*" />
@@ -446,9 +413,9 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="feedback" />
-      <option name="MAIN_CLASS_NAME" value="feedback.createQuestionFlow_Test" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="MAIN_CLASS_NAME" value="feedback.createQuestionAllType_Test" />
+      <option name="METHOD_NAME" value="createQuestionAllType" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -473,6 +440,31 @@
       <option name="PACKAGE_NAME" value="feedback" />
       <option name="MAIN_CLASS_NAME" value="feedback.createQuestionFlow_Test" />
       <option name="METHOD_NAME" value="createQuestionFlow" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="sendInvitation100Users.sendInvite_Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="feedback.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="Sandsiv" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="feedback" />
+      <option name="MAIN_CLASS_NAME" value="feedback.sendInvitation100Users" />
+      <option name="METHOD_NAME" value="sendInvite_Test" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -643,19 +635,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.createImport10_Test.createImport10" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.createQuestionFlow_Test" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.createCaseAlertCondition_Test.createCaseAlertCondition" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.createImport10_Test" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.createQuestionFlow_Test.createQuestionFlow" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.createQuestionAllType_Test.createQuestionAllType" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.createQuestionFlow_Test.createQuestionFlow" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users.sendInvite_Test" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.copySurveys_Test.copySurveysTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.createImport10_Test.createImport10" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.createQuestionFlow_Test.createQuestionFlow" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.createImport10_Test" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.createImport10_Test.createImport10" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.createCaseAlertCondition_Test.createCaseAlertCondition" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.createQuestionFlow_Test" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.createImport10_Test.createImport10" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.sendInvitation100Users.sendInvite_Test" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.copySurveys_Test.copySurveysTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.createQuestionAllType_Test.createQuestionAllType" />
       </list>
     </recent_temporary>
   </component>
@@ -698,6 +690,8 @@
       <workItem from="1510064042764" duration="3233000" />
       <workItem from="1510239385948" duration="2848000" />
       <workItem from="1510821424828" duration="8373000" />
+      <workItem from="1518425106303" duration="40000" />
+      <workItem from="1518425178625" duration="3494000" />
     </task>
     <task id="LOCAL-00001" summary="test commit">
       <created>1504873911857</created>
@@ -710,42 +704,43 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="createImport10_Test_createImport10 - 2018.02.08 at 16h 56m 41s.xml">
+    <history-entry file="copySurveys_Test_copySurveysTest - 2018.02.12 at 10h 48m 39s.xml">
+      <configuration name="copySurveys_Test.copySurveysTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="createImport10_Test_createImport10 - 2018.02.22 at 15h 58m 37s.xml">
       <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="createImport10_Test_createImport10 - 2018.02.08 at 16h 58m 57s.xml">
-      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    <history-entry file="sendInvitation100Users_sendInvite_Test - 2018.02.09 at 11h 17m 18s.xml">
+      <configuration name="sendInvitation100Users.sendInvite_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="createImport10_Test_createImport10 - 2018.02.08 at 17h 02m 27s.xml">
-      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    <history-entry file="sendInvitation100Users_sendInvite_Test - 2018.02.09 at 11h 20m 43s.xml">
+      <configuration name="sendInvitation100Users.sendInvite_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="createImport10_Test_createImport10 - 2018.02.08 at 17h 03m 41s.xml">
-      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    <history-entry file="sendInvitation100Users_sendInvite_Test - 2018.02.09 at 11h 21m 30s.xml">
+      <configuration name="sendInvitation100Users.sendInvite_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="createImport10_Test_createImport10 - 2018.02.08 at 17h 10m 12s.xml">
-      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    <history-entry file="sendInvitation100Users_sendInvite_Test - 2018.02.09 at 11h 35m 20s.xml">
+      <configuration name="sendInvitation100Users.sendInvite_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="createImport10_Test_createImport10 - 2018.02.08 at 17h 11m 05s.xml">
-      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    <history-entry file="sendInvitation100Users_sendInvite_Test - 2018.02.09 at 11h 36m 30s.xml">
+      <configuration name="sendInvitation100Users.sendInvite_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="createImport10_Test_createImport10 - 2018.02.08 at 17h 12m 28s.xml">
-      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    <history-entry file="sendInvitation100Users_sendInvite_Test - 2018.02.09 at 11h 39m 18s.xml">
+      <configuration name="sendInvitation100Users.sendInvite_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="createImport10_Test_createImport10 - 2018.02.08 at 17h 13m 47s.xml">
-      <configuration name="createImport10_Test.createImport10" configurationId="JUnit" />
+    <history-entry file="sendInvitation100Users_sendInvite_Test - 2018.02.09 at 11h 40m 16s.xml">
+      <configuration name="sendInvitation100Users.sendInvite_Test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="createQuestionAllType_Test_createQuestionAllType - 2018.02.08 at 17h 19m 50s.xml">
-      <configuration name="createQuestionAllType_Test.createQuestionAllType" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="createQuestionFlow_Test_createQuestionFlow - 2018.02.08 at 17h 14m 41s.xml">
-      <configuration name="createQuestionFlow_Test.createQuestionFlow" configurationId="JUnit" />
+    <history-entry file="sendInvitation100Users_sendInvite_Test - 2018.02.14 at 17h 50m 59s.xml">
+      <configuration name="sendInvitation100Users.sendInvite_Test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135831000" />
+    <option name="totallyTimeSpent" value="139365000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="27" width="1853" height="1030" extended-state="0" />
+    <frame x="1987" y="-2" width="1853" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -755,31 +750,31 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24500526" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3259177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25695217" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2580645" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2513144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2883232" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29551744" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39822024" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294714" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="processedProjectFiles" value="true" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -825,8 +820,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/st/QuestionFlowProd.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/st/QuestionTypeProd.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/st/createQuestionFlowProd.java" />
     <entry file="file://$PROJECT_DIR$/src/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -858,23 +851,9 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/st/QuestionProd.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/st/createQuestionFlowProd.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/test/test1.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/CopySurvey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/checkLanguageAndCreateQuestion.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/st/createCaseAlertProd.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/st/test1111.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SendInvite.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/QuestionFlow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
@@ -886,13 +865,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
           <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SurveyUpdate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="17" column="8" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -912,13 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Hub.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
-          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/QuestionType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1081">
@@ -927,62 +892,17 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Prodhub.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java">
+    <entry file="file://$PROJECT_DIR$/Sandsiv.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2540">
-          <caret line="134" column="1" lean-forward="false" selection-start-line="134" selection-start-column="1" selection-end-line="134" selection-end-column="1" />
-          <folding />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="19" column="64" lean-forward="false" selection-start-line="19" selection-start-column="64" selection-end-line="19" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/OpenCI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="15" column="23" lean-forward="false" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+        <state relative-caret-position="486">
+          <caret line="27" column="54" lean-forward="true" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
           <folding />
         </state>
       </provider>
@@ -995,62 +915,149 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow_Test.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Hub.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        <state relative-caret-position="378">
+          <caret line="27" column="26" lean-forward="false" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Import.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="23" column="44" lean-forward="false" selection-start-line="23" selection-start-column="44" selection-end-line="23" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/codeborne/selenide/4.10.01/selenide-4.10.01.jar!/com/codeborne/selenide/SelenideElement.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="161" column="9" lean-forward="false" selection-start-line="161" selection-start-column="9" selection-end-line="161" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/OpenCI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="16" lean-forward="false" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/CaseAlert.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="127" column="53" lean-forward="false" selection-start-line="127" selection-start-column="53" selection-end-line="127" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/CopySurvey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="17" column="28" lean-forward="false" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SurveyUpdate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SurveyCreate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="37" column="8" lean-forward="false" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SendInvite.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/copySurveys_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="34" lean-forward="true" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/SurveyCreate.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionAllType_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="20" lean-forward="false" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+        <state relative-caret-position="468">
+          <caret line="29" column="82" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionToCheckAllCaseAlert_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="27" lean-forward="false" selection-start-line="4" selection-start-column="27" selection-end-line="4" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/deleteCaseAlert_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="34" lean-forward="false" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/sendInvitation100Users.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="34" lean-forward="false" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+        <state relative-caret-position="270">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/feedback/sendInviteAndCheckSurveyFlow_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        <state relative-caret-position="378">
+          <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/sendInvitation100Users.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="52" lean-forward="true" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/Import.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createImport10_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        <state relative-caret-position="126">
+          <caret line="8" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createCaseAlertCondition_Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="72">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/feedback/createQuestionFlow_Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="33" column="8" lean-forward="true" selection-start-line="33" selection-start-column="8" selection-end-line="33" selection-end-column="8" />
           <folding />
         </state>
       </provider>

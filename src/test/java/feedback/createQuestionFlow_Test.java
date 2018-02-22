@@ -1,6 +1,10 @@
 package feedback;
 
 import org.junit.jupiter.api.Test;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
@@ -21,9 +25,13 @@ public class createQuestionFlow_Test {
         surveyNew.popupAddSurvey.shouldBe(exist);
         surveyNew.titlePopup.shouldHave(text("Add Survey"));
 
+        Date date = new Date();
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy_HH:mm");
+        String userMail = "qaTest::" + format.format(date);
 
-        int testMail = ((int)(Math.random()*100000));
-        String userMail = "qaTest" + testMail;
+
+//        int testMail = ((int)(Math.random()*100000));
+//        String userMail = "qaTest" + testMail;
 
         surveyNew.surveyName.setValue(userMail);
         surveyNew.unitSurvey.click();

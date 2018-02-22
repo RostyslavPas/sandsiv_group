@@ -16,7 +16,7 @@ public class sendInvitation100Users {
         sendInvitation.searchField.setValue("4444").pressEnter();
         sleep(5000);
 
-        for (int invite = 0; invite < 101; invite++) {
+        for (int invite = 0; invite < 1; invite++) {
             sendInvitation.sendInvitationBtn.click();
             sendInvitation.modal.shouldBe(Condition.visible);
             sendInvitation.modalTitle.shouldHave(text(sendInvitation.modalText));
